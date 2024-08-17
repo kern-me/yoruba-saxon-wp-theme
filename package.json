@@ -1,13 +1,19 @@
 {
-  "name": "yoruba-saxon-wp-theme",
+  "name": "yoruba-saxon",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
-  "license": "ISC",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+  ],
+  "homepage": "https://github.com/Automattic/_s#readme",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
@@ -15,5 +21,21 @@
   },
   "devDependencies": {
     "gulp-minify": "^3.1.0"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

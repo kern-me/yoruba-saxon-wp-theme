@@ -35,7 +35,7 @@ gulp.task('min-js', function () {
             noSource: true,
             ignoreFiles: ['*.min.js', '*-min.js']
         }))
-        .pipe(gulp.dest('build'))
+        .pipe(gulp.dest('build/js/'))
 });
 
 // ------------------------------------ Gulp Testing Message
