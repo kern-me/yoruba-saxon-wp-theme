@@ -1,0 +1,10 @@
+.ys-list {
+  &--clean {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    li {
+      padding-left: 0;
+    }
+  }
+}

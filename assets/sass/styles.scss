@@ -1,102 +1,72 @@
-//@import 'reset';
+
 @import 'colors';
+@import 'breakpoints';
 @import 'typography';
+@import 'buttons';
+
+@import 'hero';
+@import 'footer';
+@import 'two-col-block';
 
 body {
-  font-family: "barlowregular-rev", sans-serif;
+  font-family: "barlowregular", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: $black;
 }
 
-.ys-list {
-  &--clean {
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0;
-    li {
-      padding-left: 0;
+.ys-skewed {
+  transform: none;
+  position: relative;
+
+  $width: 70px;
+
+  &:before,
+  &:after {
+    display: none;
+    content: '';
+    height: 100%;
+    width: $width;
+    position: absolute;
+    top: 0;
+    background: $black;
+    @include breakpoint(medium) {
+      display: block;
+    }
+  }
+  &:before {
+    //left: -$width;
+  }
+  &:after {
+    //right: -$width;
+  }
+
+  @include breakpoint(medium) {
+    font-family: "barlowregular-rev", sans-serif;
+    transform: skew(-14deg);
+
+    img,
+    video {
+      transform: skew(-14deg);
     }
   }
 }
 
-.ys-hero {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  .inner {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-}
 
-.svg-logo {
-  max-width: 1254px;
-  width: 70%;
-  padding-top: 60px;
-  @media only screen and (max-width: 768px){
-    width: 90%;
-  }
-}
 
 .inner {
   margin: 0 auto;
   width: 90%;
   padding: 0 30px;
-  max-width: 1920px;
+  max-width: 1250px;
   z-index: 1;
   position: relative;
   box-sizing: border-box;
   @media only screen and (max-width: 768px){
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 
-.ys-two-col {
-  .inner {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 
-.clear-none {
-  clear: none;
-}
 
-.shape {
-  $skew: polygon(83% 0, 100% 0%, 43% 100%, 28% 100%);
-  background: $black;
-  height: 100%;
-  width: 100px;
-  float: left;
-  shape-outside: $skew;
-  clip-path: $skew;
-}
-
-.site-footer {
-  background: $black;
-  color: $white;
-  font-weight: bold;
-  a {
-    font-weight: normal;
-    color: $white;
-    text-decoration: none;
-  }
-  &--copyright {
-    font-weight: normal;
-  }
-  .inner {
-    display: flex;
-    justify-content: flex-end;
-    gap: 3rem;
-  }
-  &--left-col {
-    
-  }
-  &--right-col {
-    
-  }
-}
 

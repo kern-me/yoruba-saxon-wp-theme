@@ -1,0 +1,22 @@
+@import 'colors';
+
+.ys-btn {
+  //font-family: 'barlowbold', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $yellow;
+  width: 100%;
+  height: 82px;
+  font-weight: bold;
+  font-size: 24px;
+  color: $black;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @include breakpoint(medium) {
+    width: 500px;
+  }
+}
+

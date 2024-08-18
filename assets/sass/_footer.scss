@@ -1,0 +1,24 @@
+.site-footer {
+  background: $black;
+  color: $white;
+  font-weight: bold;
+  a {
+    font-weight: normal;
+    color: $white;
+    text-decoration: none;
+  }
+  &--copyright {
+    font-weight: normal;
+  }
+  .inner {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+  &--left-col {
+
+  }
+  &--right-col {
+
+  }
+}
