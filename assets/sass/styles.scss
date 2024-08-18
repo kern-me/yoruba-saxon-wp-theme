@@ -3,7 +3,7 @@
 @import 'typography';
 
 body {
-  font-family: "Barlow", sans-serif;
+  font-family: "barlowregular-rev", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: $black;
@@ -66,7 +66,7 @@ body {
 }
 
 .shape {
-  //$skew: polygon(83% 0, 100% 0%, 43% 100%, 28% 100%);
+  $skew: polygon(83% 0, 100% 0%, 43% 100%, 28% 100%);
   background: $black;
   height: 100%;
   width: 100px;
