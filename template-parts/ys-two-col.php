@@ -7,7 +7,7 @@
                     storytelling and passion for people through entertainment for a global audience.</p>
                 <a href="#" class="ys-btn ys-btn--yellow">Learn More</a>
             </div>
-            <img src="<?php echo content_url() ?>/uploads/2024/08/home.png" alt=""/>
+<!--            <img src="--><?php //echo content_url() ?><!--/uploads/2024/08/home.png" alt=""/>-->
         </div>
     </div>
 </section>

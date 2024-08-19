@@ -1,0 +1,44 @@
+@import 'colors';
+@import 'breakpoints';
+
+.ys-skewed {
+  transform: none;
+  position: relative;
+
+  $width: 70px;
+
+  &:before,
+  &:after {
+    display: none;
+    content: '';
+    height: 100%;
+    width: $width;
+    position: absolute;
+    top: 0;
+    background: $black;
+    @include breakpoint(medium) {
+      display: block;
+    }
+  }
+  &:before {
+    left: 0;
+  }
+  &:after {
+    right: 0;
+  }
+
+  @include breakpoint(medium) {
+    font-family: "barlowregular-rev", sans-serif;
+    transform: skew(-14deg);
+
+    strong, .ys-btn {
+      font-weight: normal;
+      font-family: "barlowbold-rev", sans-serif;
+    }
+
+    img,
+    video {
+      transform: skew(-14deg);
+    }
+  }
+}

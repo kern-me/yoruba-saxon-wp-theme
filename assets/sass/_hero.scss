@@ -5,7 +5,7 @@
   display: flex;
   margin-bottom: 100px;
   height: 30vh;
-  @media screen and (min-height: 1024px) {
+  @media screen and (min-width: 1920px) and (min-height: 1024px) {
     height: 790px;
   }
   .inner {
@@ -13,14 +13,14 @@
     display: flex;
     justify-content: center;
   }
-}
-
-.svg-logo {
-  max-width: 1254px;
-  width: 70%;
-  height: auto;
-  padding-top: 60px;
-  @media only screen and (max-width: 768px){
-    width: 90%;
+  .svg-logo {
+    max-width: 1254px;
+    width: 70%;
+    height: auto;
+    padding-top: 60px;
+    @media only screen and (max-width: 768px){
+      width: 90%;
+    }
   }
 }
+

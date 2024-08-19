@@ -42,12 +42,6 @@ gulp.task('min-js', function () {
         .pipe(gulp.dest('build/js/'))
 });
 
-gulp.task('move-fonts', function () {
-    console.log('Moving Fonts...');
-    return gulp.src('assets/fonts/*')
-        .pipe(gulp.dest('build/fonts/'))
-});
-
 // ------------------------------------ Gulp Testing Message
 gulp.task('message', function () {
     console.log('It works!!');
@@ -68,9 +62,9 @@ gulp.task('watch',
 
 
 // -------------------------------------------- Default task
-gulp.task('default', gulp.series('sass', 'min-js', 'move-fonts',
+gulp.task('default', gulp.series('sass', 'min-js',
     gulp.parallel('message', 'watch')
 ));
 
-gulp.task('build', gulp.series('sass', 'min-js', 'move-fonts')
+gulp.task('build', gulp.series('sass', 'min-js')
 );

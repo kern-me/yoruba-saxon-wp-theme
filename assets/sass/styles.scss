@@ -2,6 +2,8 @@
 @import 'colors';
 @import 'breakpoints';
 @import 'typography';
+@import 'skews';
+@import 'lists';
 @import 'buttons';
 
 @import 'hero';
@@ -13,43 +15,6 @@ body {
   font-weight: 400;
   font-style: normal;
   color: $black;
-}
-
-.ys-skewed {
-  transform: none;
-  position: relative;
-
-  $width: 70px;
-
-  &:before,
-  &:after {
-    display: none;
-    content: '';
-    height: 100%;
-    width: $width;
-    position: absolute;
-    top: 0;
-    background: $black;
-    @include breakpoint(medium) {
-      display: block;
-    }
-  }
-  &:before {
-    //left: -$width;
-  }
-  &:after {
-    //right: -$width;
-  }
-
-  @include breakpoint(medium) {
-    font-family: "barlowregular-rev", sans-serif;
-    transform: skew(-14deg);
-
-    img,
-    video {
-      transform: skew(-14deg);
-    }
-  }
 }
 
 

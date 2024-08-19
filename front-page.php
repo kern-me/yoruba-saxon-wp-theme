@@ -24,6 +24,8 @@ get_header()
         </div>
     </section>
 
-<?php include_once ('template-parts/ys-two-col.php');
+<?php
+include_once ('template-parts/ys-two-col.php');
+include_once ('template-parts/ys-carousel.php');
 get_footer();
 
