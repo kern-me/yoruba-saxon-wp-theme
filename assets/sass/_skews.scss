@@ -1,44 +1,61 @@
 @import 'colors';
+@import 'typography';
 @import 'breakpoints';
 
+
 .ys-skewed {
+  font-family: $font-body;
+
+  $skew: -14deg;
+  $offset: -190px;
+
+  max-width: 80%;
+  margin: 0 auto;
   transform: none;
   position: relative;
+  
+  transform: skew($skew);
 
-  $width: 70px;
-
-  &:before,
-  &:after {
-    display: none;
-    content: '';
-    height: 100%;
-    width: $width;
-    position: absolute;
-    top: 0;
-    background: $black;
-    @include breakpoint(medium) {
-      display: block;
-    }
-  }
-  &:before {
-    left: 0;
-  }
-  &:after {
-    right: 0;
+  strong, .ys-btn {
+    font-weight: normal;
+    font-family: $font-bold-reg;
   }
 
-  @include breakpoint(medium) {
-    font-family: "barlowregular-rev", sans-serif;
-    transform: skew(-14deg);
+  .inner {
+    $width: 100px;
 
-    strong, .ys-btn {
-      font-weight: normal;
-      font-family: "barlowbold-rev", sans-serif;
-    }
+    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    padding: 0;
 
-    img,
-    video {
-      transform: skew(-14deg);
+    &:before,
+    &:after {
+      content: '';
+      height: 100%;
+      width: $width;
+      position: absolute;
+      top: 0;
+      background: $black;
+      display: none;
+      @include breakpoint(medium){
+        display: block;
+      }
     }
+    &:before {
+      left: -20%;
+    }
+    &:after {
+      display: none;
+    }
+  }
+
+
+
+  .ys-full-bg {
+    position: relative;
+    min-height: 40vh;
+    transform: skew(14deg);
+    clip-path: polygon(30% 0%, 100% 0%, 70% 100%, 0% 100%);
   }
 }
