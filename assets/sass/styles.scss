@@ -1,4 +1,3 @@
-
 @import 'colors';
 @import 'breakpoints';
 @import 'typography';
@@ -11,27 +10,35 @@
 @import 'two-col-block';
 
 body {
-  font-family: "barlowregular", sans-serif;
+  font-family: $font-body-reg;
   font-weight: 400;
   font-style: normal;
   color: $black;
 }
 
-
-
 .inner {
   margin: 0 auto;
   width: 90%;
   padding: 0 30px;
-  max-width: 1250px;
+  max-width: 1920px;
+
   z-index: 1;
   position: relative;
   box-sizing: border-box;
-  @media only screen and (max-width: 768px){
-    padding: 0 20px;
+  @media (max-width: 768px) {
+    padding: 0;
   }
 }
 
+.ys-full-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 40vh;
+  @container ys-section-inner (width > 1230px) {
+    min-height: unset;
+  }
+}
 
 
 

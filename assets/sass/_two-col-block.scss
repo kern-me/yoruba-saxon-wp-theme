@@ -1,6 +1,52 @@
-.ys-two-col {
+
+.ys-section {
+  $ys-section-breakpoint: 1230px;
+
   .inner {
-    display: flex;
-    flex-wrap: wrap;
+    container-name: ys-section-inner;
+    container-type: inline-size;
+  }
+
+  .ys-two-col {
+    display: grid;
+    gap: 3em;
+    @container ys-section-inner (width > #{$ys-section-breakpoint}) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .ys-col {
+    &--first {
+      order: 2;
+      @container ys-section-inner (width > #{$ys-section-breakpoint}) {
+        order: 1;
+      }
+    }
+
+    &--last {
+      order: 1;
+      @container ys-section-inner (width > #{$ys-section-breakpoint}) {
+        order: 2;
+      }
+    }
+  }
+
+  .ys-full-bg {
+    min-height: 70vh;
+    @container ys-section-inner (width > #{$ys-section-breakpoint}) {
+      min-height: unset;
+    }
+  }
+
+  .ys-btn {
+    @container ys-section-inner (width > #{$ys-section-breakpoint}) {
+      width: 500px;
+    }
   }
 }
+
+
+
+
+
+

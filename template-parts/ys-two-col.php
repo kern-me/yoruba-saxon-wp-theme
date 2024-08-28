@@ -1,13 +1,37 @@
-<section class="ys-skewed">
+<?php
+$main_heading = get_field('main_heading');
+$main_subheading = get_field('main_subheading');
+$main_image = get_field('main_image');
+$main_cta = get_field('main_cta');
+
+?>
+<section class="ys-section">
     <div class="inner">
         <div class="ys-two-col">
-            <div class="ys-two-col--content">
-                <h1 class="heading-l">The Disruptors</h1>
-                <p><strong>Yoruba Saxon</strong> is a talent-led production company, focused on values-based content, across all platforms and for all quadrants, with an aim to shift the culture and color outside the lines. As artists and filmmakers, we are committed to expressing our love of
-                    storytelling and passion for people through entertainment for a global audience.</p>
-                <a href="#" class="ys-btn ys-btn--yellow">Learn More</a>
+            <div class="ys-col ys-col--first ys-two-col--content">
+                <h1><?php echo $main_heading; ?></h1>
+                
+                <?php echo $main_subheading; ?>
+                
+                <?php
+                $link = get_field('main_cta');
+                
+                if( $link ):
+                $link_url = $link['url'];
+                $link_title = $link['title'];
+                $link_target = $link['target'] ? $link['target'] : '_self';
+                ?>
+                <a class="ys-btn ys-btn--yellow" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+	            <?php endif; ?>
             </div>
-<!--            <img src="--><?php //echo content_url() ?><!--/uploads/2024/08/home.png" alt=""/>-->
+            <div class="ys-col ys-col--last ys-full-bg" style="background-image:url('<?php echo $main_image ?>')"></div>
+        </div>
+        <div class="ys-carousel">
+            <div class="ys-slick">
+                <div>First</div>
+                <div>Second</div>
+                <div>Third</div>
+            </div>
         </div>
     </div>
 </section>
