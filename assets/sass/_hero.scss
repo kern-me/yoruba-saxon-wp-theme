@@ -1,26 +1,22 @@
+@use 'spacing';
+
 .ys-hero {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  margin-bottom: 100px;
-  height: 30vh;
-  @media screen and (min-width: 1920px) and (min-height: 1024px) {
-    height: 790px;
-  }
+  margin-bottom: 4em;
+  height: 70vh;
   .inner {
     padding: 0;
     display: flex;
     justify-content: center;
   }
   .svg-logo {
+    position: relative;
     max-width: 1254px;
-    width: 70%;
     height: auto;
-    padding-top: 60px;
-    @media only screen and (max-width: 768px){
-      width: 90%;
-    }
+    top: 6vh;
   }
 }
 
