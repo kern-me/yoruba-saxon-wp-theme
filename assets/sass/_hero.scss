@@ -5,18 +5,21 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  margin-bottom: 4em;
-  height: 70vh;
-  .inner {
+  margin-bottom: 6.75rem;
+  height: 800px;
+  justify-content: center;
+  align-items: end;
+  padding: 0 1rem 6.75rem 1rem;
+  @media (min-width: spacing.$medium) {
+    height: 1060px;
+  }
+  &-inner {
     padding: 0;
-    display: flex;
-    justify-content: center;
   }
   .svg-logo {
     position: relative;
-    max-width: 1254px;
+    width: 1670px;
     height: auto;
-    top: 6vh;
   }
 }
 

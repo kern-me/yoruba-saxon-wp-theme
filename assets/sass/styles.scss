@@ -16,6 +16,11 @@ body {
   color: $black;
 }
 
+strong {
+  font-weight: normal;
+  font-family: $font-bold-reg;
+}
+
 .inner {
   margin: 0 auto;
   width: 90%;

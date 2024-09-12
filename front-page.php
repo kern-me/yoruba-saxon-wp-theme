@@ -3,7 +3,7 @@ get_header()
 ?>
     
     <section class="ys-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/ys-hero-home.jpg')">
-        <div class="inner">
+
             <svg class="svg-logo" width="1254" height="348" viewBox="0 0 1254 348" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.9">
                     <path d="M737.39 0.1L729.32 30.88H1226.92V316.59H654.44L646.46 347.05L1253.69 347.47V0M701.43 30.88L709.52 0H0V347.48H618.45L626.54 316.6H26.76V30.88H701.43Z" fill="white"/>
@@ -21,7 +21,7 @@ get_header()
                     <path d="M701.74 30.47L626.44 317.82L654.45 317.4L729.61 30.57L701.74 30.47Z" fill="white"/>
                 </g>
             </svg>
-        </div>
+
     </section>
 
 <?php
