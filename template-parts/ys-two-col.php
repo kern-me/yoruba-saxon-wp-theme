@@ -28,10 +28,25 @@ $main_cta = get_field('main_cta');
         </div>
         <div class="ys-carousel">
             <div class="ys-slick">
-                <div>First</div>
-                <div>Second</div>
-                <div>Third</div>
+                <?php
+                $latest_work_card = get_field('latest_work_card');
+                $card_heading = $latest_work_card['card_heading'];
+                $card_description = $latest_work_card['card_description'];
+                $card_image = $latest_work_card['card_image'];
+                $card_link = $latest_work_card['card_link'];
+
+                if ( $latest_work_card ) :
+
+                foreach( $latest_work_card as $card ): ?>
+                <div>
+                    <img src="<?php echo $card_image['url']; ?>" alt="<?php echo $card_image['alt']; ?>" />
+                    <h3><?php echo $card_heading ?></h3>
+                    <p><?php echo $card_description ?></p>
+                    <a href="<?php echo $card_link['url'] ?>" class="ys-btn ys-btn--yellow" target="<?php echo $card_link['target'] ?>"><?php echo $card_link['title'] ?></a>
+                </div>
+            <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
             </div>
         </div>
-    </div>
 </section>
