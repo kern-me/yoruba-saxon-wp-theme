@@ -1,0 +1,51 @@
+$black : #2C2E35;
+$yellow: #F7E547;
+$white: #ffffff;
+
+$font-body-reg: 'barlowregular', sans-serif;
+$font-body: 'barlowregular-rev', sans-serif;
+
+$font-bold-reg: 'barlowbold', sans-serif;
+$font-bold: 'barlowbold-rev', sans-serif;
+
+
+$xl: 13.625rem;
+$large: 7.6875rem;
+$medium: 6em;
+$small: 2em;
+
+
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: 430px) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 1024px) { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 1920px) { @content; }
+  }
+  @else if $point == xlarge {
+    @media (min-width: 2560px) { @content; }
+  }
+}
+
+
+@mixin bp-macbook($size) {
+  @if $size == default {
+    @media (max-width: 1512px) and (max-height: 982px) { @content; }
+  }
+  @else if $size == medium {
+    @media (max-width: 1352px) and (max-height: 878px) { @content; }
+  }
+  @else if $size == small {
+    @media (max-width: 1147px) and (max-height: 745px) { @content; }
+  }
+  @else if $size == smaller {
+    @media (max-width: 1024px) and (max-height: 665px) { @content; }
+  }
+  @else if $size == large {
+    @media (max-width: 1800px) and (max-height: 1169px) { @content; }
+  }
+}
+

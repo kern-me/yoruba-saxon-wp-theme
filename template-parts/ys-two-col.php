@@ -5,7 +5,7 @@ $main_image = get_field('main_image');
 $main_cta = get_field('main_cta');
 
 ?>
-<section class="ys-section">
+<section class="ys-section ys-skewed">
     <div class="inner">
         <div class="ys-two-col">
             <div class="ys-col ys-col--first ys-two-col--content">
@@ -24,7 +24,9 @@ $main_cta = get_field('main_cta');
                 <a class="ys-btn ys-btn--yellow" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 	            <?php endif; ?>
             </div>
-            <div class="ys-col ys-col--last ys-full-bg" style="background-image:url('<?php echo $main_image ?>')"></div>
+            <div class="ys-col ys-col--last">
+                <img class="" src="<?php echo $main_image ?>')" alt="">
+            </div>
         </div>
         <div class="ys-carousel">
             <div class="ys-slick">

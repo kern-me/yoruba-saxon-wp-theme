@@ -1,15 +1,12 @@
-@use 'breakpoints';
-@use 'typography';
-@use 'colors';
-@use 'spacing';
+@use 'vars';
 
 .site-footer {
   position: relative;
   overflow: hidden;
-  margin-top: spacing.$large;
-  padding: spacing.$large 0;
-  background: colors.$black;
-  color: colors.$white;
+  margin-top: vars.$large;
+  padding: vars.$large 0;
+  background: vars.$black;
+  color: vars.$white;
 
   $ys-section-breakpoint: 1230px;
 
@@ -25,7 +22,7 @@
   }
 
   a {
-    color: colors.$white;
+    color: vars.$white;
     text-decoration: none;
   }
 
@@ -42,7 +39,7 @@
       width: 2px;
       height: 160%;
       position: absolute;
-      background: colors.$white;
+      background: vars.$white;
       left: -2em;
     }
   }
