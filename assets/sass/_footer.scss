@@ -21,7 +21,7 @@
     padding: 0 vars.$section-gutter;
     @include vars.breakpoint(medium){
       justify-content: end;
-      gap: 9rem;
+      gap: 20%;
       padding: 0;
     }
     @include vars.breakpoint(small){
@@ -30,7 +30,7 @@
   }
 
   li {
-    font-size: 1rem;
+    font-size: vars.$footer-font-size;
   }
 
   a {
@@ -39,7 +39,7 @@
   }
 
   &--copyright {
-    font-size: 1rem;
+    font-size: vars.$footer-font-size;
     padding-top: 2em;
     line-height: 1.5em;
     margin: 0;

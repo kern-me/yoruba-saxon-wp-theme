@@ -25,6 +25,8 @@ $section-padding: 14vh;
 $section-padding-mobile: calc($section-padding/2);
 $section-gutter: 5vw;
 
+$footer-font-size: 1.15rem;
+
 @mixin breakpoint($point) {
   @if $point == small {
     @media (min-width: 430px) { @content; }
