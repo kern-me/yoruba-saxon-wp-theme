@@ -78,14 +78,27 @@
   font-style: normal;
 }
 
-
-h1 {
+.heading-xl {
   font-size: 2.5rem;
   text-transform: uppercase;
   @include vars.breakpoint(medium){
     font-size: 3rem;
     line-height: 1;
   }
+}
+
+.heading-l {
+
+}
+.heading-m {
+
+}
+.heading-s {
+
+}
+
+h1 {
+  @extend .heading-xl;
 }
 h2 {
   font-size: 2rem;
@@ -113,18 +126,7 @@ p, li {
     line-height: 2;
   }
 }
-.heading-xl {
 
-}
-.heading-l {
-
-}
-.heading-m {
-
-}
-.heading-s {
-
-}
 
 p, ul, ol, pre, table, blockquote {
   margin-top: 0;

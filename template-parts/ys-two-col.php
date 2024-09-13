@@ -26,31 +26,41 @@ $main_cta = get_field('main_cta');
                     <?php endif; ?>
                 </div>
                 <div class="ys-col ys-col--last">
-                    <img class="" src="<?php echo $main_image ?>')" alt="">
+                    <img src="<?php echo $main_image ?>')" alt="">
                 </div>
             </div>
-            <div class="ys-carousel">
-                <div class="ys-slick">
-                    <?php
-                    $latest_work_card = get_field('latest_work_card');
-                    $card_heading = $latest_work_card['card_heading'];
-                    $card_description = $latest_work_card['card_description'];
-                    $card_image = $latest_work_card['card_image'];
-                    $card_link = $latest_work_card['card_link'];
 
-                    if ( $latest_work_card ) :
-
-                    foreach( $latest_work_card as $card ): ?>
+            <div class="ys-carousel-cards">
+                <h2 class="heading-xl">Latest Work</h2>
+                <div class="ys-carousel-cards--container">
+                    <div class="ys-carousel-card">
                         <div>
-                            <img src="<?php echo $card_image['url']; ?>" alt="<?php echo $card_image['alt']; ?>" />
-                            <h3><?php echo $card_heading ?></h3>
-                            <p><?php echo $card_description ?></p>
-                            <a href="<?php echo $card_link['url'] ?>" class="ys-btn ys-btn--yellow" target="<?php echo $card_link['target'] ?>"><?php echo $card_link['title'] ?></a>
+                            <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/latest-work-1.jpg" alt="" />
+                            <h3>Becoming King</h3>
+                            <p>Paramount+</p>
                         </div>
-                    <?php endforeach; ?>
+                        <a href="#" class="ys-btn ys-btn--yellow">Watch Now</a>
+                    </div>
+                    <div class="ys-carousel-card">
+                        <div>
+                            <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/latest-work-2.jpg" alt="" />
+                            <h3>Lawman: Bass Reeves</h3>
+                            <p>Paramount+</p>
+                        </div>
+                        <a href="#" class="ys-btn ys-btn--yellow">Watch Now</a>
+                    </div>
+                    <div class="ys-carousel-card">
+                        <div>
+                            <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/latest-work-3.jpg" alt="" />
+                            <h3>The After</h3>
+                            <p>Netflix</p>
+                        </div>
+                        <a href="#" class="ys-btn ys-btn--yellow">Watch Now</a>
+                    </div>
                 </div>
-                <?php endif; ?>
             </div>
         </div>
+
     </div>
 </section>
+
