@@ -5,7 +5,7 @@ $main_image = get_field('main_image');
 $main_cta = get_field('main_cta');
 
 ?>
-<section class="ys-section">
+<section class="ys-section ys-section--intro">
     <div class="ys-skewed">
         <div class="inner">
             <div class="ys-two-col">

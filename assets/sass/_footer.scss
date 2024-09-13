@@ -3,22 +3,34 @@
 .site-footer {
   position: relative;
   overflow: hidden;
-  margin-top: vars.$large;
-  padding: vars.$large 0;
+  margin-top: vars.$section-padding-mobile;
+  padding: vars.$section-padding-mobile 0;
   background: vars.$black;
   color: vars.$white;
+  @include vars.breakpoint(medium){
+    margin-top: vars.$section-padding;
+    padding: vars.$section-padding 0;
+  }
 
   $ys-section-breakpoint: 1230px;
 
   .inner {
-    container-name: ys-footer-inner;
-    container-type: inline-size;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(380px,80vw), 1fr));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 vars.$section-gutter;
+    @include vars.breakpoint(medium){
+      justify-content: end;
+      gap: 9rem;
+      padding: 0;
+    }
+    @include vars.breakpoint(small){
+      flex-direction: row;
+    }
   }
 
   li {
-    padding: 0.25em;
+    font-size: 1rem;
   }
 
   a {
@@ -27,8 +39,10 @@
   }
 
   &--copyright {
+    font-size: 1rem;
     padding-top: 2em;
     line-height: 1.5em;
+    margin: 0;
   }
 
   &--left-col,
@@ -44,15 +58,18 @@
     }
   }
 
-  &--bg {
+  .footer-logo {
     position: absolute;
-    opacity: 0.05;
-    top: 0;
-    left: -35vw;
-
-    svg {
-      width: auto;
-      height: 100%;
+    opacity: .02;
+    top: -70%;
+    right: 50%;
+    width: 150%;
+    max-width: none;
+    @include vars.breakpoint(medium){
+      width: 630px;
+      height: auto;
+      top: -18vh;
+      left: -380px;
     }
   }
 }

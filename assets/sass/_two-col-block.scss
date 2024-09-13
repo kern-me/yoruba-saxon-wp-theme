@@ -1,4 +1,30 @@
+@use 'vars';
 
+// Two Column
+.ys-two-col {
+  display: grid;
+
+  @include vars.breakpoint(medium) {
+    gap: 9%;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ys-col {
+    &--first {
+      order: 2;
+      @include vars.breakpoint(medium) {
+        order: 1;
+      }
+    }
+
+    &--last {
+      order: 1;
+      @include vars.breakpoint(medium) {
+        order: 2;
+      }
+    }
+  }
+}
 
 
 

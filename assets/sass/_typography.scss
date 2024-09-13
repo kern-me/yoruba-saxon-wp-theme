@@ -78,15 +78,10 @@
   font-style: normal;
 }
 
-html, .root {
-  font-size: 16px;
-  line-height: 1.5;
-}
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
+
 h1 {
   font-size: 2.5rem;
+  text-transform: uppercase;
   @include vars.breakpoint(medium){
     font-size: 3rem;
     line-height: 1;
@@ -94,20 +89,32 @@ h1 {
 }
 h2 {
   font-size: 2rem;
+  @include vars.breakpoint(medium){
+    font-size: 2.5rem;
+  }
 }
 h3 {
   font-size: 1.5rem;
+  @include vars.breakpoint(medium){
+    font-size: 2rem;
+  }
 }
 h4, h5, h6 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  @include vars.breakpoint(medium){
+    font-size: 1.5rem;
+  }
 }
-p {
-  font-size: 1.5rem;
-  line-height: 2;
-  margin: 0;
+p, li {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  @include vars.breakpoint(medium){
+    font-size: 1.5rem;
+    line-height: 2;
+  }
 }
-h1, .heading-xl {
-  text-transform: uppercase;
+.heading-xl {
+
 }
 .heading-l {
 
