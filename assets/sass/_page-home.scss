@@ -33,14 +33,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  height: 40vh;
+  height: 50vh;
   justify-content: center;
-  align-items: end;
-  padding: 0 5vw 7vh 5vw;
+  padding: 0 5vw;
   @media (min-width: 1024px) and (min-height: 665px) {
     height: 65vh;
     margin-bottom: 14vh;
     padding: 0 0 14vh 0;
+    align-items: end;
   }
 
   &-inner {
@@ -59,26 +59,30 @@
 // Section
 
 h1 {
-  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  @include vars.breakpoint(medium){
+    margin-bottom: 3rem;
+  }
 }
 
 .ys-section {
   max-width: 100%;
   margin: 0;
   position: relative;
+}
 
-  .inner {
+.inner {
+  padding: 0;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1512px;
+
+  @media (max-width: 768px) {
     padding: 0;
-    margin: 0 auto;
-    z-index: 1;
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: none;
-
-    @media (max-width: 768px) {
-      padding: 0;
-    }
   }
 }
 // Buttons
