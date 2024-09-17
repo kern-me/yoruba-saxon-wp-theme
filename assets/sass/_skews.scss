@@ -8,11 +8,24 @@
     left: -5%;
   }
 
-  strong,
-  .ys-btn {
+  strong {
     @include vars.breakpoint(medium) {
       font-weight: normal;
       font-family: vars.$font-bold;
+    }
+  }
+
+  .ys-btn {
+    transform: skew(vars.$skew);
+    @include vars.breakpoint(medium){
+      transform: skew(0);
+    }
+    span {
+      font-family: vars.$font-bold;
+      @include vars.breakpoint(medium) {
+        font-family: vars.$font-bold-reg;
+        transform: skew(vars.$skew-base);
+      }
     }
   }
 

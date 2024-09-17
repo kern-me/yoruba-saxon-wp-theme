@@ -11,8 +11,7 @@
   padding: 0 vars.$section-gutter;
   @media (min-width: 1024px) and (min-height: 665px) {
     height: vars.$hero-height;
-    margin-bottom: vars.$section-padding;
-    padding: 0 0 vars.$section-padding 0;
+    padding: vars.$section-padding 0;
     align-items: end;
   }
 

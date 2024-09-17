@@ -4,7 +4,8 @@
 .ys-btn {
   width: 100%;
   max-width: 375px;
-  font-family: vars.$font-bold-reg;
+  font-family: vars.$font-bold;
+  transform: skew(0);
   padding: 0;
   display: flex;
   justify-content: center;
@@ -17,8 +18,18 @@
   text-transform: uppercase;
   letter-spacing: 3px;
 
+  @include vars.breakpoint(medium) {
+
+  }
+
   @media (min-width: 768px) {
     width: 65%;
+  }
+
+  span {
+    @include vars.breakpoint(medium) {
+      transform: skew(0)
+    }
   }
 
   &:visited, &:active {
@@ -28,6 +39,8 @@
     background: vars.$yellow;
   }
 }
+
+
 
 .wp-block-buttons, {
   & > .wp-block-button {

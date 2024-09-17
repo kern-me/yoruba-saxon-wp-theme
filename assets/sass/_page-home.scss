@@ -1,30 +1,6 @@
 @use 'vars';
 
-// Two Column
-.ys-two-col {
-  display: grid;
 
-  @include vars.breakpoint(medium) {
-    gap: 9%;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .ys-col {
-    &--first {
-      order: 2;
-      @include vars.breakpoint(medium) {
-        order: 1;
-      }
-    }
-
-    &--last {
-      order: 1;
-      @include vars.breakpoint(medium) {
-        order: 2;
-      }
-    }
-  }
-}
 
 h1 {
   margin-top: 1rem;
@@ -37,31 +13,35 @@ h1 {
 .ys-section--intro {
   .ys-skewed {
     .inner {
-      padding: 7vh 5vw 0 5vw;
+      padding: 0 vars.$section-gutter;
       @include vars.breakpoint(medium){
-        padding: 0 0 0 15rem;
+        padding: 0 0 0 vars.$section-padding;
       }
-
-      &:before,
-      &:after {
-        content: '';
-        height: 100%;
-        width: 100px;
-        position: absolute;
-        top: 0;
-        background: vars.$black;
-        display: none;
+      &.inner--lines {
         @include vars.breakpoint(medium){
-          display: block;
+          padding: 0 0 0 vars.$section-padding * 2;
         }
-      }
-      &:before {
-        @include vars.breakpoint(medium){
-          left: 70px;
+        &:before,
+        &:after {
+          content: '';
+          height: 100%;
+          width: 100px;
+          position: absolute;
+          top: 0;
+          background: vars.$black;
+          display: none;
+          @include vars.breakpoint(medium){
+            display: block;
+          }
         }
-      }
-      &:after {
-        display: none;
+        &:before {
+          @include vars.breakpoint(medium){
+            left: 70px;
+          }
+        }
+        &:after {
+          display: none;
+        }
       }
     }
     .ys-col {
@@ -90,9 +70,8 @@ h1 {
   }
 }
 
-
 .ys-carousel-cards {
-  padding-top: 7vh;
+  padding-top: vars.$section-padding;
 }
 
 .ys-carousel-cards--container {
@@ -107,6 +86,69 @@ h1 {
   }
 }
 
+.skew-reverse {
+  transform: skew(0deg)
+}
+
+.text--no-skew {
+  font-family: vars.$font-body-reg
+}
+
+.ys-no-skew {
+  font-family: vars.$font-body-reg !important;
+  transform: skew(0deg);
+
+  .inner {
+    padding: 0 vars.$section-gutter;
+    @include vars.breakpoint(medium) {
+      padding: 0 4rem 0 12rem;
+    }
+
+  }
+  .ys-carousel-card {
+    overflow: visible;
+  }
+
+  .ys-btn {
+    font-family: vars.$font-bold-reg;
+    transform: skew(vars.$skew);
+    span {
+      transform: skew(vars.$skew-base);
+      font-family: vars.$font-bold-reg;
+      @include vars.breakpoint(medium) {
+        transform: skew(vars.$skew-base);
+      }
+    }
+  }
+}
+
+.skewed-image-container {
+  position: relative;
+  @include vars.breakpoint(medium) {
+    overflow: hidden;
+    transform: skew(vars.$skew);
+    left: -4rem;
+  }
+  img {
+    @include vars.breakpoint(medium) {
+      max-width: none;
+      width: 160%;
+      transform: skew(vars.$skew-base);
+    }
+  }
+}
+
+.card-content {
+  position: relative;
+  @include vars.breakpoint(medium) {
+    left: -7.7rem;
+  }
+}
+
+.ys-skew {
+  transform: skew(vars.$skew)
+}
+
 .ys-carousel-card {
   display: flex;
   flex-direction: column;
@@ -115,17 +157,14 @@ h1 {
 
   h3 {
     font-size: 1.5rem;
-    font-family: vars.$font-bold-reg;
     line-height: 1.1;
     padding-top: 1rem;
     text-align: center;
     @include vars.breakpoint(medium) {
-      font-family: vars.$font-bold;
       text-align: left;
     }
   }
   p {
-    font-family: vars.$font-body-reg;
     line-height: 1.2;
     text-align: center;
     max-width: none;
@@ -133,6 +172,7 @@ h1 {
       text-align: left;
     }
   }
+
   .ys-btn {
     width: 100%;
     margin: auto;
@@ -140,13 +180,16 @@ h1 {
       margin-top: auto;
     }
   }
+
   img {
     position: relative;
-    height: auto;
     width: 100%;
+    height: vars.$carousel-card-height;
+    object-fit: cover;
+    object-position: top;
     @include vars.breakpoint(medium) {
       left: -4.5rem;
-      width: 145%;
+      width: 160%;
       max-width: none;
     }
   }
@@ -162,4 +205,8 @@ h1 {
 
 .slick-prev {
   left: 0 !important;
+}
+
+.padding-top--0 {
+  padding-top: 0 !important;
 }

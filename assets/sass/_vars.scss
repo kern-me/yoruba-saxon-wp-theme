@@ -14,16 +14,18 @@ $large: 7.6875rem;
 $medium: 6em;
 $small: 2em;
 
-$hero-height: 65vh;
-$hero-height-mobile: 50vh;
+$hero-height: 40rem;
+$hero-height-mobile: 600px;
 $hero-logo-width: 65%;
 
 $skew: -14deg;
 $skew-base: -$skew;
 
-$section-padding: 14vh;
+$section-padding: 8rem;
 $section-padding-mobile: calc($section-padding/2);
 $section-gutter: 5vw;
+
+$carousel-card-height: 450px;
 
 $footer-font-size: 1.15rem;
 
