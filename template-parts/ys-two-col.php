@@ -8,9 +8,9 @@ $main_cta = get_field('main_cta');
 <section class="ys-section ys-section--intro ys-section--pad-top">
     <div class="ys-skewed">
         <div class="inner inner--lines">
-            <div class="ys-two-col">
+            <div class="ys-two-col ys-two-col--mobile-reversed">
                 <div class="ys-col ys-col--first ys-two-col--content">
-                    <h1><?php echo $main_heading; ?></h1>
+                    <h1 class="text--no-wrap"><?php echo $main_heading; ?></h1>
 
                     <?php echo $main_subheading; ?>
 
@@ -32,7 +32,7 @@ $main_cta = get_field('main_cta');
                 </div>
             </div>
 
-            <div class="ys-carousel-cards">
+            <div class="ys-carousel-cards ys-section--pad-top">
                 <h2 class="heading-xl">Latest Work</h2>
                 <div class="ys-carousel-cards--container">
                     <div class="ys-carousel-card">
@@ -65,9 +65,11 @@ $main_cta = get_field('main_cta');
     </div>
 </section>
 
-<section class="ys-section ys-section--pad-top">
+<section class="ys-section ys-section--bg ys-section--meet-the-team ys-section--margin-top" style="background-image: url('<?php echo site_url() ?>/wp-content/uploads/2024/09/meet-the-team-graphic.jpg')">
     <div class="inner">
-        <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/meet-the-team-graphic.jpg" alt="" />
+        <a class="ys-btn ys-btn--white" href="#">
+            <span>Meet the Team</span>
+        </a>
     </div>
 </section>
 
@@ -80,10 +82,10 @@ $main_cta = get_field('main_cta');
                     <div class="skewed-image-container">
                         <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/press-1.jpg" alt="" />
                     </div>
-                    <div class="card-content">
+                    <div class="ys-carousel-card--content">
                         <h3>Variety</h3>
                         <p>May 23, 2024</p>
-                        <p>David Oyelowo on Creating an Inclusive Kingdom and Sticking With ‘Bass Reeves’ After Being Turned Down by Every Studio</p>
+                        <p class="ys-carousel-card--description">David Oyelowo on Creating an Inclusive Kingdom and Sticking With ‘Bass Reeves’ After Being Turned Down by Every Studio</p>
                         <a href="#" class="ys-btn ys-btn--yellow"><span>Read More</span></a>
                     </div>
                 </div>
@@ -93,10 +95,10 @@ $main_cta = get_field('main_cta');
                     <div class="skewed-image-container">
                         <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/press-2.jpg" alt="" />
                     </div>
-                    <div class="card-content">
+                    <div class="ys-carousel-card--content">
                         <h3>Deadline</h3>
                         <p>May 15, 2024</p>
-                        <p>David Oyelowo Is Working To “Normalize The Marginalized” With Production Company Yoruba Saxon And Streamer Mansa</p>
+                        <p class="ys-carousel-card--description">David Oyelowo Is Working To “Normalize The Marginalized” With Production Company Yoruba Saxon And Streamer Mansa</p>
                         <a href="#" class="ys-btn ys-btn--yellow"><span>Read More</span></a>
                     </div>
                 </div>
@@ -106,10 +108,10 @@ $main_cta = get_field('main_cta');
                     <div class="skewed-image-container">
                         <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/press-3.jpg" alt="" />
                     </div>
-                    <div class="card-content">
+                    <div class="ys-carousel-card--content">
                         <h3>Robb Report</h3>
                         <p>April 28, 2024</p>
-                        <p>Meet Hollywood Power Couple David and Jessica Oyelowo; Together since they were teens, the actor and his producing-partner wife...</p>
+                        <p class="ys-carousel-card--description">Meet Hollywood Power Couple David and Jessica Oyelowo; Together since they were teens, the actor and his producing-partner wife...</p>
                         <a href="#" class="ys-btn ys-btn--yellow ys-btn--skewed"><span>Read More</span></a>
                     </div>
                 </div>

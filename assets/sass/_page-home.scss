@@ -70,10 +70,6 @@ h1 {
   }
 }
 
-.ys-carousel-cards {
-  padding-top: vars.$section-padding;
-}
-
 .ys-carousel-cards--container {
   padding-top: 3rem;
   display: grid;
@@ -98,13 +94,18 @@ h1 {
   font-family: vars.$font-body-reg !important;
   transform: skew(0deg);
 
+  h1, .heading-xl {
+    font-family: vars.$font-thin-reg;
+
+  }
+
   .inner {
     padding: 0 vars.$section-gutter;
     @include vars.breakpoint(medium) {
       padding: 0 4rem 0 12rem;
     }
-
   }
+
   .ys-carousel-card {
     overflow: visible;
   }
@@ -138,10 +139,18 @@ h1 {
   }
 }
 
-.card-content {
-  position: relative;
-  @include vars.breakpoint(medium) {
-    left: -7.7rem;
+
+.ys-carousel-card {
+  &--content {
+    position: relative;
+    @include vars.breakpoint(medium) {
+      left: -7.7rem;
+    }
+  }
+
+  &--description {
+    font-size: 1.25rem;
+    line-height: 1.4;
   }
 }
 
@@ -209,4 +218,31 @@ h1 {
 
 .padding-top--0 {
   padding-top: 0 !important;
+}
+
+.ys-section--bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text--no-wrap {
+  white-space: nowrap;
+}
+
+.ys-section--meet-the-team {
+  height: 50vh;
+  @include vars.breakpoint(medium) {
+    height: 66rem;
+  }
+  .inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 100%;
+    padding-bottom: vars.$section-padding-mobile
+  }
+  .ys-btn {
+    transform: skew(-12deg)
+  }
 }

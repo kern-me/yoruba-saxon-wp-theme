@@ -3,24 +3,27 @@
 // Two Column
 .ys-two-col {
   display: grid;
+  gap: vars.$pad-medium;
 
   @include vars.breakpoint(medium) {
     gap: 9%;
     grid-template-columns: 1fr 1fr;
   }
 
-  .ys-col {
-    &--first {
-      order: 2;
-      @include vars.breakpoint(medium) {
-        order: 1;
-      }
-    }
-
-    &--last {
-      order: 1;
-      @include vars.breakpoint(medium) {
+  &--mobile-reversed {
+    .ys-col {
+      &--first {
         order: 2;
+        @include vars.breakpoint(medium) {
+          order: 1;
+        }
+      }
+
+      &--last {
+        order: 1;
+        @include vars.breakpoint(medium) {
+          order: 2;
+        }
       }
     }
   }
@@ -31,7 +34,16 @@
   margin: 0;
   position: relative;
   &--pad-top {
-    padding-top: vars.$section-padding;
+    padding-top: vars.$section-padding-mobile;
+    @include vars.breakpoint(medium) {
+      padding-top: vars.$section-padding;
+    }
+  }
+  &--margin-top {
+    margin-top: vars.$section-padding-mobile;
+    @include vars.breakpoint(medium) {
+      margin-top: vars.$section-padding;
+    }
   }
 }
 

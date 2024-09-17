@@ -43,6 +43,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'barlowlight-rev';
+  src: url('../assets/fonts/barlow-light-rev.woff2') format('woff2'),
+  url('../assets/fonts/barlow-light-rev.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'barlowmedium';
   src: url('../assets/fonts/barlow-medium.woff2') format('woff2'),
   url('../assets/fonts/barlow-medium.woff') format('woff');
@@ -74,6 +81,13 @@
   font-family: 'barlowthin';
   src: url('../assets/fonts/barlow-thin.woff2') format('woff2'),
   url('../assets/fonts/barlow-thin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'barlowthin-rev';
+  src: url('../assets/fonts/barlow-thin-rev.woff2') format('woff2'),
+  url('../assets/fonts/barlow-thin-rev.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

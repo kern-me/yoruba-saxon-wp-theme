@@ -18,10 +18,6 @@
   text-transform: uppercase;
   letter-spacing: 3px;
 
-  @include vars.breakpoint(medium) {
-
-  }
-
   @media (min-width: 768px) {
     width: 65%;
   }
@@ -37,6 +33,10 @@
   }
   &--yellow {
     background: vars.$yellow;
+  }
+  &--white {
+    background: vars.$white;
+    color: vars.$black;
   }
 }
 
