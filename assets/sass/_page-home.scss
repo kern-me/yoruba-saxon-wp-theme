@@ -108,6 +108,13 @@ h1 {
 
   .ys-carousel-card {
     overflow: visible;
+    justify-content: space-between;
+    h3, p, .ys-btn {
+      @include vars.breakpoint(medium) {
+        position: relative;
+        left: -7.5rem;
+      }
+    }
   }
 
   .ys-btn {
@@ -185,8 +192,8 @@ h1 {
   .ys-btn {
     width: 100%;
     margin: auto;
-    @include vars.breakpoint(small) {
-      margin-top: auto;
+    @include vars.breakpoint(medium) {
+      margin: 0;
     }
   }
 
