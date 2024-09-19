@@ -16,8 +16,22 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'yaroba-saxon'); ?></a>
-    <header id="masthead" class="site-header">
-        <nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'yaroba-saxon'); ?></button>
-        </nav><!-- #site-navigation -->
-    </header><!-- #masthead -->
+    <header>
+        <nav class="menu--right" role="navigation">
+            <div class="menu-toggle">
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="menu-item">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
