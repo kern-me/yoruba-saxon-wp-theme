@@ -38,24 +38,24 @@ $main_cta = get_field('main_cta');
                     <div class="ys-carousel-card">
                         <div>
                             <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/latest-work-1.jpg" alt="" />
-                            <h3>Becoming King</h3>
-                            <p>Paramount+</p>
+                            <h3 class="ys-carousel-card--heading">Becoming King</h3>
+                            <p class="ys-carousel-card--date">Paramount+</p>
                         </div>
                         <a href="#" class="ys-btn ys-btn--yellow"><span>Watch Now</span></a>
                     </div>
                     <div class="ys-carousel-card">
                         <div>
                             <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/latest-work-2.jpg" alt="" />
-                            <h3>Lawman: Bass Reeves</h3>
-                            <p>Paramount+</p>
+                            <h3 class="ys-carousel-card--heading">Lawman: Bass Reeves</h3>
+                            <p class="ys-carousel-card--date">Paramount+</p>
                         </div>
                         <a href="#" class="ys-btn ys-btn--yellow"><span>Watch Now</span></a>
                     </div>
                     <div class="ys-carousel-card">
                         <div>
                             <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/latest-work-3.jpg" alt="" />
-                            <h3>The After</h3>
-                            <p>Netflix</p>
+                            <h3 class="ys-carousel-card--heading">The After</h3>
+                            <p class="ys-carousel-card--date">Netflix</p>
                         </div>
                         <a href="#" class="ys-btn ys-btn--yellow"><span>Watch Now</span></a>
                     </div>

@@ -1,7 +1,6 @@
 @use 'vars';
 
 .ys-skewed {
-
   @include vars.breakpoint(medium){
     font-family: vars.$font-body;
     transform: skew(vars.$skew);
@@ -23,6 +22,15 @@
     }
   }
 
+  .ys-carousel-card {
+    &--heading {
+      font-family: vars.$font-bold-reg;
+      @include vars.breakpoint(medium){
+        font-family: vars.$font-bold;
+      }
+    }
+  }
+
   .ys-btn {
     transform: skew(vars.$skew);
     @include vars.breakpoint(medium){
@@ -40,6 +48,52 @@
   img, svg {
     @include vars.breakpoint(medium){
       transform: skew(vars.$skew-base)
+    }
+  }
+}
+
+
+.ys-no-skew {
+  font-family: vars.$font-body-reg !important;
+  transform: skew(0deg);
+
+  h1, .heading-xl {
+    font-family: vars.$font-thin-reg;
+  }
+
+  .inner {
+    padding: 0 vars.$section-gutter;
+    @include vars.breakpoint(medium) {
+      padding: 0 4rem 0 12rem;
+    }
+  }
+
+  .ys-carousel-card {
+    overflow: visible;
+    justify-content: space-between;
+    &--heading {
+      font-family: vars.$font-bold-reg;
+      @include vars.breakpoint(medium) {
+        font-family: vars.$font-bold-reg;
+      }
+    }
+    h3, p, .ys-btn {
+      @include vars.breakpoint(medium) {
+        position: relative;
+        left: -7.5rem;
+      }
+    }
+  }
+
+  .ys-btn {
+    font-family: vars.$font-bold-reg;
+    transform: skew(vars.$skew);
+    span {
+      transform: skew(vars.$skew-base);
+      font-family: vars.$font-bold-reg;
+      @include vars.breakpoint(medium) {
+        transform: skew(vars.$skew-base);
+      }
     }
   }
 }

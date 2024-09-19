@@ -5,12 +5,14 @@ $white: #ffffff;
 $font-body-reg: 'barlowregular', sans-serif;
 $font-body: 'barlowregular-rev', sans-serif;
 
+$font-italic-reg: 'barlowregular-rev', sans-serif;
+
+
 $font-bold-reg: 'barlowbold', sans-serif;
 $font-bold: 'barlowbold-rev', sans-serif;
 
 $font-thin-reg: 'barlowthin', sans-serif;
 $font-thin: 'barlowthin-rev', sans-serif;
-
 
 $xl: 13.625rem;
 $large: 7.6875rem;
@@ -29,7 +31,7 @@ $section-padding-mobile: calc($section-padding/2);
 $pad-medium: calc($section-padding/4);
 $section-gutter: 5vw;
 
-$carousel-card-height: 450px;
+$carousel-card-height: 400px;
 
 $footer-font-size: 1.15rem;
 
@@ -38,7 +40,7 @@ $footer-font-size: 1.15rem;
     @media (min-width: 430px) { @content; }
   }
   @else if $point == medium {
-    @media (min-width: 1024px) { @content; }
+    @media (min-width: 1025px) { @content; }
   }
   @else if $point == large {
     @media (min-width: 1920px) { @content; }

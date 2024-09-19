@@ -33,6 +33,7 @@
   max-width: 100%;
   margin: 0;
   position: relative;
+  overflow: hidden;
   &--pad-top {
     padding-top: vars.$section-padding-mobile;
     @include vars.breakpoint(medium) {

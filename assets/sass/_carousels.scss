@@ -1,0 +1,84 @@
+@use 'vars';
+
+.ys-carousel-cards--container {
+  padding-top: 3.5rem;
+  display: grid;
+  gap: 8rem;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 1fr;
+  @include vars.breakpoint(medium) {
+    gap: 3.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.ys-carousel-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  justify-content: space-between;
+
+  &--date {
+    font-style: italic;
+    font-size: 1.25rem;
+  }
+
+  &--description {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.1;
+    padding-top: 1rem;
+    text-align: center;
+    @include vars.breakpoint(medium) {
+      text-align: left;
+    }
+  }
+
+  p {
+    line-height: 1.2;
+    text-align: center;
+    max-width: none;
+    @include vars.breakpoint(medium) {
+      text-align: left;
+    }
+  }
+
+  .ys-btn {
+    width: 80%;
+    margin: auto;
+    @include vars.breakpoint(medium) {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  img {
+    position: relative;
+    width: 100%;
+    height: vars.$carousel-card-height;
+    object-fit: cover;
+    object-position: top;
+    @include vars.breakpoint(medium) {
+      left: -4.5rem;
+      width: 160%;
+      max-width: none;
+    }
+  }
+}
+
+.slick-next:before, .slick-prev:before {
+  color: #000 !important;
+}
+
+.slick-next {
+  right: 0 !important;
+}
+
+.slick-prev {
+  left: 0 !important;
+}
