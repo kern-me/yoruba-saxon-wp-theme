@@ -19,7 +19,7 @@
     <header>
         <nav class="menu--right" role="navigation">
             <div class="menu-toggle">
-                <input type="checkbox" />
+                <input id="nav-btn" type="checkbox" />
 
                 <span></span>
                 <span></span>
@@ -33,5 +33,6 @@
                 </ul>
             </div>
         </nav>
+        <div class="nav-overlay"></div>
     </header>
 
