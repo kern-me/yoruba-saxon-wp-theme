@@ -1,7 +1,7 @@
 <section class="ys-section ys-section--intro ys-no-skew ys-section--pad-top">
     <div class="inner">
         <h2 class="heading-xl">Press</h2>
-        <div class="ys-carousel-cards--container">
+        <div class="ys-carousel-cards--container-grid">
             <div class="ys-carousel-card">
                 <div class="skewed-image-container">
                     <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/press-1.jpg" alt=""/>

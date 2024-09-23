@@ -34,7 +34,7 @@ $main_cta = get_field('main_cta');
 
             <div class="ys-carousel-cards ys-section--pad-top">
                 <h2 class="heading-xl">Latest Work</h2>
-                <div class="ys-carousel-cards--container">
+                <div class="ys-carousel-cards--container ys-slick">
                     <div class="ys-carousel-card">
                         <div>
                             <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/latest-work-1.jpg" alt="" />
@@ -48,6 +48,22 @@ $main_cta = get_field('main_cta');
                             <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/latest-work-2.jpg" alt="" />
                             <h3 class="ys-carousel-card--heading">Lawman: Bass Reeves</h3>
                             <p class="ys-carousel-card--date">Paramount+</p>
+                        </div>
+                        <a href="#" class="ys-btn ys-btn--yellow"><span>Watch Now</span></a>
+                    </div>
+                    <div class="ys-carousel-card">
+                        <div>
+                            <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/latest-work-3.jpg" alt="" />
+                            <h3 class="ys-carousel-card--heading">The After</h3>
+                            <p class="ys-carousel-card--date">Netflix</p>
+                        </div>
+                        <a href="#" class="ys-btn ys-btn--yellow"><span>Watch Now</span></a>
+                    </div>
+                    <div class="ys-carousel-card">
+                        <div>
+                            <img src="<?php echo site_url() ?>/wp-content/uploads/2024/09/latest-work-3.jpg" alt="" />
+                            <h3 class="ys-carousel-card--heading">The After</h3>
+                            <p class="ys-carousel-card--date">Netflix</p>
                         </div>
                         <a href="#" class="ys-btn ys-btn--yellow"><span>Watch Now</span></a>
                     </div>

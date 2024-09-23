@@ -1,24 +1,22 @@
 @use 'vars';
 
 .ys-carousel-cards--container {
-  padding-top: 3.5rem;
-  display: grid;
-  gap: 8rem;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 1fr;
-  @include vars.breakpoint(medium) {
-    gap: 3.5rem;
-    grid-template-columns: 1fr 1fr 1fr;
+  padding-top: vars.$pad-large;
+  &-grid {
+    padding-top: 3.5rem;
+    display: grid;
+    gap: 8rem;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    @include vars.breakpoint(medium) {
+      gap: 3.5rem;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }
 
 .ys-carousel-card {
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
-  width: 100%;
-  justify-content: space-between;
-
   &--date {
     font-style: italic;
     font-size: 1.25rem;
@@ -71,14 +69,42 @@
   }
 }
 
-.slick-next:before, .slick-prev:before {
-  color: #000 !important;
+
+.slick-slide {
+  padding: 0 1.3rem;
+  @include vars.breakpoint(medium) {
+    max-width: 26rem;
+  }
+
+  .ys-btn {
+    max-width: 100%;
+  }
+}
+
+$arrow-spacing: -60px;
+$arrow-spacing-mobile: -40px;
+
+.slick-next, .slick-prev {
+  opacity: 1;
 }
 
 .slick-next {
-  right: 0 !important;
+  right: -4px !important;
+  @include vars.breakpoint(medium) {
+    right: $arrow-spacing !important;
+  }
+
+  &:before {
+    content: url("data:image/svg+xml,%3Csvg width='56' height='78' viewBox='0 0 56 78' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_138' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='0' y='0' width='56' height='78'%3E%3Cpath d='M0.0400391 77.6367H55.2933V0.975266H0.0400391V77.6367Z' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_138)'%3E%3Cpath d='M3.37451 74.3037L50.3812 30.0877L21.9345 4.30905' stroke='%23E5E5E5' stroke-width='6.66667' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E%0A") !important;
+  }
 }
 
 .slick-prev {
-  left: 0 !important;
+  left: $arrow-spacing-mobile !important;
+  @include vars.breakpoint(medium) {
+    left: $arrow-spacing !important;
+  }
+  &:before {
+    content: url("data:image/svg+xml,%3Csvg width='56' height='78' viewBox='0 0 56 78' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_1_146' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='0' y='0' width='56' height='78'%3E%3Cpath d='M0.363953 77.1831H55.6173V0.521973H0.363953V77.1831Z' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_1_146)'%3E%3Cpath d='M52.2843 3.8569L5.27768 48.0729L33.7243 73.8516' stroke='%23E7E8E9' stroke-width='6.66667' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E%0A") !important;
+  }
 }
