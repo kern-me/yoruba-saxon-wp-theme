@@ -72,26 +72,6 @@ h1 {
   }
 }
 
-.skewed-image-container {
-  position: relative;
-  @include vars.breakpoint(medium) {
-    overflow: hidden;
-    transform: skew(vars.$skew);
-    left: -4rem;
-  }
-  img {
-    @include vars.breakpoint(medium) {
-      max-width: none;
-      width: 160%;
-      transform: skew(vars.$skew-base);
-    }
-  }
-}
-
-
-
-
-
 .ys-section--meet-the-team {
   height: 50vh;
   @include vars.breakpoint(medium) {

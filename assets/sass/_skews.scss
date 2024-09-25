@@ -63,8 +63,11 @@
 
   .inner {
     padding: 0 vars.$section-gutter;
+  }
+
+  .slick-slide {
     @include vars.breakpoint(medium) {
-      padding: 0 4rem 0 12rem;
+      max-width: none;
     }
   }
 
@@ -73,15 +76,27 @@
     justify-content: space-between;
     &--heading {
       font-family: vars.$font-bold-reg;
-      @include vars.breakpoint(medium) {
-        font-family: vars.$font-bold-reg;
-      }
+    }
+    &--date, &--description {
+      font-family: vars.$font-body-reg;
+    }
+    &--description {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
     }
     h3, p, .ys-btn {
       @include vars.breakpoint(medium) {
         position: relative;
-        left: -7.5rem;
       }
+    }
+    img {
+      left: 0;
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -89,11 +104,7 @@
     font-family: vars.$font-bold-reg;
     transform: skew(vars.$skew);
     span {
-      transform: skew(vars.$skew-base);
-      font-family: vars.$font-bold-reg;
-      @include vars.breakpoint(medium) {
-        transform: skew(vars.$skew-base);
-      }
+      font-family: vars.$font-bold;
     }
   }
 }
