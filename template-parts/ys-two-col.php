@@ -64,17 +64,6 @@ $latest_work_heading = get_field('latest_work_heading');
                         endwhile;
                     endif;
                     ?>
-
-                    <!--
-                    <div class="ys-carousel-card">
-                        <div>
-                            <img src="/wp-content/uploads/2024/09/latest-work-3.jpg" alt="" />
-                            <h3 class="ys-carousel-card--heading">The After</h3>
-                            <p class="ys-carousel-card--date">Netflix</p>
-                        </div>
-                        <a href="#" class="ys-btn ys-btn--yellow"><span>Watch Now</span></a>
-                    </div>
-                    -->
                 </div>
             </div>
         </div>
