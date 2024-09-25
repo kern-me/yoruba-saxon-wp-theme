@@ -155,5 +155,10 @@
 html {
   &.active {
     overflow: hidden;
+    .menu-toggle {
+      span {
+        box-shadow: none;
+      }
+    }
   }
 }
