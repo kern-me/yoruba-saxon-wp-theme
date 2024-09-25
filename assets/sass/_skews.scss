@@ -65,15 +65,43 @@
     padding: 0 vars.$section-gutter;
   }
 
+  .slick-list {
+    @include vars.breakpoint(medium) {
+      clip-path: polygon(0% 63%, 7.65% 0%, 100% 0%, 94% 50%, 91.5% 100%, 0% 100%)
+    }
+  }
+
   .slick-slide {
     @include vars.breakpoint(medium) {
-      max-width: none;
+      width: 415px;
     }
   }
 
   .ys-carousel-card {
     overflow: visible;
     justify-content: space-between;
+    &--image-container {
+      //transform: skew(vars.$skew);
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      height: 350px;
+      @include vars.breakpoint(medium) {
+        transform: skew(vars.$skew);
+
+        left: 45px;
+      }
+      img {
+        height: 100%;
+        @include vars.breakpoint(medium) {
+          left: -55px;
+          width: 128%;
+          transform: skew(vars.$skew-base);
+        }
+
+      }
+    }
+
     &--heading {
       font-family: vars.$font-bold-reg;
     }
@@ -92,11 +120,6 @@
       @include vars.breakpoint(medium) {
         position: relative;
       }
-    }
-    img {
-      left: 0;
-      width: 100%;
-      //height: auto;
     }
   }
 

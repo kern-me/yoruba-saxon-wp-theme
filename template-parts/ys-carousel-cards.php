@@ -4,7 +4,7 @@
         <?php $press_heading = get_field('press_heading'); ?>
         <h2 class="heading-xl"><?php echo $press_heading ?></h2>
 
-        <div class="ys-carousel-cards--container-grid ys-slick-no-skew">
+        <div class="ys-carousel-cards--container-grid ys-slick">
             <?php
             if( have_rows('press_cards') ):
                 while( have_rows('press_cards') ) : the_row();
@@ -21,9 +21,9 @@
                     endif;
 
                     echo '<div class="ys-carousel-card">';
-
+                    echo '<div class="ys-carousel-card--image-container">';
                     echo '<img src="' . esc_url($press_card_image['url']) . '" alt="' . esc_attr($press_card_image['alt']) . '" />';
-
+                    echo '</div>';
 
                     echo '<div>';
                     echo '<h3 class="ys-carousel-card--heading">' . $press_card_heading . '</h3>';
