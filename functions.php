@@ -196,6 +196,10 @@ add_action('wp_enqueue_scripts', 'include_custom_jquery');
 
 
 
+function hide_admin_comments() {
+    echo '<style>#menu-comments {display:none}</style>';
+}
+add_action('admin_head', 'hide_admin_comments');
 
 
 
