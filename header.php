@@ -20,16 +20,15 @@
         <nav class="menu--right" role="navigation">
             <div class="menu-toggle">
                 <input id="nav-btn" type="checkbox" />
-
                 <span></span>
                 <span></span>
                 <span></span>
                 <ul class="menu-item">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Press</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/team">Team</a></li>
+                    <li><a href="/press">Press</a></li>
                 </ul>
             </div>
         </nav>
