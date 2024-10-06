@@ -1,0 +1,96 @@
+@use 'vars';
+
+body.projects {
+
+}
+
+.ys-section--projects {
+  padding: vars.$section-padding 0;
+
+  .inner {
+    padding: 0 vars.$section-gutter;
+  }
+}
+
+.u-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ys-project {
+  transform: skew(vars.$skew);
+  overflow: hidden;
+  position: relative;
+  &:after {
+    z-index: 0;
+    transition: opacity 0.25s ease-in;
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    left: -50%;
+    top: 50%;
+    translate: 50% -50%;
+  }
+
+  &-image-container {
+    height: 100%;
+    img {
+      height: 100%;
+      object-fit: cover;
+      max-width: none;
+      width: 122%;
+      transform: skew(vars.$skew-base);
+      left: -11%;
+      position: relative;
+    }
+  }
+
+  &-text-container {
+    transition: opacity 0.15s ease-out;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    translate: 33% -50%;
+    color: white;
+    z-index: 1;
+    text-align: center;
+    h3 {
+      font-family: vars.$font-bold;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-family: vars.$font-body;
+    }
+    h3, p {
+    }
+  }
+
+  &:hover {
+    .ys-project-text-container {
+      opacity: 1;
+    }
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+// Grid
+
+.ys-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  //grid-template-rows: masonry;
+  grid-gap: 1rem;
+}
+
+.ys-project {
+  &:nth-child(3){
+    //grid-row: span 10;
+  }
+}
