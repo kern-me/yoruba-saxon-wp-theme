@@ -3,7 +3,7 @@
 // Two Column
 .ys-two-col {
   display: grid;
-  gap: vars.$pad-medium;
+  gap: vars.$pad-m;
 
   @include vars.breakpoint(medium) {
     gap: 9%;
@@ -45,6 +45,34 @@
     @include vars.breakpoint(medium) {
       margin-top: vars.$section-padding;
     }
+  }
+}
+
+.pad-top--xl {
+  padding-top: vars.$pad-l;
+  @include vars.breakpoint(medium) {
+    padding-top: vars.$pad-xl;
+  }
+}
+
+.margin-top--xl {
+  margin-top: vars.$pad-l;
+  @include vars.breakpoint(medium) {
+    margin-top: vars.$pad-xl;
+  }
+}
+
+.pad-top--l {
+  padding-top: vars.$pad-m;
+  @include vars.breakpoint(medium) {
+    padding-top: vars.$pad-l;
+  }
+}
+
+.margin-top--l {
+  margin-top: vars.$pad-m;
+  @include vars.breakpoint(medium) {
+    margin-top: vars.$pad-l;
   }
 }
 

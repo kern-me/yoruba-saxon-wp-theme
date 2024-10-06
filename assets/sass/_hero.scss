@@ -9,6 +9,7 @@
   height: vars.$hero-height-mobile;
   justify-content: center;
   padding: 0 vars.$section-gutter;
+  align-items: center;
   @media (min-width: 1025px) and (min-height: 665px) {
     height: vars.$hero-height;
     padding: vars.$section-padding 0;
@@ -18,12 +19,17 @@
   &-inner {
     padding: 0;
   }
+}
 
-  .svg-logo {
-    position: relative;
-    height: auto;
-    @include vars.breakpoint(medium){
-      width: vars.$hero-logo-width;
+body {
+  &.home {
+    .ys-hero {
+      .svg-logo {
+        max-height: none;
+        @include vars.breakpoint(medium){
+          width: vars.$hero-logo-width;
+        }
+      }
     }
   }
 }

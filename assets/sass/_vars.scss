@@ -29,8 +29,9 @@ $skew-base: -$skew;
 $section-padding: 8rem;
 $section-padding-mobile: calc($section-padding/2);
 
-$pad-large: calc($section-padding/2);
-$pad-medium: calc($section-padding/4);
+$pad-xl: calc($section-padding);
+$pad-l: calc($section-padding/2);
+$pad-m: calc($section-padding/4);
 $section-gutter: 5vw;
 
 $carousel-card-height: 400px;
