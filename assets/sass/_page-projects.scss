@@ -1,9 +1,5 @@
 @use 'vars';
 
-body.projects {
-
-}
-
 .ys-section--projects {
   padding: vars.$section-padding 0;
 
@@ -21,52 +17,75 @@ body.projects {
   transform: skew(vars.$skew);
   overflow: hidden;
   position: relative;
+  text-decoration: none;
   &:after {
-    z-index: 0;
-    transition: opacity 0.25s ease-in;
-    opacity: 0;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.7);
-    left: -50%;
-    top: 50%;
-    translate: 50% -50%;
+    @include vars.breakpoint(medium){
+      z-index: 0;
+      transition: opacity 0.25s ease-in;
+      opacity: 0;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      left: -50%;
+      top: 50%;
+      translate: 50% -50%;
+    }
   }
 
   &-image-container {
-    height: 100%;
-    img {
+    height: auto;
+    @include vars.breakpoint(medium){
       height: 100%;
-      object-fit: cover;
-      max-width: none;
-      width: 122%;
-      transform: skew(vars.$skew-base);
-      left: -11%;
+    }
+    img {
       position: relative;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      @include vars.breakpoint(medium){
+        height: 100%;
+        object-fit: cover;
+        max-width: none;
+        transform: skew(vars.$skew-base);
+        width: 122%;
+        left: -11%;
+      }
     }
   }
 
   &-text-container {
-    transition: opacity 0.15s ease-out;
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    translate: 33% -50%;
-    color: white;
+    color: vars.$black;
     z-index: 1;
     text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    @include vars.breakpoint(medium){
+      color: white;
+      transform: skew(vars.$skew-base);
+      transition: opacity 0.15s ease-out;
+      opacity: 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+    }
+
     h3 {
-      font-family: vars.$font-bold;
-      margin-top: 1rem;
+      font-family: vars.$font-bold-reg;
       margin-bottom: 0.5rem;
     }
     p {
-      font-family: vars.$font-body;
+      font-family: vars.$font-body-reg;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
     }
     h3, p {
+      transform: skew(0deg);
+      line-height: 1;
     }
   }
 
@@ -83,14 +102,12 @@ body.projects {
 // Grid
 
 .ys-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-  //grid-template-rows: masonry;
-  grid-gap: 1rem;
-}
+  display: block;
 
-.ys-project {
-  &:nth-child(3){
-    //grid-row: span 10;
+  @include vars.breakpoint(medium){
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    //grid-template-rows: masonry;
+    grid-gap: 1rem;
   }
 }

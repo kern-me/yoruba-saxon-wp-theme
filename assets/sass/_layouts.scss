@@ -48,35 +48,6 @@
   }
 }
 
-.pad-top--xl {
-  padding-top: vars.$pad-l;
-  @include vars.breakpoint(medium) {
-    padding-top: vars.$pad-xl;
-  }
-}
-
-.margin-top--xl {
-  margin-top: vars.$pad-l;
-  @include vars.breakpoint(medium) {
-    margin-top: vars.$pad-xl;
-  }
-}
-
-.pad-top--l {
-  padding-top: vars.$pad-m;
-  @include vars.breakpoint(medium) {
-    padding-top: vars.$pad-l;
-  }
-}
-
-.margin-top--l {
-  margin-top: vars.$pad-m;
-  @include vars.breakpoint(medium) {
-    margin-top: vars.$pad-l;
-  }
-}
-
-
 .inner {
   padding: 0;
   margin: 0 auto;
