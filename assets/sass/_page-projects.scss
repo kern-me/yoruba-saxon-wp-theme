@@ -8,11 +8,6 @@
   }
 }
 
-.u-centered {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .ys-project {
   transform: skew(vars.$skew);
   overflow: hidden;
@@ -107,7 +102,52 @@
   @include vars.breakpoint(medium){
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-    //grid-template-rows: masonry;
-    grid-gap: 1rem;
+    grid-gap: 3.5rem;
+  }
+}
+
+.ys-hero-video {
+  padding: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+
+  .svg-logo {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    max-width: 65%;
+  }
+}
+
+.video-container {
+  width: 140%;
+  height: 100%;
+  right: 20%;
+  max-width: none;
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+
+  &:after {
+    content: '';
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.7)
+  }
+
+  video {
+    max-width: none;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
   }
 }

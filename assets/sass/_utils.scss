@@ -4,6 +4,11 @@
   transform: skew(0deg)
 }
 
+.u-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .text--no-skew {
   font-family: vars.$font-body-reg
 }
