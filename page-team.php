@@ -1,18 +1,7 @@
-<?php get_header(); ?>
-
-
-<section class="ys-hero"
-         style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/ys-hero-home.jpg')">
-
-    <svg class="svg-logo" width="309" height="179" viewBox="0 0 309 179" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M71.806 130.304V58.232H58V47H97.546V58.232H83.74V130.304H71.806Z" fill="white"/>
-        <path d="M103.985 130.304V47H139.553V58.232H115.919V82.685H136.511V93.917H115.919V118.37H139.553V130.304H103.985Z" fill="white"/>
-        <path d="M172.56 101.171L166.71 70.985H166.476L160.626 101.171H172.56ZM143.076 130.304L161.679 47H171.624L190.227 130.304H178.293L174.783 112.403H158.52L155.01 130.304H143.076Z" fill="white"/>
-        <path d="M197.274 130.304V47H208.74L224.067 91.109H224.301L239.511 47H251.094V130.304H239.16V79.643H238.926L227.109 115.445H221.142L209.442 79.643H209.208V130.304H197.274Z" fill="white"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M179.979 19H290V160H142.72L137.699 179H290H309V160V19V0H290H185L179.979 19ZM166.914 19L171.891 0H19H0V19V160V179H19H125L129.977 160H19V19H166.914Z" fill="white"/>
-    </svg>
-
-</section>
+<?php
+get_header();
+include_once ('template-parts/ys-hero.php');
+?>
 
 <section class="ys-section ys-section--projects">
     <div class="inner">

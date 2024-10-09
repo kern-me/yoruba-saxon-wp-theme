@@ -1,0 +1,7 @@
+@use 'vars';
+
+body {
+  &.page-about {
+    background-color: vars.$black
+  }
+}
