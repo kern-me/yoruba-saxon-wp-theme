@@ -7,10 +7,10 @@
         <div class="inner">
             <div class="site-footer--left-col">
                 <ul class="ys-list ys-list--clean">
-                    <li><strong>About</strong></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Press</a></li>
+                    <li><strong><a href="/about">About</a></strong></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/team">Team</a></li>
+                    <li><a href="/press">Press</a></li>
                 </ul>
                 <ul class="ys-list ys-list--clean">
                     <li><strong>Contact</strong></li>

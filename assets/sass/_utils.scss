@@ -17,6 +17,13 @@
   transform: skew(vars.$skew)
 }
 
+.pad-bottom--xl {
+  padding-bottom: vars.$pad-l;
+  @include vars.breakpoint(medium) {
+    padding-bottom: vars.$pad-xl;
+  }
+}
+
 .pad-top--xl {
   padding-top: vars.$pad-l;
   @include vars.breakpoint(medium) {

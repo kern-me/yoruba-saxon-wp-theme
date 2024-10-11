@@ -1,6 +1,6 @@
 <?php
 $media_selection = get_field('media_selection');
-$hero_heading_svg = get_field('hero_heading_svg');
+
 
 if ($media_selection === 'video') {
     $video_file = get_field('video_file');
@@ -15,15 +15,24 @@ if ($media_selection === 'video') {
             </div>';
 } else if ($media_selection === 'image') {
     $hero_image = get_field('hero_image');
+
     if ($hero_image) {
-        echo
-            '<section class="ys-hero" style="background-image: url(' . $hero_image['url'] . ')">';
+        echo '<section class="ys-hero" style="background-image: url(' . $hero_image['url'] . ')">';
     } else {
-        echo
-            '<section class="ys-hero"> ';
+        echo '<section class="ys-hero"> ';
     }
 }
-echo '<img class="ys-hero-heading" src="' . esc_url($hero_heading_svg['url']) . '" alt="' . esc_attr(get_the_title()) . '" />';
-echo '<h1 class="sr-only" aria-hidden="false">' . get_the_title() . '</h1>';
+
+if (is_page()) {
+    $hero_heading_svg = get_field('hero_heading_svg');
+    echo '<img class="ys-hero-heading" src="' . esc_url($hero_heading_svg['url']) . '" alt="' . esc_attr(get_the_title()) . '" />';
+    echo '<h1 class="sr-only" aria-hidden="false">' . get_the_title() . '</h1>';
+}
+
+
+if (is_single()) {
+    echo '<h1 class="">' . get_the_title() . '</h1>';
+}
+
 echo '</section>';
 

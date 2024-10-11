@@ -1,0 +1,88 @@
+@use 'vars';
+
+body.single-project {
+  .ys-hero {
+    justify-content: end;
+    padding: 0 vars.$section-gutter;
+    h1 {
+      font-family: "din", sans-serif;
+      margin: 0;
+      text-transform: uppercase;
+      color: white;
+      font-size: 8rem;
+      letter-spacing: 0.5rem;
+      line-height: 0.75;
+      position: relative;
+      bottom: -0.3rem;
+      @include vars.breakpoint(medium){
+        font-size: 11rem;
+      }
+    }
+  }
+
+  .ys-col.ys-col--last {
+    img {
+      object-position: center;
+      @include vars.breakpoint(medium) {
+        max-width: none;
+        width: 100%;
+        position: absolute;
+        transform: skew(12deg);
+        height: 100%;
+        left: 50%;
+        translate: -50%;
+      }
+    }
+  }
+}
+
+.video-container {
+  padding: 0 vars.$section-gutter;
+  position: relative;
+  z-index: 1;
+}
+
+.featured-review {
+  background-color: vars.$black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  top: -5rem;
+  min-height: 20rem;
+  padding: 10rem vars.$section-gutter 5rem;
+
+  p {
+    font-family: vars.$font-italic-reg;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin: 0;
+    @include vars.breakpoint(medium){
+      font-size: 2.5rem;
+    }
+    &:first-child {
+      &:before {
+        content: open-quote
+      }
+      &:after {
+        content: close-quote
+      }
+    }
+    &:last-child {
+      font-size: 1.25rem;
+      font-family: vars.$font-body-reg;
+      @include vars.breakpoint(medium){
+        font-size: 1.75rem;
+      }
+    }
+  }
+  * {
+    color: white;
+  }
+}
+
+
+

@@ -23,6 +23,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: 'barlowbolditalic';
+  src: url('../assets/fonts/barlow-bolditalic.woff2') format('woff2'),
+  url('../assets/fonts/barlow-bolditalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'barlowbold-rev';
   src: url('../assets/fonts/barlow-bold-rev.woff2') format('woff2'),
   url('../assets/fonts/barlow-bold-rev.woff') format('woff');
@@ -75,6 +82,13 @@
   font-family: 'barlowregular';
   src: url('../assets/fonts/barlow-regular.woff2') format('woff2'),
   url('../assets/fonts/barlow-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'barlowitalic';
+  src: url('../assets/fonts/barlow-italic.woff2') format('woff2'),
+  url('../assets/fonts/barlow-italic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

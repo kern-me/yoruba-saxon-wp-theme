@@ -12,3 +12,18 @@ document.getElementById('nav-btn').onclick = function(){
         site_html.classList.add('active');
     }
 }
+
+if (document.querySelector('body.single-project')) {
+    const skewedImage = document.querySelector('.single-project-description .ys-col--last img')
+    const skewedImageContainer = document.querySelector('.single-project-description .ys-col--last')
+
+    function setSkewedImageWidth() {
+        //console.log(skewedImageContainer.getBoundingClientRect().width)
+        const elem_width = skewedImageContainer.getBoundingClientRect().width.toString();
+        console.log(elem_width)
+        skewedImage.style.width = elem_width + 'px'
+    }
+    window.addEventListener("resize", setSkewedImageWidth)
+}
+
+
