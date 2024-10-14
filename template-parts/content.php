@@ -123,15 +123,25 @@ if (is_singular('project')):
         <?php endif; ?>
 
         <?php
-        $supplemental_image = get_field('supplemental_image');
+        $supplemental_image1 = get_field('supplemental_image1');
+        $supplemental_image2 = get_field('supplemental_image2');
+        $supplemental_image3 = get_field('supplemental_image3');
 
-        if ($supplemental_image): ?>
+        ?>
             <section class="single-project-supplemental">
-                <img src="<?php echo esc_url($supplemental_image['url']) ?>"
-                     alt="<?php echo esc_attr($supplemental_image['alt']) ?>"/>
-            </section>
-        <?php endif; ?>
+                <?php if ($supplemental_image1): ?>
+                <img src="<?php echo esc_url($supplemental_image1['url']) ?>" alt="<?php echo esc_attr($supplemental_image1['alt']) ?>"/>
+                <?php endif; ?>
 
+                <?php if ($supplemental_image2): ?>
+                <img src="<?php echo esc_url($supplemental_image2['url']) ?>" alt="<?php echo esc_attr($supplemental_image2['alt']) ?>"/>
+                <?php endif; ?>
+
+                <?php if ($supplemental_image3): ?>
+                <img src="<?php echo esc_url($supplemental_image3['url']) ?>" alt="<?php echo esc_attr($supplemental_image3['alt']) ?>"/>
+                <?php endif; ?>
+
+            </section>
 <?php endif; ?>
 
 
