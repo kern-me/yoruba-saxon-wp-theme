@@ -18,12 +18,29 @@ if (document.querySelector('body.single-project')) {
     const skewedImageContainer = document.querySelector('.single-project-description .ys-col--last')
 
     function setSkewedImageWidth() {
-        //console.log(skewedImageContainer.getBoundingClientRect().width)
         const elem_width = skewedImageContainer.getBoundingClientRect().width.toString();
-        console.log(elem_width)
         skewedImage.style.width = elem_width + 'px'
     }
     window.addEventListener("resize", setSkewedImageWidth)
+
+    // Featured Video Play Button
+    const video = document.getElementById("featured_video");
+    const playButton = document.getElementById("featured_play_btn");
+
+    playButton.addEventListener("click", function() {
+        playButton.classList.remove('initial')
+
+        if (video.paused) {
+            playButton.classList.remove('play')
+            playButton.classList.add('pause')
+            video.play();
+        } else {
+            playButton.classList.remove('pause')
+            playButton.classList.add('play')
+            video.pause();
+        }
+    });
+
 }
 
 

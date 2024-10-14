@@ -8,7 +8,7 @@
  */
 ?>
 
-<div class="entry-content">
+    <div class="entry-content">
 <?php
 
 /*  -------------------------------------------------------------------
@@ -66,9 +66,12 @@ if (is_singular('project')):
         <?php
         if ($featured_media_selection === 'video'):
             $featured_video = get_field('featured_video');
+            $featured_video_poster = get_field('featured_video_poster');
+
             echo
                 '<div class="video-container">
-                        <video autoplay loop muted playsinline>
+                        <button id="featured_play_btn" class="ys-btn--video initial"></button>
+                        <video id="featured_video" poster="' . $featured_video_poster . '">
                             <source src="' . $featured_video . '" type="video/mp4">
                         </video>
                     </div>';
@@ -108,12 +111,13 @@ if (is_singular('project')):
                             ?>
                             <article class="ys-carousel-card">
                                 <div class="ys-carousel-card--image-container">
-                                    <?php echo get_the_post_thumbnail( $related_press_article->ID, 'thumbnail' ); ?>
+                                    <?php echo get_the_post_thumbnail($related_press_article->ID, 'thumbnail'); ?>
                                 </div>
                                 <h3><?php echo $publication_name ?></h3>
                                 <p class="ys-carousel-card--date"><?php echo $published_date ?></p>
                                 <p class="ys-carousel-card--description"><?php echo $press_description ?></p>
-                                <a class="ys-btn ys-btn--yellow ys-skew" href="<?php echo esc_url($press_link); ?>">Read More</a>
+                                <a class="ys-btn ys-btn--yellow ys-skew" href="<?php echo esc_url($press_link); ?>">Read
+                                    More</a>
                             </article>
 
                         <?php endforeach; ?>
@@ -128,50 +132,53 @@ if (is_singular('project')):
         $supplemental_image3 = get_field('supplemental_image3');
 
         ?>
-            <section class="single-project-supplemental">
-                <?php if ($supplemental_image1): ?>
-                <img src="<?php echo esc_url($supplemental_image1['url']) ?>" alt="<?php echo esc_attr($supplemental_image1['alt']) ?>"/>
-                <?php endif; ?>
+        <section class="single-project-supplemental">
+            <?php if ($supplemental_image1): ?>
+                <img src="<?php echo esc_url($supplemental_image1['url']) ?>"
+                     alt="<?php echo esc_attr($supplemental_image1['alt']) ?>"/>
+            <?php endif; ?>
 
-                <?php if ($supplemental_image2): ?>
-                <img src="<?php echo esc_url($supplemental_image2['url']) ?>" alt="<?php echo esc_attr($supplemental_image2['alt']) ?>"/>
-                <?php endif; ?>
+            <?php if ($supplemental_image2): ?>
+                <img src="<?php echo esc_url($supplemental_image2['url']) ?>"
+                     alt="<?php echo esc_attr($supplemental_image2['alt']) ?>"/>
+            <?php endif; ?>
 
-                <?php if ($supplemental_image3): ?>
-                <img src="<?php echo esc_url($supplemental_image3['url']) ?>" alt="<?php echo esc_attr($supplemental_image3['alt']) ?>"/>
-                <?php endif; ?>
+            <?php if ($supplemental_image3): ?>
+                <img src="<?php echo esc_url($supplemental_image3['url']) ?>"
+                     alt="<?php echo esc_attr($supplemental_image3['alt']) ?>"/>
+            <?php endif; ?>
 
-            </section>
-<?php endif; ?>
+        </section>
+    <?php endif; ?>
 
 
-<?php
-/*  -------------------------------------------------------------------
-    SINGLE PRESS ARTICLE CONTENT
-*/
+    <?php
+    /*  -------------------------------------------------------------------
+        SINGLE PRESS ARTICLE CONTENT
+    */
 
-if (is_singular('press')):
-    $press_image = get_field('press_image');
-    $publication = get_field('publication');
-    $published_date = get_field('published_date');
-    $press_description = get_field('press_description');
-    $press_link = get_field('press_link');
-?>
-    <section class="single-press">
-        <div class="inner inner--content">
-            <article>
-                <div class="skewed-image-container">
-                    <?php if ($press_image): ?>
-                        <img src="<?php echo $press_image['url'] ?>" alt="<?php echo $press_image['alt'] ?>"/>
-                    <?php endif; ?>
-                </div>
-                <h3 class="press-card--publication-name"><?php echo $publication ?></h3>
-                <p class="press-card--published-date"></p>
-                <p class="press-card--description"></p>
-                <a href="<?php echo $press_link ?>" target="_blank">Read More</a>
-            </article>
-        </div>
-    </section>
-<?php endif; ?>
-</div>
+    if (is_singular('press')):
+        $press_image = get_field('press_image');
+        $publication = get_field('publication');
+        $published_date = get_field('published_date');
+        $press_description = get_field('press_description');
+        $press_link = get_field('press_link');
+        ?>
+        <section class="single-press">
+            <div class="inner inner--content">
+                <article>
+                    <div class="skewed-image-container">
+                        <?php if ($press_image): ?>
+                            <img src="<?php echo $press_image['url'] ?>" alt="<?php echo $press_image['alt'] ?>"/>
+                        <?php endif; ?>
+                    </div>
+                    <h3 class="press-card--publication-name"><?php echo $publication ?></h3>
+                    <p class="press-card--published-date"></p>
+                    <p class="press-card--description"></p>
+                    <a href="<?php echo $press_link ?>" target="_blank">Read More</a>
+                </article>
+            </div>
+        </section>
+    <?php endif; ?>
+    </div>
 <?php endif; ?>
