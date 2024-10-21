@@ -120,3 +120,11 @@
   }
 }
 
+.ys-btn--skewed {
+  transform: skew(vars.$skew);
+  span {
+    font-family: "barlowbold", sans-serif;
+    transform: skew(vars.$skew-base);
+  }
+}
+
