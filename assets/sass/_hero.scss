@@ -13,6 +13,9 @@
   @media (min-width: 1025px) and (min-height: 665px) {
     height: vars.$hero-height;
   }
+  @include vars.breakpoint(large){
+    background-position: top;
+  }
 }
 
 img.ys-hero-heading {
