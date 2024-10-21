@@ -23,10 +23,14 @@ if ($media_selection === 'video') {
     }
 }
 
-if (is_page()) {
+if (is_page() && !is_page('about')) {
     $hero_heading_svg = get_field('hero_heading_svg');
     echo '<img class="ys-hero-heading" src="' . esc_url($hero_heading_svg['url']) . '" alt="' . esc_attr(get_the_title()) . '" />';
     echo '<h1 class="sr-only" aria-hidden="false">' . get_the_title() . '</h1>';
+}
+
+if (is_page('about')) {
+    echo '<h1>Stories <span>Un</span>told</h1>';
 }
 
 
