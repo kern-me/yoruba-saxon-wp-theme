@@ -18,29 +18,56 @@ if (document.querySelector('body.single-project')) {
     const skewedImageContainer = document.querySelector('.single-project-description .ys-col--last')
 
     function setSkewedImageWidth() {
-        const elem_width = skewedImageContainer.getBoundingClientRect().width.toString();
-        skewedImage.style.width = elem_width + 'px'
+        if (window.innerWidth > 1024) {
+            console.log(innerWidth)
+            const elem_width = skewedImageContainer.getBoundingClientRect().width.toString();
+            skewedImage.style.width = elem_width + 'px'
+        } else {
+            skewedImage.style.width = '100%'
+        }
     }
+
+    setSkewedImageWidth()
+
     window.addEventListener("resize", setSkewedImageWidth)
 
     // Featured Video Play Button
-    const video = document.getElementById("featured_video");
-    const playButton = document.getElementById("featured_play_btn");
+    if (document.getElementById('featured_video')) {
+        const video = document.getElementById("featured_video");
+        const playButton = document.getElementById("featured_play_btn");
 
-    playButton.addEventListener("click", function() {
-        playButton.classList.remove('initial')
+        playButton.addEventListener("click", function() {
+            playButton.classList.remove('initial')
 
-        if (video.paused) {
-            playButton.classList.remove('play')
-            playButton.classList.add('pause')
-            video.play();
-        } else {
-            playButton.classList.remove('pause')
-            playButton.classList.add('play')
-            video.pause();
-        }
-    });
+            if (video.paused) {
+                playButton.classList.remove('play')
+                playButton.classList.add('pause')
+                video.play();
+            } else {
+                playButton.classList.remove('pause')
+                playButton.classList.add('play')
+                video.pause();
+            }
+        });
+    }
+}
 
+if (document.querySelector('body.page-about')) {
+    const skewed_image_containers = document.querySelectorAll('.ys-masonry-grid a');
+    const skewed_images = document.querySelectorAll('.ys-masonry-grid a img');
+
+
+    function set_image_widths() {
+        skewed_images.forEach(element => {
+            const parentWidth = element.parentElement.getBoundingClientRect().width.toString()
+            //console.log(element.getBoundingClientRect().width.toString())
+            element.style.width = parentWidth + 'px'
+        });
+    }
+
+    set_image_widths()
+
+    window.addEventListener("resize", set_image_widths)
 }
 
 
