@@ -4,16 +4,21 @@ body.single-project {
   .ys-hero {
     justify-content: end;
     padding: 0 vars.$section-gutter;
+    min-height: 30vh;
     h1 {
       font-family: "din", sans-serif;
       margin: 0;
       text-transform: uppercase;
       color: white;
-      font-size: 8rem;
+      font-size: 6rem;
       letter-spacing: 0.5rem;
       line-height: 0.75;
       position: relative;
       bottom: -0.3rem;
+
+      @include vars.breakpoint(small){
+        font-size: 9rem;
+      }
       @include vars.breakpoint(medium){
         font-size: 11rem;
       }
@@ -69,20 +74,21 @@ body.single-project {
 
 
   .single-project-supplemental {
-    padding: vars.$section-gutter 5vw;
-
-    @include vars.breakpoint(medium) {
-      grid-auto-rows: 1fr;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      object-position: top;
+    padding-block: vars.$section-gutter;
+    &--grid {
       @include vars.breakpoint(medium) {
-        height: 100%;
+        grid-auto-rows: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top;
+        @include vars.breakpoint(medium) {
+          height: 100%;
+        }
       }
     }
   }

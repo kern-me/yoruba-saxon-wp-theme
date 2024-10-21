@@ -38,20 +38,42 @@ if (is_singular('project')):
                 <div class="ys-two-col ys-two-col--mobile-reversed">
                     <div class="ys-col ys-col--first ys-two-col--content">
                         <?php the_content(); ?>
+                        <?php if ($directed_by): ?>
                         <p><strong>Directed By: </strong><?php echo $directed_by ?></p>
+                        <?php endif; ?>
+
+                        <?php if ($produced_by): ?>
                         <p><strong>Produced By: </strong><?php echo $produced_by ?></p>
+                        <?php endif; ?>
+
+                        <?php if ($studio): ?>
                         <p><strong>Studio: </strong><?php echo $studio ?></p>
+                        <?php endif; ?>
+
+                        <?php if ($written_by): ?>
                         <p><strong>Written By: </strong><?php echo $written_by ?></p>
+                        <?php endif; ?>
+
+                        <?php if ($starring): ?>
                         <p><strong>Starring: </strong><?php echo $starring ?></p>
+                        <?php endif; ?>
+
+                        <?php if ($release_date): ?>
                         <p><strong>Release Date: </strong><?php echo $release_date ?></p>
+                        <?php endif; ?>
+
+                        <?php if ($watch_link): ?>
                         <a class="ys-btn ys-btn--yellow" href="<?php echo esc_url($link_url); ?>"
                            target="<?php echo esc_attr($link_target); ?>">
                             <span><?php echo esc_html($link_title); ?></span>
                         </a>
+                        <?php endif; ?>
                     </div>
                     <div class="ys-col ys-col--last">
+                        <?php if($description_image): ?>
                         <img src=" <?php echo esc_url($description_image['url']) ?>'"
                              alt="<?php echo esc_attr($description_image['alt']) ?>"/>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -78,7 +100,9 @@ if (is_singular('project')):
 
         elseif ($featured_media_selection === 'image'):
             $featured_media_image = get_field('featured_image');
-            echo '<img src="' . esc_url($featured_media_image['url']) . '" alt="' . esc_attr($featured_media_image['alt']) . '"/>';
+            if ($featured_media_image):
+                echo '<img src="' . esc_url($featured_media_image['url']) . '" alt="' . esc_attr($featured_media_image['alt']) . '"/>';
+            endif;
         endif;
 
         $featured_review = get_field('featured_review');
@@ -133,6 +157,8 @@ if (is_singular('project')):
 
         ?>
         <section class="single-project-supplemental">
+            <div class="inner">
+                <div class="single-project-supplemental--grid">
             <?php if ($supplemental_image1): ?>
                 <img src="<?php echo esc_url($supplemental_image1['url']) ?>"
                      alt="<?php echo esc_attr($supplemental_image1['alt']) ?>"/>
@@ -147,7 +173,7 @@ if (is_singular('project')):
                 <img src="<?php echo esc_url($supplemental_image3['url']) ?>"
                      alt="<?php echo esc_attr($supplemental_image3['alt']) ?>"/>
             <?php endif; ?>
-
+            </div>
         </section>
     <?php endif; ?>
 
