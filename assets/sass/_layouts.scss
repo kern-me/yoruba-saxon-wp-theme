@@ -66,25 +66,6 @@
   padding-inline: vars.$section-gutter
 }
 
-@mixin skewed-container {
-  transform: skew(vars.$skew);
-  overflow: hidden;
-  position: relative;
-
-  img {
-    position: absolute;
-    max-width: none;
-    transform: skew(vars.$skew-base);
-    object-fit: cover;
-    object-position: top;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    @include vars.breakpoint(medium) {
-      position: relative;
-    }
-  }
-}
 
 .ys-masonry-grid {
   display: flex;
@@ -100,10 +81,106 @@
     }
   }
   a {
-    display: inline-block;
+    display: block;
     margin-bottom: 2rem;
     width: 100%;
     height: 100%;
-    @include skewed-container;
+    transform: skew(0);
+    overflow: hidden;
+    position: relative;
+    @include vars.breakpoint(medium) {
+      display: inline-block;
+      transform: skew(vars.$skew);
+    }
+
+    img {
+      position: relative;
+      transform: skew(0);
+      object-fit: cover;
+      object-position: top;
+      width: 100%;
+      height: 100%;
+      @include vars.breakpoint(medium) {
+        height: auto;
+        left: 50%;
+        top: 50%;
+        translate: -50% -50%;
+        position: absolute;
+        max-width: none;
+        transform: skew(vars.$skew-base);
+      }
+    }
+
+    @include vars.breakpoint(medium) {
+      transform: skew(vars.$skew);
+    }
   }
 }
+
+.skewed-row {
+  $gap: 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include vars.breakpoint(medium) {
+    transform: skew(vars.$skew);
+  }
+
+  .skewed-col {
+    h3 {
+      font-family: vars.$font-bold-reg;
+      @include vars.breakpoint(medium) {
+        font-family: vars.$font-bold;
+      }
+    }
+    p {
+      font-family: vars.$font-body-reg;
+      @include vars.breakpoint(medium) {
+        font-family: vars.$font-body;
+      }
+    }
+    @include vars.breakpoint(medium) {
+      width: calc(50% - $gap);
+    }
+    &--first {
+      order: 2;
+      @include vars.breakpoint(medium) {
+        order: 1;
+      }
+    }
+    &--last {
+      order: 1;
+      @include vars.breakpoint(medium) {
+        order: 2;
+      }
+    }
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.skewed-img-container {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  img {
+    position: relative;
+    object-position: top;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+
+    @include vars.breakpoint(medium) {
+      object-position: top;
+      max-width: none;
+      position: absolute;
+      left: -30%;
+      transform: skew(vars.$skew-base);
+    }
+
+  }
+}
+

@@ -13,6 +13,10 @@
   font-family: vars.$font-body-reg
 }
 
+.text--black {
+  color: vars.$black !important;
+}
+
 .ys-skew {
   transform: skew(vars.$skew)
 }
@@ -74,4 +78,5 @@
 .img-clip {
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
+
 

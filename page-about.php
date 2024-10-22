@@ -45,11 +45,19 @@ $partners = get_field('partners');
 
 <section class="ys-section pad-top--xl">
     <div class="inner gutter">
+
         <h2 class="heading-xl">Founders</h2>
-        <h3><?php echo $founders_heading ?></h3>
-        <p><?php echo $founders_description ?></p>
-        <img src="<?php echo $founders_image['url']; ?>" alt="<?php echo $founders_image['alt']; ?>">
-        <a href="<?php echo $founders_link['url']; ?>" target="_blank"><?php echo $founders_link['title']; ?></a>
+        <div class="skewed-row">
+            <div class="skewed-col skewed-col--first">
+                <div class="skew-shape--start"></div>
+                <h3><?php echo $founders_heading ?></h3>
+                <p><?php echo $founders_description ?></p>
+                <a class="ys-btn ys-btn--skewed text--black ys-btn--yellow" href="<?php echo $founders_link['url']; ?>" target="_blank"><?php echo $founders_link['title']; ?></a>
+            </div>
+            <div class="skewed-col skewed-col--last skewed-img-container">
+                <img src="<?php echo $founders_image['url']; ?>" alt="<?php echo $founders_image['alt']; ?>">
+            </div>
+        </div>
     </div>
 </section>
 
