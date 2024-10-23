@@ -8,7 +8,11 @@ body.page-about {
   }
 
   h2 {
-    font-size: 3.5rem;
+    font-size: 15vw;
+    white-space: nowrap;
+    @include vars.breakpoint(small) {
+      font-size: 3.5rem;
+    }
     @include vars.breakpoint(medium) {
       font-size: 6rem;
     }

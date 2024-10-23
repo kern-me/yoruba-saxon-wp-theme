@@ -66,6 +66,49 @@
   padding-inline: vars.$section-gutter
 }
 
+.flex-grid {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  flex-direction: column;
+  @include vars.breakpoint(medium) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  &--partners {
+    img {
+      max-width: 6rem;
+
+      &.partner-logo {
+        &--s,
+        &--m,
+        &--l {
+          max-width: 150px;
+        }
+
+        &--s {
+          @include vars.breakpoint(medium) {
+            max-width: 6rem;
+          }
+        }
+        &--m {
+          @include vars.breakpoint(medium) {
+            max-width: 10rem;
+          }
+        }
+        &--l {
+          @include vars.breakpoint(medium) {
+            max-width: 14rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 
 

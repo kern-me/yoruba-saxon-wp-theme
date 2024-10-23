@@ -30,7 +30,7 @@ if (is_page() && !is_page('about')) {
 }
 
 if (is_page('about')) {
-    echo '<h1>Stories <span>Un</span>told</h1>';
+    echo '<h1><span>Stories</span> <span class="text--strikethrough">Untold</span></h1>';
 }
 
 

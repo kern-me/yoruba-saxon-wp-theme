@@ -93,14 +93,24 @@ $partners = get_field('partners');
 <section id="partners" class="ys-section pad-top--xl">
     <div class="inner gutter">
         <h2 class="heading-xl">Partners</h2>
+        <div class="flex-grid flex-grid--partners pad-top--l">
         <?php
         if (have_rows('partners')):
             while (have_rows('partners')) : the_row();
                 $partner_logo = get_sub_field('partner_logo');
-                echo '<img src="' . $partner_logo['url'] . '" alt="' . $partner_logo['alt'] . '" />';
+                $partner_logo_size = get_sub_field('partner_logo_size');
+
+                if ($partner_logo_size):
+                    $partner_logo_size = get_sub_field('partner_logo_size');
+                else:
+                    $partner_logo_size = '';
+                endif;
+
+                echo '<img class="' . $partner_logo_size . '" src="' . $partner_logo['url'] . '" alt="' . $partner_logo['alt'] . '" />';
             endwhile;
         endif;
         ?>
+        </div>
     </div>
 </section>
 
