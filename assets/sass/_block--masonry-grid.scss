@@ -1,0 +1,69 @@
+@use 'vars';
+
+.block--masonry-grid {
+  .grid {
+    $gap: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: $gap;
+    max-width: 1500px;
+    @include vars.breakpoint(medium) {
+      padding-left: $gap;
+    }
+    &--col {
+      width: 100%;
+      height: 20vh;
+      @include vars.breakpoint(medium) {
+        width: 30%;
+        height: 400px;
+      }
+    }
+    a {
+      display: block;
+      transform: skew(0);
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 20rem;
+      @include vars.breakpoint(medium) {
+        display: inline-block;
+        transform: skew(vars.$skew);
+        width: 20rem;
+      }
+
+      img {
+        position: relative;
+        transform: skew(0);
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+        height: 100%;
+
+        @include vars.breakpoint(medium) {
+          width: 160%;
+          left: -30%;
+          max-width: none;
+          transform: skew(vars.$skew-base);
+        }
+      }
+
+      @include vars.breakpoint(medium) {
+        transform: skew(vars.$skew);
+      }
+    }
+  }
+
+  .ys-btn {
+    transform: skew(vars.$skew);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    span {
+      transform: skew(vars.$skew-base);
+      font-family: vars.$font-bold-reg;
+    }
+  }
+}
+

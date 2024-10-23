@@ -1,0 +1,126 @@
+@use 'vars';
+
+.block--two-col-img {
+  p {
+    strong {
+      font-family: vars.$font-bold-reg;
+      @include vars.breakpoint(medium) {
+        font-family: vars.$font-bold;
+      }
+    }
+  }
+  h3 {
+    @include vars.breakpoint(medium) {
+      padding-top: 4rem;
+    }
+
+  }
+  .skewed-row {
+    $gap: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include vars.breakpoint(medium) {
+      transform: skew(vars.$skew);
+    }
+
+    .skewed-col {
+      h3 {
+        font-family: vars.$font-bold-reg;
+        @include vars.breakpoint(medium) {
+          font-family: vars.$font-bold;
+        }
+      }
+      p {
+        font-family: vars.$font-body-reg;
+        @include vars.breakpoint(medium) {
+          font-family: vars.$font-body;
+        }
+      }
+      @include vars.breakpoint(medium) {
+        width: calc(50% - $gap);
+      }
+      &--first {
+        order: 2;
+        @include vars.breakpoint(medium) {
+          order: 1;
+        }
+      }
+      &--last {
+        order: 1;
+        @include vars.breakpoint(medium) {
+          order: 2;
+        }
+      }
+    }
+
+    &--reversed {
+      .skewed-col {
+        &--first {
+          order: 1;
+          @include vars.breakpoint(medium) {
+            order: 1;
+          }
+        }
+        &--last {
+          order: 2;
+          @include vars.breakpoint(medium) {
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+
+  .skewed-img-container {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    @include vars.breakpoint(medium) {
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      position: relative;
+      object-position: center;
+      max-width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      max-height: 20rem;
+      margin-top: 2rem;
+      @include vars.breakpoint(medium) {
+        margin-top: 0;
+        aspect-ratio: auto;
+        object-position: top;
+        width: 160%;
+        max-width: none;
+        max-height: 50rem;
+        height: 100%;
+        //position: absolute;
+        left: -30%;
+        transform: skew(vars.$skew-base);
+      }
+    }
+  }
+
+  .ys-btn {
+    transform: skew(vars.$skew);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    @include vars.breakpoint(medium) {
+      transform: skew(0);
+    }
+    span {
+      @include vars.breakpoint(medium) {
+        transform: skew(vars.$skew-base);
+        font-family: vars.$font-bold-reg;
+      }
+    }
+  }
+}

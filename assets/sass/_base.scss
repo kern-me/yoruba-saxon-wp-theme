@@ -26,3 +26,8 @@ strong {
   font-weight: normal;
   font-family: vars.$font-bold-reg;
 }
+
+p:empty {
+  display: none;
+}
+
