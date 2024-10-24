@@ -49,6 +49,13 @@
   }
 }
 
+.margin-top--xxl {
+  margin-top: vars.$pad-xl;
+  @include vars.breakpoint(medium) {
+    margin-top: vars.$pad-xxl;
+  }
+}
+
 .margin-top--xl {
   margin-top: vars.$pad-l;
   @include vars.breakpoint(medium) {

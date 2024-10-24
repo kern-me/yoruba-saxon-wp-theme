@@ -21,7 +21,6 @@
     align-items: flex-start;
     @include vars.breakpoint(medium) {
       gap: $gap;
-      padding-top: 4rem;
       transform: skew(vars.$skew);
     }
 

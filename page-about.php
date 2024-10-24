@@ -19,7 +19,7 @@ $partners = get_field('partners');
     </div>
 </section>
 
-<section id="projects" class="ys-section pad-top--xxl block--masonry-grid">
+<section id="projects" class="ys-section margin-top--xxl block--masonry-grid">
     <div class="inner gutter">
         <h2 class="heading-l">Projects</h2>
         <div class="grid pad-top--l">
@@ -42,10 +42,10 @@ $partners = get_field('partners');
     </div>
 </section>
 
-<section id="founders" class="ys-section pad-top--xxl block--two-col-img founders-section">
-    <div class="inner gutter">
+<section class="ys-section margin-top--xxl block--two-col-img">
+    <div class="inner gutter ys-lines-section">
         <h2 class="heading-xl">Founders</h2>
-        <div class="skewed-row">
+        <div id="founders" class="skewed-row margin-top--l">
             <div class="skewed-col skewed-col--first">
                 <h3><?php echo $founders_heading ?></h3>
                 <p class="description"><?php echo $founders_description ?></p>
@@ -55,13 +55,8 @@ $partners = get_field('partners');
                 <img src="<?php echo $founders_image['url']; ?>" alt="<?php echo $founders_image['alt']; ?>">
             </div>
         </div>
-    </div>
-</section>
-
-<section id="press" class="ys-section pad-top--xxl block--two-col-img">
-    <div class="inner gutter">
-        <div class="skewed-row skewed-row--reversed">
-        <?php if ($featured_press):
+        <div id="press" class="skewed-row skewed-row--reversed margin-top--xxl">
+            <?php if ($featured_press):
             foreach ($featured_press as $press):
                 $pid = $press->ID;
 
@@ -103,7 +98,7 @@ $partners = get_field('partners');
     </div>
 </section>
 
-<section id="partners" class="ys-section pad-top--xxl">
+<section id="partners" class="ys-section margin-top--xxl">
     <div class="inner gutter">
         <h2 class="heading-xl">Partners</h2>
         <div class="flex-grid flex-grid--partners pad-top--l">

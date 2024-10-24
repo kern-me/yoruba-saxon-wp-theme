@@ -47,6 +47,10 @@ body.page-about {
   }
 
   #founders {
+    position: relative;
+    @include vars.breakpoint(medium) {
+      left: 4rem;
+    }
     h3 {
       padding-bottom: 1rem;
     }
@@ -108,7 +112,9 @@ body.page-about {
       }
     }
   }
+
   #press {
+    position: relative;
     h2 {
       line-height: 1.3;
       @include vars.breakpoint(medium) {
@@ -132,6 +138,7 @@ body.page-about {
 
 
   }
+
   h3 {
     text-transform: uppercase;
     font-size: 2rem;
@@ -139,6 +146,31 @@ body.page-about {
     @include vars.breakpoint(medium) {
       font-size: 3rem;
       padding-bottom: 0
+    }
+  }
+
+  .ys-lines-section {
+    position: relative;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 5rem;
+      background: #131313;
+      z-index: -1;
+      height: 100%;
+      transform: skew(vars.$skew)
+    }
+    &:before {
+      left: -10rem;
+      top: 12rem;
+    }
+    &:after {
+      right: -8rem;
+      bottom: 0;
+    }
+    h2, h3, p {
+      position: relative;
+      z-index: 3;
     }
   }
 }
@@ -181,6 +213,10 @@ body.page-about {
     }
   }
 }
+
+
+
+
 
 
 
