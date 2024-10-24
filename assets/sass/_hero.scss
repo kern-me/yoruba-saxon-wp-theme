@@ -79,12 +79,11 @@ img.ys-hero-heading {
 body.page-about {
   .ys-hero {
     height: auto;
-    padding-block: 2.5rem;
-    padding-inline: vars.$section-gutter;
     align-items: center;
+    padding: 5rem 0 1.5rem;
     @include vars.breakpoint(medium) {
       justify-content: end;
-      padding-bottom: 5rem;
+      padding: 10.5rem vars.$section-gutter 2.5rem;
     }
     h1 {
       font-size: 18vw;

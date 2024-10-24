@@ -55,11 +55,16 @@
   }
 
   .ys-btn {
+    position: relative;
     transform: skew(vars.$skew);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    @include vars.breakpoint(medium) {
+      left: -4rem;
+    }
+
     span {
       transform: skew(vars.$skew-base);
       font-family: vars.$font-bold-reg;
