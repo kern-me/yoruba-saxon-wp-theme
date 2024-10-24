@@ -177,3 +177,22 @@ body.page-about {
     background-color: vars.$dark-gray
   }
 }
+
+body.page-team {
+  .menu-toggle {
+    span {
+      background: black;
+      box-shadow: none;
+    }
+  }
+}
+
+html.active {
+  body.page-team {
+    .menu-toggle {
+      span {
+        background: white;
+      }
+    }
+  }
+}
