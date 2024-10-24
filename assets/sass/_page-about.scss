@@ -46,20 +46,69 @@ body.page-about {
     }
   }
 
-  .press-section {
+  #projects {
+    .grid {
+      a {
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          opacity: 0;
+          z-index: 1;
+          background-color: rgba(0, 0, 0, 0.7);
+          transition: opacity .15s ease-in;
+          @include vars.breakpoint(medium) {
+            opacity: 0;
+          }
+        }
+        &:hover {
+          &:before {
+            opacity: 1;
+          }
+          span {
+            opacity: 1;
+          }
+        }
+        span {
+          opacity: 1;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          translate: -50%;
+          transition: opacity 0.15s ease-in;
+          z-index: 1;
+          color: white;
+          font-family: vars.$font-body-reg;
+          font-size: 1.25rem;
+          line-height: 1.15;
+          text-align: center;
+          background-color: rgba(0,0,0,0.8);
+          padding: 3%;
+          width: 100%;
+          @include vars.breakpoint(medium) {
+            top: 50%;
+            bottom: unset;
+            left: 50%;
+            translate: -50% -50%;
+            font-family: vars.$font-body;
+            opacity: 0;
+            background-color: rgba(0,0,0,0)
+          }
+        }
+
+      }
+    }
+  }
+  #press {
     h2 {
       line-height: 1.3;
       @include vars.breakpoint(medium) {
         line-height: 0.6;
       }
     }
-  }
-
-  .founders-section {
-
-  }
-  #press {
-
   }
   h3 {
     text-transform: uppercase;

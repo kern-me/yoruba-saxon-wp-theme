@@ -30,9 +30,9 @@
 
     .skewed-col {
       h3 {
-        font-family: vars.$font-bold-reg;
+        font-family: vars.$font-body-reg;
         @include vars.breakpoint(medium) {
-          font-family: vars.$font-bold;
+          font-family: vars.$font-body;
         }
       }
       p {

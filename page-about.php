@@ -32,6 +32,7 @@ $partners = get_field('partners');
                 $project_link = get_permalink($pr_id);
                 ?>
                 <a href="<?php echo esc_url($project_link); ?>">
+                    <span><?php echo $project_title ?></span>
                     <img class="" src="<?php echo $project_image['url']; ?>" alt="<?php echo $project_image['alt']; ?>">
                 </a>
             <?php endforeach; ?>
