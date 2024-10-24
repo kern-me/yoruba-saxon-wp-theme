@@ -46,6 +46,12 @@ body.page-about {
     }
   }
 
+  #founders {
+    h3 {
+      padding-bottom: 1rem;
+    }
+  }
+
   #projects {
     .grid {
       a {
@@ -106,15 +112,72 @@ body.page-about {
     h2 {
       line-height: 1.3;
       @include vars.breakpoint(medium) {
+        padding-bottom: 4rem;
         line-height: 0.6;
       }
     }
+    h3 {
+      padding-bottom: 0;
+    }
+    .ys-carousel-card--date {
+      line-height: 1.3;
+      padding-top: 0;
+      margin-bottom: 2rem;
+    }
+    .description {
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+
   }
   h3 {
     text-transform: uppercase;
     font-size: 2rem;
+    line-height: 1.3;
     @include vars.breakpoint(medium) {
       font-size: 3rem;
+      padding-bottom: 0
+    }
+  }
+}
+
+.btn-group {
+  display: flex;
+  position: relative;
+  gap: 4rem;
+  padding-top: 4rem;
+  flex-direction: column;
+  @include vars.breakpoint(medium) {
+    flex-direction: row;
+    left: -10%;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    @include vars.breakpoint(medium) {
+      width: 50%;
+    }
+    &:first-child {
+      @include vars.breakpoint(medium) {
+        align-items: end;
+      }
+    }
+    &:last-child {
+      @include vars.breakpoint(medium) {
+        align-items: flex-start;
+      }
+    }
+    a.ys-btn {
+      transform: skew(vars.$skew);
+      margin: 0;
+      span {
+        transform: skew(0deg);
+        @include vars.breakpoint(medium) {
+          transform: skew(vars.$skew-base);
+        }
+      }
     }
   }
 }

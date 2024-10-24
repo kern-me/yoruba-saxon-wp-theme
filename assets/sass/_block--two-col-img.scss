@@ -10,21 +10,18 @@
     }
   }
   h3 {
-    @include vars.breakpoint(medium) {
-      padding-top: 4rem;
-    }
-
+    padding-bottom: 2rem;
   }
   .skewed-row {
-    $gap: 2rem;
+    $gap: 4rem;
 
     display: flex;
     flex-wrap: wrap;
-    gap: $gap;
+    gap: 2rem;
     align-items: flex-start;
-    justify-content: space-between;
-
     @include vars.breakpoint(medium) {
+      gap: $gap;
+      padding-top: 4rem;
       transform: skew(vars.$skew);
     }
 
@@ -98,7 +95,7 @@
         object-position: top;
         width: 160%;
         max-width: none;
-        max-height: 50rem;
+        max-height: 40rem;
         height: 100%;
         //position: absolute;
         left: -30%;
