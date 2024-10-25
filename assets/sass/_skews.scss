@@ -77,12 +77,6 @@
     }
   }
 
-  .slick-slide {
-    @include vars.breakpoint(medium) {
-      //width: 415px;
-    }
-  }
-
   .ys-carousel-card {
     overflow: visible;
     justify-content: space-between;
