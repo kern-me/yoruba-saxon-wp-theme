@@ -62,8 +62,8 @@
     object-fit: cover;
     object-position: top;
     @include vars.breakpoint(medium) {
-      left: -4.5rem;
-      width: 160%;
+      left: -4rem;
+      width: calc(100% + 8rem);
       max-width: none;
     }
   }

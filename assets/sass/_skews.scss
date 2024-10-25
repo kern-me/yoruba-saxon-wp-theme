@@ -87,24 +87,21 @@
     overflow: visible;
     justify-content: space-between;
     &--image-container {
-      //transform: skew(vars.$skew);
       overflow: hidden;
       width: 100%;
       position: relative;
       height: 350px;
       @include vars.breakpoint(medium) {
         transform: skew(vars.$skew);
-
         left: 45px;
       }
       img {
         height: 100%;
         @include vars.breakpoint(medium) {
-          left: -55px;
-          width: 128%;
+          left: -4rem;
+          width: calc(100% + 8rem);
           transform: skew(vars.$skew-base);
         }
-
       }
     }
 
