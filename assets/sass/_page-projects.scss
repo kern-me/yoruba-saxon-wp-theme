@@ -13,8 +13,11 @@
   overflow: hidden;
   position: relative;
   text-decoration: none;
+
   @include vars.breakpoint(medium){
     transform: skew(vars.$skew);
+    width: 25rem;
+    height: 25rem;
   }
   &:after {
     @include vars.breakpoint(medium){
@@ -47,8 +50,8 @@
         object-fit: cover;
         max-width: none;
         transform: skew(vars.$skew-base);
-        width: 122%;
-        left: -11%;
+        width: calc(100% + 14rem);
+        left: -7rem;
       }
     }
   }
@@ -113,7 +116,7 @@
 
   @include vars.breakpoint(medium){
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25rem, 0fr));
     grid-gap: 3.5rem;
   }
 }

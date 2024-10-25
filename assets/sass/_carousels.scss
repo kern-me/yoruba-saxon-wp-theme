@@ -17,6 +17,7 @@
 
 .ys-carousel-card {
   overflow: hidden;
+  height: 100%;
   &--date {
     font-style: italic;
     font-size: 1.25rem;
@@ -67,12 +68,15 @@
       max-width: none;
     }
   }
+  .ys-carousel-card--entry-content {
+    min-height: 7rem;
+  }
 }
 
 .slick-slide {
-  padding: 0 1.5rem;
+  padding: 0 2.2rem;
   @include vars.breakpoint(medium) {
-    max-width: 26rem;
+    width: 26rem;
   }
 
   .ys-btn {

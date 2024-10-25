@@ -135,4 +135,11 @@
   }
 }
 
+.u-clamp5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5 !important;
+  -webkit-box-orient: vertical;
+}
+
 

@@ -64,8 +64,8 @@ if (is_singular('project')):
 
                         <?php if ($watch_link): ?>
                         <a class="ys-btn ys-btn--yellow" href="<?php echo esc_url($link_url); ?>"
-                           target="<?php echo esc_attr($link_target); ?>">
-                            <span><?php echo esc_html($link_title); ?></span>
+                           target="_blank">
+                            <span>Watch Now</span>
                         </a>
                         <?php endif; ?>
                     </div>

@@ -30,32 +30,24 @@ include_once ('template-parts/ys-hero.php');
         </svg>
         <div class="ys-projects-grid ys-projects-grid--coming-soon pad-top--l">
             <?php
+            $projects_coming_soon = get_field('projects_coming_soon');
 
-            if( have_rows('projects_coming_soon') ):
-                while( have_rows('projects_coming_soon') ) : the_row();
-                    $project_name = get_sub_field('project_name');
-                    $project_description = get_sub_field('project_description');
-                    $project_image = get_sub_field('project_image');
-                    $project_link = get_sub_field('project_link');
-
-                    if( $project_link ):
-                        $link_url = $project_link['url'];
-                        $link_title = $project_link['title'];
-                        $link_target = $project_link['target'] ? $project_link['target'] : '_self';
-                    endif;
-
-                    echo '<a class="ys-project" href="'. esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '">';
-                    echo '<div class="ys-project-image-container">';
-                    echo '<img src="' . esc_url($project_image['url']) . '" alt="' . esc_attr($project_image['alt']) . '" />';
-                    echo '</div>';
-                    echo '<div class="ys-project-text-container">';
-                    echo '<h3>' . $project_name . '</h3>';
-                    echo '<p>' . $project_description . '</p>';
-                    echo '</div>';
-                    echo '</a>';
-                endwhile;
-            endif;
+            if($projects_coming_soon): foreach($projects_coming_soon as $project_card):
+                $img = get_field('description_image', $project_card->ID);
+                $title = get_the_title($project_card->ID);
+                $studio = get_field('studio', $project_card->ID);
+                $permalink =  get_permalink($project_card->ID);
             ?>
+            <a href="<?php echo $permalink ?>" class="ys-project">
+                <div class="ys-project-image-container">
+                    <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>">
+                </div>
+                <div class="ys-project-text-container">
+                    <h3><?php echo $title ?></h3>
+                    <p><?php echo $studio ?></p>
+                </div>
+            </a>
+            <?php endforeach; endif; ?>
         </div>
 
         <svg class="u-centered margin-top--xl" width="242" height="98" viewBox="0 0 242 98" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,32 +66,24 @@ include_once ('template-parts/ys-hero.php');
         </svg>
         <div class="ys-projects-grid pad-top--l">
             <?php
+            $projects_all = get_field('all_projects');
 
-            if( have_rows('all_projects') ):
-                while( have_rows('all_projects') ) : the_row();
-                    $all_projects_name = get_sub_field('all_projects_name');
-                    $all_projects_description = get_sub_field('all_projects_description');
-                    $all_projects_image = get_sub_field('all_projects_image');
-                    $all_projects_link = get_sub_field('all_projects_link');
-
-                    if( $all_projects_link ):
-                        $all_projects_link_url = $all_projects_link['url'];
-                        $all_projects_link_title = $all_projects_link['title'];
-                        $all_projects_link_target = $all_projects_link['target'] ? $all_projects_link['target'] : '_self';
-                    endif;
-
-                    echo '<a class="ys-project" href="'. esc_url( $all_projects_link_url ) . '" target="' . esc_attr( $all_projects_link_target ) . '">';
-                    echo '<div class="ys-project-image-container">';
-                    echo '<img src="' . esc_url($all_projects_image['url']) . '" alt="' . esc_attr($all_projects_image['alt']) . '" />';
-                    echo '</div>';
-                    echo '<div class="ys-project-text-container">';
-                    echo '<h3>' . $all_projects_name . '</h3>';
-                    echo '<p>' . $all_projects_description . '</p>';
-                    echo '</div>';
-                    echo '</a>';
-                endwhile;
-            endif;
-            ?>
+            if($projects_all): foreach($projects_all as $project_card):
+                $img = get_field('description_image', $project_card->ID);
+                $title = get_the_title($project_card->ID);
+                $studio = get_field('studio', $project_card->ID);
+                $permalink =  get_permalink($project_card->ID);
+                ?>
+                <a href="<?php echo $permalink ?>" class="ys-project">
+                    <div class="ys-project-image-container">
+                        <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>">
+                    </div>
+                    <div class="ys-project-text-container">
+                        <h3><?php echo $title ?></h3>
+                        <p><?php echo $studio ?></p>
+                    </div>
+                </a>
+            <?php endforeach; endif; ?>
         </div>
     </div>
 </section>

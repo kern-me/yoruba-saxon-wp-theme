@@ -51,7 +51,7 @@
   }
 }
 
-body.single, body.page-press {
+body.single, body.page-press, body.page-home {
   .ys-btn--yellow {
     &:hover {
       background: black;
@@ -59,8 +59,6 @@ body.single, body.page-press {
     }
   }
 }
-
-
 
 .wp-block-buttons, {
   & > .wp-block-button {

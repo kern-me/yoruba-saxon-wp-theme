@@ -6,6 +6,8 @@ $main_cta = get_field('main_cta');
 
 $latest_work_heading = get_field('latest_work_heading');
 
+$project_cards = get_field('project_cards');
+
 ?>
 <section class="ys-section ys-section--intro ys-section--pad-top">
     <div class="ys-skewed">
@@ -38,33 +40,25 @@ $latest_work_heading = get_field('latest_work_heading');
                 <h2 class="heading-xl"><?php echo $latest_work_heading ?></h2>
                 <div class="ys-carousel-cards--container ys-slick">
                     <?php
-
-                    if( have_rows('carousel_card') ):
-                        while( have_rows('carousel_card') ) : the_row();
-                            $carousel_card_heading = get_sub_field('card_heading');
-                            $carousel_card_date = get_sub_field('card_date');
-                            $carousel_card_description = get_sub_field('card_description');
-                            $carousel_card_image = get_sub_field('card_image');
-                            $carousel_card_link = get_sub_field('card_link');
-
-                            if( $carousel_card_link ):
-                                $link_url = $carousel_card_link['url'];
-                                $link_title = $carousel_card_link['title'];
-                                $link_target = $carousel_card_link['target'] ? $carousel_card_link['target'] : '_self';
-                            endif;
-
-                            echo '<div class="ys-carousel-card">';
-                            echo '<div>';
-                            echo '<img src="' . esc_url($carousel_card_image['url']) . '" alt="' . esc_attr($carousel_card_image['alt']) . '" />';
-                            echo '<h3 class="ys-carousel-card--heading">' . $carousel_card_heading . '</h3>';
-                            echo '<p class="ys-carousel-card--date">' . $carousel_card_description . '</p>';
-                            echo '</div>';
-                            echo '<a class="ys-btn ys-btn--yellow" href="'. esc_url( $link_url ) . '" target="' . esc_attr( $link_target ) . '">' . '<span>' . esc_html( $link_title ) . '</span></a>';
-                            echo '</div>';
-                        endwhile;
-                    endif;
-                    ?>
+                    if($project_cards): foreach($project_cards as $project_card):
+                        $img = get_field('description_image', $project_card->ID);
+                        $title = get_the_title($project_card->ID);
+                        $studio = get_field('studio', $project_card->ID);
+                        $permalink =  get_permalink($project_card->ID);
+                        ?>
+                        <article class="ys-carousel-card">
+                            <div class="ys-carousel-card--image-container">
+                                <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['alt'] ?>">
+                                <div class="ys-carousel-card--entry-content">
+                                    <h3 class="ys-carousel-card--heading"><?php echo $title ?></h3>
+                                    <p class="ys-carousel-card--date"><?php echo $studio ?></p>
+                                </div>
+                            </div>
+                            <a class="ys-btn ys-btn--yellow" href="<?php echo $permalink; ?>"><span>Read More</span></a>
+                        </article>
+                    <?php endforeach; endif; ?>
                 </div>
+
             </div>
         </div>
     </div>
