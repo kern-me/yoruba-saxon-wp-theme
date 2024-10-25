@@ -190,3 +190,20 @@ sup {
 sub {
   bottom: -0.25em;
 }
+
+body {
+  &.page-team {
+    @include vars.breakpoint(medium){
+      h2 {
+        margin-top: -1rem;
+      }
+    }
+  }
+  &.page-about {
+    @include vars.breakpoint(medium){
+      h3 {
+        margin-top: -1rem;
+      }
+    }
+  }
+}
