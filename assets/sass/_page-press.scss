@@ -1,0 +1,74 @@
+@use 'vars';
+
+body.page-press {
+  .ys-hero {
+    .ys-hero-heading {
+      max-width: 60%;
+      @include vars.breakpoint(medium){
+        max-width: 800px;
+      }
+    }
+  }
+  .press-heading-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+
+    h2, p {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin: 3rem 0 2rem;
+      font-family: vars.$font-bold-reg;
+      line-height: 1.3;
+      @include vars.breakpoint(medium){
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      font-family: vars.$font-italic-reg;
+      font-size: 1.5rem;
+      line-height: 1.5;
+      @include vars.breakpoint(medium){
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .ys-section.ys-lines-section {
+    position: unset;
+    &:before {
+      content: '';
+      width: 12rem;
+      height: 116vh;
+      position: absolute;
+      background: vars.$yellow;
+      transform: skew(vars.$skew);
+      top: 0;
+      left: -16rem;
+      z-index: -1;
+      @include vars.breakpoint(small){
+        left: -12rem;
+      }
+      @include vars.breakpoint(medium){
+        left: 0;
+      }
+    }
+  }
+  .ys-carousel-card--date {
+    margin: 0.5rem 0 1rem;
+  }
+  .ys-carousel-card--description {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

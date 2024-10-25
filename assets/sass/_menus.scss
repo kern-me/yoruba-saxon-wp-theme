@@ -178,7 +178,7 @@ body.page-about {
   }
 }
 
-body.page-team {
+body.page-team, body.page-press {
   .menu-toggle {
     span {
       background: black;
@@ -188,7 +188,7 @@ body.page-team {
 }
 
 html.active {
-  body.page-team {
+  body.page-team, body.page-press {
     .menu-toggle {
       span {
         background: white;

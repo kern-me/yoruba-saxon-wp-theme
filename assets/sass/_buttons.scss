@@ -51,6 +51,15 @@
   }
 }
 
+body.single, body.page-press {
+  .ys-btn--yellow {
+    &:hover {
+      background: black;
+      color: white;
+    }
+  }
+}
+
 
 
 .wp-block-buttons, {
