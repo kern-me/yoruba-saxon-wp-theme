@@ -16,9 +16,12 @@ if ($media_selection === 'video') {
 } else if ($media_selection === 'youtube') {
     $youtubeID = get_field('youtubeID');
     $youtube_title = get_field('youtube_title');
+    $youtube_start = get_field('youtube_start');
     echo
         '<section class="ys-hero ys-hero-video">
-            <iframe width="806" height="453" src="https://www.youtube.com/embed/' . $youtubeID . '" title="' . $youtube_title . '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+            <div class="iframe-overlay"></div>
+            <iframe width="100%" height="" src="https://www.youtube.com/embed/' . $youtubeID . '?start='.$youtube_start.'&autoplay=1&mute=1&loop=1&playlist='. $youtubeID . '"  allow="autoplay" title="' . $youtube_title . '" frameborder="0" allowfullscreen></iframe>';
+
 
 } else if ($media_selection === 'image') {
     $hero_image = get_field('hero_image');
