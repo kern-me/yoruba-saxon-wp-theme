@@ -142,4 +142,11 @@
   -webkit-box-orient: vertical;
 }
 
+.u-heading-width--l {
+  width: 75%;
+
+  @include vars.breakpoint(medium) {
+    width: 25rem;
+  }
+}
 

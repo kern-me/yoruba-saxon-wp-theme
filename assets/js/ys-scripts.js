@@ -29,7 +29,6 @@ if (document.querySelector('body.single-project')) {
 
     function setSkewedImageWidth() {
         if (window.innerWidth > 1024) {
-            console.log(innerWidth)
             const elem_width = skewedImageContainer.getBoundingClientRect().width.toString();
             skewedImage.style.width = elem_width + 'px'
         } else {
