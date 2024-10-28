@@ -1,8 +1,18 @@
 const nav_overlay = document.querySelector('.nav-overlay');
 const site_html = document.querySelector('html');
+const primary_menu = document.getElementById('nav-btn')
+
+document.addEventListener('click', (event) => {
+    if (!primary_menu.contains(event.target) && primary_menu.classList.contains('active')) {
+        nav_overlay.classList.remove('active');
+        primary_menu.click();
+        primary_menu.classList.remove('active');
+        site_html.classList.remove('active');
+    }
+});
 
 document.getElementById('nav-btn').onclick = function(){
-    if (this.classList.contains('active')) {
+    if (this.classList.contains('active')){
         this.classList.remove('active');
         nav_overlay.classList.remove('active');
         site_html.classList.remove('active');
