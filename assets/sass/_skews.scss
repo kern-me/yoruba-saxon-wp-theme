@@ -84,8 +84,9 @@
       overflow: hidden;
       width: 100%;
       position: relative;
-      height: 350px;
+
       @include vars.breakpoint(medium) {
+        height: 350px;
         transform: skew(vars.$skew);
         left: 45px;
       }

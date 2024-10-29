@@ -70,10 +70,9 @@
   display: flex;
   gap: 4rem;
   justify-content: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   @include vars.breakpoint(medium) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 2rem;
     justify-content: space-between;
   }
@@ -86,22 +85,25 @@
         &--s,
         &--m,
         &--l {
-          max-width: 150px;
+          max-width: 8rem;
         }
 
         &--s {
+          max-width: 4rem;
           @include vars.breakpoint(medium) {
-            max-width: 6rem;
+            max-width: 8rem;
           }
         }
         &--m {
+          max-width: 6rem;
           @include vars.breakpoint(medium) {
             max-width: 10rem;
           }
         }
         &--l {
+          max-width: 8rem;
           @include vars.breakpoint(medium) {
-            max-width: 14rem;
+            max-width: 12rem;
           }
         }
       }

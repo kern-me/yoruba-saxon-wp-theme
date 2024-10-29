@@ -135,12 +135,12 @@ if (is_singular('project')):
                             ?>
                             <article class="ys-carousel-card">
                                 <div class="ys-carousel-card--image-container">
-                                    <?php echo get_the_post_thumbnail($related_press_article->ID, 'thumbnail'); ?>
+                                    <?php echo get_the_post_thumbnail($related_press_article->ID); ?>
                                 </div>
                                 <h3><?php echo $publication_name ?></h3>
                                 <p class="ys-carousel-card--date"><?php echo $published_date ?></p>
-                                <p class="ys-carousel-card--description"><?php echo $press_description ?></p>
-                                <a class="ys-btn ys-btn--yellow ys-skew" href="<?php echo esc_url($press_link); ?>">Read
+                                <div class="ys-carousel-card--description"><?php echo $press_description ?></div>
+                                <a class="ys-btn ys-btn--yellow ys-skew margin-top--m" href="<?php echo esc_url($press_link); ?>">Read
                                     More</a>
                             </article>
 

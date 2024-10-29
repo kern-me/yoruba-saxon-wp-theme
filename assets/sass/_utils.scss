@@ -150,3 +150,17 @@
   }
 }
 
+.u-text-center--mobile {
+  text-align: center;
+  @include vars.breakpoint(medium) {
+    text-align: left;
+  }
+}
+
+.u-margin-top-2--mobile {
+  margin-top: 2rem;
+  @include vars.breakpoint(medium) {
+    margin-top: 0;
+  }
+}
+

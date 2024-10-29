@@ -68,7 +68,7 @@ $partners = get_field('partners');
                 ?>
                 <div class="skewed-col skewed-col--first skewed-img-container">
                     <h2 aria-hidden="true" class="heading-xl ys-skew--reversed show-mobile-only--block">Press</h2>
-                    <?php echo get_the_post_thumbnail($pid, ''); ?>
+                    <div class="u-margin-top-2--mobile"><?php echo get_the_post_thumbnail($pid, 'medium'); ?></div>
                 </div>
                 <div class="skewed-col skewed-col--last">
                     <h2 class="heading-xl ys-skew--reversed show-desktop-only--block">Press</h2>
@@ -100,7 +100,7 @@ $partners = get_field('partners');
 
 <section id="partners" class="ys-section margin-top--xxl">
     <div class="inner gutter">
-        <h2 class="heading-xl">Partners</h2>
+        <h2 class="heading-xl u-text-center--mobile">Partners</h2>
         <div class="flex-grid flex-grid--partners pad-top--l">
         <?php
         if (have_rows('partners')):
