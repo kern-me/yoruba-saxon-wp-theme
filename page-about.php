@@ -21,7 +21,7 @@ $partners = get_field('partners');
 
 <section id="projects" class="ys-section margin-top--xxl block--masonry-grid">
     <div class="inner gutter">
-        <h2 class="heading-l">Projects</h2>
+        <h2 class="heading-xl u-text-center--mobile">Projects</h2>
         <div class="grid pad-top--l">
         <?php if ($projects):
             foreach ($projects as $project):
@@ -38,13 +38,13 @@ $partners = get_field('partners');
             <?php endforeach; ?>
         <?php endif; ?>
         </div>
-        <a href="/projects" class="ys-btn ys-btn--yellow"><span>All Projects</span></a>
+        <a href="/projects" class="ys-btn ys-btn--yellow u-content-centered--mobile u-margin-top-2"><span>All Projects</span></a>
     </div>
 </section>
 
 <section class="ys-section margin-top--xxl block--two-col-img">
     <div class="inner gutter ys-lines-section">
-        <h2 class="heading-xl">Founders</h2>
+        <h2 class="heading-xl u-text-center--mobile">Founders</h2>
         <div id="founders" class="skewed-row margin-top--l">
             <div class="skewed-col skewed-col--first">
                 <h3><?php echo $founders_heading ?></h3>
@@ -67,7 +67,7 @@ $partners = get_field('partners');
                 $press_link = get_field('press_link', $pid);
                 ?>
                 <div class="skewed-col skewed-col--first skewed-img-container">
-                    <h2 aria-hidden="true" class="heading-xl ys-skew--reversed show-mobile-only--block">Press</h2>
+                    <h2 aria-hidden="true" class="heading-xl ys-skew--reversed show-mobile-only--block u-text-center--mobile">Press</h2>
                     <div class="u-margin-top-2--mobile"><?php echo get_the_post_thumbnail($pid, 'medium'); ?></div>
                 </div>
                 <div class="skewed-col skewed-col--last">

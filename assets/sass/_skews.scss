@@ -37,7 +37,8 @@
       transform: skew(0);
     }
     span {
-      font-family: vars.$font-bold;
+      font-family: vars.$font-bold-reg;
+      transform: skew(vars.$skew-base);
       @include vars.breakpoint(medium) {
         font-family: vars.$font-bold-reg;
         transform: skew(vars.$skew-base);
@@ -124,8 +125,5 @@
   .ys-btn {
     font-family: vars.$font-bold-reg;
     transform: skew(vars.$skew);
-    span {
-      font-family: vars.$font-bold;
-    }
   }
 }

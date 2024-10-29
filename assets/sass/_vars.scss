@@ -43,6 +43,8 @@ $carousel-card-height: 400px;
 
 $footer-font-size: 1.15rem;
 
+$btn-width: 375px;
+
 @mixin breakpoint($point) {
   @if $point == small {
     @media (min-width: 430px) { @content; }

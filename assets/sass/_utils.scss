@@ -157,10 +157,37 @@
   }
 }
 
+.u-margin-top-2 {
+  margin-top: 2rem;
+}
+
+.u-margin-top-4 {
+  margin-top: 4rem;
+}
+
+.u-margin-top-4--mobile {
+  margin-top: 4rem;
+  @include vars.breakpoint(medium) {
+    margin-top: 0;
+  }
+}
+
 .u-margin-top-2--mobile {
   margin-top: 2rem;
   @include vars.breakpoint(medium) {
     margin-top: 0;
   }
+}
+
+.u-content-centered--mobile {
+  margin-inline: auto;
+  @include vars.breakpoint(medium) {
+    margin-inline: unset;
+  }
+}
+
+.u-font-unskewed--bold {
+  font-family: vars.$font-bold-reg !important;
+  transform: skew(vars.$skew-base) !important
 }
 

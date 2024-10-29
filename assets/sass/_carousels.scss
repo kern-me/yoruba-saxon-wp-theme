@@ -86,6 +86,9 @@
 
   .ys-btn {
     max-width: 100%;
+    @include vars.breakpoint(small) {
+      max-width: 375px;
+    }
   }
 }
 

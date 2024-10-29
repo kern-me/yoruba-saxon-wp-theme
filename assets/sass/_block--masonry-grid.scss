@@ -59,8 +59,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
-
     span {
       transform: skew(vars.$skew-base);
       font-family: vars.$font-bold-reg;

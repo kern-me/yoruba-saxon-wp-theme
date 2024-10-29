@@ -22,7 +22,7 @@
                     $press_description = get_field('press_description', $press_card->ID);
                     $press_link = get_field('press_link', $press_card->ID);
                     ?>
-                    <article class="ys-carousel-card test">
+                    <article class="ys-carousel-card">
                         <div class="ys-carousel-card--image-container">
                             <?php echo get_the_post_thumbnail($press_card->ID, ''); ?>
                         </div>

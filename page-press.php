@@ -12,7 +12,7 @@ $press_link = get_field('press_link');
         <div class="press-heading-content">
             <img src="<?php echo $press_image['url']; ?>" alt="<?php echo $press_image['alt']; ?>" />
             <?php echo $press_heading_content; ?>
-            <a target="_blank" href="<?php echo $press_link['url']; ?>" class="ys-btn ys-btn--skewed ys-btn--yellow"><span>Read More</span></a>
+            <a target="_blank" href="<?php echo $press_link['url']; ?>" class="ys-btn ys-btn--skewed ys-btn--yellow margin-top--m"><span>Read More</span></a>
         </div>
     </div>
 </section>
