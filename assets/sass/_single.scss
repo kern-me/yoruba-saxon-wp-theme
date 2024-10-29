@@ -5,6 +5,18 @@ body.single-project {
     justify-content: end;
     padding: 0 vars.$section-gutter;
     min-height: 30vh;
+    &.ys-hero-image {
+      h1 {
+        position: relative;
+        bottom: -0.3rem;
+      }
+    }
+    &.ys-hero-video {
+      h1 {
+        position: absolute;
+        bottom: -0.3rem;
+      }
+    }
     h1 {
       font-family: "din", sans-serif;
       margin: 0;
@@ -13,12 +25,8 @@ body.single-project {
       font-size: 6rem;
       letter-spacing: 0.5rem;
       line-height: 0.75;
-      position: relative;
-      bottom: -0.3rem;
+      z-index: 3;
 
-      @include vars.breakpoint(small){
-        font-size: 9rem;
-      }
       @include vars.breakpoint(medium){
         font-size: 11rem;
       }
@@ -67,6 +75,9 @@ body.single-project {
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
+        }
+        p {
+          margin-bottom: 0;
         }
       }
     }
