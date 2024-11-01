@@ -29,16 +29,20 @@ $partners = get_field('partners');
 
                 $project_image = get_field('description_image', $pr_id);
                 $project_title = get_the_title($pr_id);
+                $studio = get_field('studio', $pr_id);
                 $project_link = get_permalink($pr_id);
                 ?>
                 <a href="<?php echo esc_url($project_link); ?>">
-                    <span><?php echo $project_title ?></span>
-                    <img class="" src="<?php echo $project_image['url']; ?>" alt="<?php echo $project_image['alt']; ?>">
+                    <div>
+                        <p class="project-title"><?php echo $project_title ?></p>
+                        <p class="project-studio"><?php echo $studio ?></p>
+                    </div>
+                    <img src="<?php echo $project_image['url']; ?>" alt="<?php echo $project_image['alt']; ?>">
                 </a>
             <?php endforeach; ?>
         <?php endif; ?>
         </div>
-        <a href="/projects" class="ys-btn ys-btn--yellow u-content-centered--mobile u-margin-top-2"><span>All Projects</span></a>
+        <a href="<?php echo site_url() ?>/projects" class="ys-btn ys-btn--yellow u-content-centered--mobile u-margin-top-2"><span>All Projects</span></a>
     </div>
 </section>
 

@@ -35,7 +35,6 @@ body.page-about {
         position: relative;
         display: inline-block;
         &:before {
-          //position: absolute;
           content: '';
           display: block;
           height: 3px;
@@ -44,7 +43,6 @@ body.page-about {
           top: 50%;
           left: 0;
           width: 36%;
-          //translate: -50%;
         }
       }
     }
@@ -119,35 +117,53 @@ body.page-about {
           &:before {
             opacity: 1;
           }
-          span {
+          div {
             opacity: 1;
           }
         }
-        span {
+        div {
           opacity: 1;
           position: absolute;
+          margin: 0;
           bottom: 0;
           left: 50%;
           translate: -50%;
           transition: opacity 0.15s ease-in;
           z-index: 1;
-          color: white;
-          font-family: vars.$font-body-reg;
-          font-size: 1.25rem;
-          line-height: 1.15;
-          text-align: center;
           background-color: rgba(0,0,0,0.8);
-          padding: 3%;
           width: calc(100% + 2px);
+          transform: skew(0);
+          padding: 1rem;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
           @include vars.breakpoint(medium) {
+            display: block;
             top: 50%;
             bottom: unset;
             left: 50%;
             translate: -50% -50%;
             font-family: vars.$font-body;
             opacity: 0;
-            background-color: rgba(0,0,0,0)
+            background-color: rgba(0,0,0,0);
+            transform: skew(vars.$skew-base);
           }
+          p {
+            color: white;
+            line-height: 1;
+            text-align: center;
+            &.project-title {
+              font-size: 1.5rem;
+              font-family: vars.$font-bold-reg;
+              margin: 0;
+            }
+            &.project-studio {
+              font-size: 1.25rem;
+              font-family: vars.$font-body-reg;
+              margin: 0.5rem 0 0 0;
+            }
+          }
+
         }
       }
     }
@@ -175,8 +191,6 @@ body.page-about {
         margin-bottom: 0;
       }
     }
-
-
   }
 
   h3 {
@@ -252,10 +266,6 @@ body.page-about {
       span {
         font-family: vars.$font-bold-reg;
         transform: skew(vars.$skew-base);
-        @include vars.breakpoint(medium) {
-          //font-family: vars.$font-bold;
-          //transform: skew(0);
-        }
       }
     }
   }

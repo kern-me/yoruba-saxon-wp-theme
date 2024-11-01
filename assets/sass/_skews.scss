@@ -84,10 +84,10 @@
     &--image-container {
       overflow: hidden;
       width: 100%;
+      height: 400px;
       position: relative;
 
       @include vars.breakpoint(medium) {
-        height: 350px;
         transform: skew(vars.$skew);
         left: 45px;
       }
@@ -112,7 +112,7 @@
       line-height: 1.5;
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
     }
     h3, p, .ys-btn {
