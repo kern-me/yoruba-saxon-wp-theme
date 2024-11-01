@@ -70,41 +70,40 @@
   display: flex;
   gap: 4rem;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
   @include vars.breakpoint(medium) {
+    flex-direction: row;
     flex-wrap: nowrap;
-    gap: 2rem;
+    gap: 4rem;
     justify-content: space-between;
   }
 
   &--partners {
-    img {
-      max-width: 6rem;
+    a {
+      svg {
+        width: 100%;
+        height: auto;
 
-      &.partner-logo {
-        &--s,
-        &--m,
-        &--l {
-          max-width: 8rem;
+        path {
+          transition: fill 0.25s ease-in;
         }
 
-        &--s {
-          max-width: 4rem;
-          @include vars.breakpoint(medium) {
-            max-width: 8rem;
+        &:hover {
+          path {
+            fill: vars.$yellow
           }
         }
-        &--m {
+      }
+      &.partner {
+        &.size-s {
           max-width: 6rem;
-          @include vars.breakpoint(medium) {
-            max-width: 10rem;
-          }
         }
-        &--l {
-          max-width: 8rem;
-          @include vars.breakpoint(medium) {
-            max-width: 12rem;
-          }
+        &.size-m {
+          max-width: 10rem;
+        }
+        &.size-l {
+          max-width: 12rem;
         }
       }
     }
