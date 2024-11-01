@@ -26,7 +26,7 @@ $project_cards = get_field('project_cards');
                         $link_title = $link['title'];
                         $link_target = $link['target'] ? $link['target'] : '_self';
                         ?>
-                        <a class="ys-btn ys-btn--yellow" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                        <a class="ys-btn ys-btn--yellow u-margin-top-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                             <span><?php echo esc_html( $link_title ); ?></span>
                         </a>
                     <?php endif; ?>
@@ -54,7 +54,7 @@ $project_cards = get_field('project_cards');
                                     <p class="ys-carousel-card--date"><?php echo $studio ?></p>
                                 </div>
                             </div>
-                            <a class="ys-btn ys-btn--yellow" href="<?php echo $permalink; ?>"><span>Read More</span></a>
+                            <a class="ys-btn ys-btn--yellow u-margin-top-2" href="<?php echo $permalink; ?>"><span>Read More</span></a>
                         </article>
                     <?php endforeach; endif; ?>
                 </div>

@@ -30,7 +30,7 @@
                             <h3 class="ys-carousel-card--heading"><?php echo $publication_name ?></h3>
                             <p class="ys-carousel-card--date"><?php echo $published_date ?></p>
                         </div>
-                        <div class="ys-carousel-card--description"><?php echo $press_description ?></div>
+                        <div class="ys-carousel-card--description u-margin-top-2"><?php echo $press_description ?></div>
                         <a class="margin-top--m ys-btn ys-btn--yellow" href="<?php echo esc_url($press_link); ?>" target="_blank"><span>Read More</span></a>
                     </article>
                 <?php endforeach; endif; ?>

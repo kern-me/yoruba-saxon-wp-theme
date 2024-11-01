@@ -29,7 +29,7 @@
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     line-height: 1.1;
     padding-top: 1rem;
     text-align: center;
@@ -42,6 +42,7 @@
     line-height: 1.2;
     text-align: center;
     max-width: none;
+    margin-bottom: 0;
     @include vars.breakpoint(medium) {
       text-align: left;
     }
@@ -73,7 +74,9 @@
     }
   }
   .ys-carousel-card--entry-content {
-    min-height: 7rem;
+    @include vars.breakpoint(medium) {
+      min-height: 5rem;
+    }
   }
 }
 

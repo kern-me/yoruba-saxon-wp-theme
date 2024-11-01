@@ -115,10 +115,10 @@
 }
 
 .heading-xl {
-  font-size: 2.25rem;
+  font-size: 2.85rem;
   text-transform: uppercase;
   @include vars.breakpoint(medium){
-    font-size: 3rem;
+    font-size: 3.25rem;
     line-height: 1;
   }
 }
