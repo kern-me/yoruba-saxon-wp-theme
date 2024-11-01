@@ -104,10 +104,11 @@
     &--heading {
       font-family: vars.$font-bold-reg;
     }
-    &--date, &--description {
-      font-family: vars.$font-body-reg;
+    &--date {
+      font-family: vars.$font-italic-reg;
     }
     &--description {
+      font-family: vars.$font-body-reg;
       font-size: 1.25rem;
       line-height: 1.5;
       overflow: hidden;

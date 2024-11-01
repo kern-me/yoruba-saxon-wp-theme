@@ -10,6 +10,7 @@
     grid-auto-rows: auto;
     @include vars.breakpoint(medium) {
       gap: 3.5rem;
+      row-gap: 14rem;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
@@ -20,6 +21,7 @@
   height: 100%;
   &--date {
     font-style: italic;
+    font-family: vars.$font-italic-reg;
     font-size: 1.25rem;
   }
 
