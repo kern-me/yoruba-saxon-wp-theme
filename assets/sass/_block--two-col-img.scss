@@ -5,7 +5,7 @@
     strong {
       font-family: vars.$font-bold-reg;
       @include vars.breakpoint(medium) {
-        font-family: vars.$font-bold;
+        font-family: vars.$font-bold-rev;
       }
     }
   }
@@ -28,13 +28,13 @@
       h3 {
         font-family: vars.$font-body-reg;
         @include vars.breakpoint(medium) {
-          font-family: vars.$font-body;
+          font-family: vars.$font-body-rev;
         }
       }
       p {
         font-family: vars.$font-body-reg;
         @include vars.breakpoint(medium) {
-          font-family: vars.$font-body;
+          font-family: vars.$font-body-rev;
         }
       }
       @include vars.breakpoint(medium) {

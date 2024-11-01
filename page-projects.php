@@ -27,7 +27,7 @@ include_once ('template-parts/ys-hero.php');
             <?php endforeach; endif; ?>
         </div>
 
-        <img class="u-centered margin-top--xl u-heading-width--l" src="<?php echo get_template_directory_uri() . '/assets/images/heading-all-projects.svg' ?>" alt="All Projects" />
+        <img class="u-centered u-margin-top-xl u-heading-width--l" src="<?php echo get_template_directory_uri() . '/assets/images/heading-all-projects.svg' ?>" alt="All Projects" />
 
         <div class="ys-projects-grid pad-top--l">
             <?php

@@ -5,45 +5,28 @@ $white: #ffffff;
 $gray: #BCBEC0;
 
 $font-body-reg: 'barlowregular', sans-serif;
-$font-body: 'barlowregular-rev', sans-serif;
+$font-body-rev: 'barlowregular-rev', sans-serif;
 
 $font-italic-reg: 'barlowitalic', sans-serif;
 $font-italic-bold: 'barlowbolditalic', sans-serif;
 
-
 $font-bold-reg: 'barlowbold', sans-serif;
-$font-bold: 'barlowbold-rev', sans-serif;
+$font-bold-rev: 'barlowbold-rev', sans-serif;
 
 $font-thin-reg: 'barlowthin', sans-serif;
-$font-thin: 'barlowthin-rev', sans-serif;
-
-$xl: 13.625rem;
-$large: 7.6875rem;
-$medium: 6em;
-$small: 2em;
-
-$hero-height: 40rem;
-$hero-height-mobile: 20rem;
-$hero-logo-width: 65%;
+$font-thin-rev: 'barlowthin-rev', sans-serif;
 
 $skew: -14deg;
 $skew-base: -$skew;
 
 $section-padding: 8rem;
-$section-padding-mobile: calc($section-padding/2);
-
-$pad-xxl: calc($section-padding*2);
-$pad-xl: calc($section-padding);
-$pad-l: calc($section-padding/2);
-$pad-m: calc($section-padding/4);
-
+$section-padding-mobile: 4rem;
 $section-gutter: 5vw;
 
-$carousel-card-height: 400px;
-
-$footer-font-size: 1.15rem;
-
-$btn-width: 375px;
+$pad-xxl: 16rem;
+$pad-xl: 8rem;
+$pad-l: 4rem;
+$pad-m: 2rem;
 
 @mixin breakpoint($point) {
   @if $point == small {

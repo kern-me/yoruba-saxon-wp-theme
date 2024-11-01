@@ -12,7 +12,7 @@ $press_link = get_field('press_link');
         <div class="press-heading-content">
             <img src="<?php echo $press_image['url']; ?>" alt="<?php echo $press_image['alt']; ?>" />
             <?php echo $press_heading_content; ?>
-            <a target="_blank" href="<?php echo $press_link['url']; ?>" class="ys-btn ys-btn--skewed ys-btn--yellow margin-top--m"><span>Read More</span></a>
+            <a target="_blank" href="<?php echo $press_link['url']; ?>" class="ys-btn ys-btn--skewed ys-btn--yellow u-margin-top-2"><span>Read More</span></a>
         </div>
     </div>
 </section>
@@ -26,7 +26,7 @@ $press_link = get_field('press_link');
             <h3><?php the_field( 'publication' ); ?></h3>
             <p class="ys-carousel-card--date"><?php the_field( 'published_date' ); ?></p>
             <div class="ys-carousel-card--description"><?php the_field( 'press_description' ); ?></div>
-            <a href="<?php the_field('press_link') ?>" class="ys-btn ys-btn--yellow margin-top--m"><span>Read More</span></a>
+            <a href="<?php the_field('press_link') ?>" class="ys-btn ys-btn--yellow u-margin-top-2"><span>Read More</span></a>
         </article>
         <?php endwhile; ?>
     </div>

@@ -2,7 +2,7 @@
 
 .ys-skewed {
   @include vars.breakpoint(medium){
-    font-family: vars.$font-body;
+    font-family: vars.$font-body-rev;
     transform: skew(vars.$skew);
     position: relative;
     left: -5%;
@@ -11,14 +11,14 @@
   h1, .heading-xl {
     font-family: vars.$font-thin-reg;
     @include vars.breakpoint(medium) {
-      font-family: vars.$font-thin;
+      font-family: vars.$font-thin-rev;
     }
   }
 
   strong {
     @include vars.breakpoint(medium) {
       font-weight: normal;
-      font-family: vars.$font-bold;
+      font-family: vars.$font-bold-rev;
     }
   }
 
@@ -26,7 +26,7 @@
     &--heading {
       font-family: vars.$font-bold-reg;
       @include vars.breakpoint(medium){
-        font-family: vars.$font-bold;
+        font-family: vars.$font-bold-rev;
       }
     }
   }

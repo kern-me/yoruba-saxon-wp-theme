@@ -4,7 +4,7 @@
 .ys-btn {
   width: 100%;
   max-width: 375px;
-  font-family: vars.$font-bold;
+  font-family: vars.$font-bold-rev;
   transform: skew(0);
   padding: 0;
   display: flex;
@@ -68,7 +68,7 @@ body.single, body.page-press, body.page-home {
       width: 630px;
     }
     .wp-block-button__link {
-      font-family: vars.$font-bold;
+      font-family: vars.$font-bold-rev;
       padding: 0;
       display: flex;
       justify-content: center;

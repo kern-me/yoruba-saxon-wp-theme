@@ -13,6 +13,7 @@
   }
 
   $ys-section-breakpoint: 1230px;
+  $footer-font-size: 1.15rem;
 
   .inner {
     display: flex;
@@ -30,7 +31,7 @@
   }
 
   li {
-    font-size: vars.$footer-font-size;
+    font-size: $footer-font-size;
   }
 
   a {
@@ -39,7 +40,7 @@
   }
 
   &--copyright {
-    font-size: vars.$footer-font-size;
+    font-size: $footer-font-size;
     padding-top: 2em;
     line-height: 1.5em;
     margin: 0;

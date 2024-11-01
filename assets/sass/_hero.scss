@@ -7,11 +7,11 @@
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  height: vars.$hero-height-mobile;
+  height: 20rem;
   justify-content: center;
   align-items: center;
   @media (min-width: 1025px) and (min-height: 665px) {
-    height: vars.$hero-height;
+    height: 40rem;
   }
   @include vars.breakpoint(large){
     background-position: top;
