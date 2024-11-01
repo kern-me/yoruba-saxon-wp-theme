@@ -7,15 +7,15 @@
         <div class="inner">
             <div class="site-footer--left-col">
                 <ul class="ys-list ys-list--clean">
-                    <li><strong><a href="/about">About</a></strong></li>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/team">Team</a></li>
-                    <li><a href="/press">Press</a></li>
+                    <li><strong><a href="<?php echo site_url() ?>/about">About</a></strong></li>
+                    <li><a href="<?php echo site_url() ?>/projects">Projects</a></li>
+                    <li><a href="<?php echo site_url() ?>/team">Team</a></li>
+                    <li><a href="<?php echo site_url() ?>/press">Press</a></li>
                 </ul>
                 <ul class="ys-list ys-list--clean">
                     <li><strong>Contact</strong></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">X (Twitter)</a></li>
+                    <li><a href="https://instagram.com/yorubasaxon">Instagram</a></li>
+                    <li><a href="https://twitter.com/yorubasaxon">X (Twitter)</a></li>
                 </ul>
             </div>
             <div class="site-footer--right-col">

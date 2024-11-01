@@ -24,11 +24,11 @@
                 <span></span>
                 <span></span>
                 <ul class="menu-item">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/team">Team</a></li>
-                    <li><a href="/press">Press</a></li>
+                    <li><a href="<?php echo site_url() ?>">Home</a></li>
+                    <li><a href="<?php echo site_url() ?>/about">About</a></li>
+                    <li><a href="<?php echo site_url() ?>/projects">Projects</a></li>
+                    <li><a href="<?php echo site_url() ?>/team">Team</a></li>
+                    <li><a href="<?php echo site_url() ?>/press">Press</a></li>
                 </ul>
             </div>
         </nav>
