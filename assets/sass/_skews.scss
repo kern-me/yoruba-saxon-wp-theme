@@ -63,7 +63,10 @@
   }
 
   .inner {
-    padding: 0 vars.$section-gutter;
+    padding: 0 vars.$section-gutter-mobile;
+    @include vars.breakpoint(medium) {
+      padding: 0 vars.$section-gutter;
+    }
   }
 
   .carousel-clip-path {

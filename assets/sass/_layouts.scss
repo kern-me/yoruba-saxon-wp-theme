@@ -63,7 +63,10 @@
 }
 
 .gutter {
-  padding-inline: vars.$section-gutter
+  padding-inline: vars.$section-gutter-mobile;
+  @include vars.breakpoint(medium) {
+    padding-inline: vars.$section-gutter;
+  }
 }
 
 .flex-grid {

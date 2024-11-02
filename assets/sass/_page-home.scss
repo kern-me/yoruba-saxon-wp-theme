@@ -23,7 +23,7 @@ h1 {
 .ys-section--intro {
   .ys-skewed {
     .inner {
-      padding: 0 vars.$section-gutter;
+      padding: 0 vars.$section-gutter-mobile;
       @include vars.breakpoint(medium){
         padding: 0 0 0 vars.$section-padding;
       }
