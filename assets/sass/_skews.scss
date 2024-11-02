@@ -87,7 +87,7 @@
     &--image-container {
       overflow: hidden;
       width: 100%;
-      height: 400px;
+      height: 25rem;
       position: relative;
 
       @include vars.breakpoint(medium) {
@@ -107,16 +107,13 @@
     &--heading {
       font-family: vars.$font-bold-reg;
     }
-    &--date {
-      font-family: vars.$font-italic-reg;
-    }
     &--description {
       font-family: vars.$font-body-reg;
       font-size: 1.25rem;
       line-height: 1.5;
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
     h3, p, .ys-btn {
