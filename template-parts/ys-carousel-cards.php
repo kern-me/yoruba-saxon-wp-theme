@@ -3,15 +3,12 @@
 
         <?php $press_heading = get_field('press_heading'); ?>
         <h2 class="heading-xl"><?php echo $press_heading ?></h2>
-        <svg class="carousel-clip-path" width="1349" height="676" viewBox="0 0 1349 676" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <clipPath id="carousel_clip_path">
-                    <path d="M75.5 1L1 302V675H1262V356.5L1348 1H75.5Z" stroke="black"/>
-                </clipPath>
-            </defs>
+        <svg class="carousel-clip-path" width="1364" height="802" viewBox="0 0 1364 802" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <clipPath id="carousel_clip_path">
+                <path d="M73 1L1 298L4 801.5L1265 790.5L1261.5 403L1362.5 1H73Z" fill="#D9D9D9" fill-opacity="0.6" stroke="black"/>
+            </clipPath>
         </svg>
         <div class="ys-carousel-cards--container-grid ys-slick">
-
                 <?php
                 $press_cards = get_field('press_cards');
 
