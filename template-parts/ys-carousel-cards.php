@@ -20,15 +20,18 @@
                     $press_link = get_field('press_link', $press_card->ID);
                     ?>
                     <article class="ys-carousel-card">
-                        <div class="ys-carousel-card--image-container">
-                            <?php echo get_the_post_thumbnail($press_card->ID, ''); ?>
+                        <div>
+                            <div class="ys-carousel-card--image-container">
+                                <?php echo get_the_post_thumbnail($press_card->ID, ''); ?>
+                            </div>
+                            <div class="ys-carousel-card--entry-content">
+                                <h3 class="ys-carousel-card--heading"><?php echo $publication_name ?></h3>
+                                <p class="ys-carousel-card--date"><?php echo $published_date ?></p>
+                            </div>
+                            <div class="ys-carousel-card--description u-margin-top-2"><?php echo $press_description ?></div>
                         </div>
-                        <div class="ys-carousel-card--entry-content">
-                            <h3 class="ys-carousel-card--heading"><?php echo $publication_name ?></h3>
-                            <p class="ys-carousel-card--date"><?php echo $published_date ?></p>
-                        </div>
-                        <div class="ys-carousel-card--description u-margin-top-2"><?php echo $press_description ?></div>
-                        <a class="u-margin-top-2 ys-btn ys-btn--yellow" href="<?php echo esc_url($press_link); ?>" target="_blank"><span>Read More</span></a>
+
+                        <a class="ys-btn ys-btn--yellow u-margin-top-2--mobile" href="<?php echo esc_url($press_link); ?>" target="_blank"><span>Read More</span></a>
                     </article>
                 <?php endforeach; endif; ?>
         </div>

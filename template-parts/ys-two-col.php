@@ -32,7 +32,7 @@ $project_cards = get_field('project_cards');
                     <?php endif; ?>
                 </div>
                 <div class="ys-col ys-col--last">
-                    <img src="<?php echo $main_image ?>')" alt="">
+                    <img src="<?php echo $main_image['url']; ?>" alt="<?php echo $main_image['alt']; ?>">
                 </div>
             </div>
 

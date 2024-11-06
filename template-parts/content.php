@@ -139,7 +139,7 @@ if (is_singular('project')):
                                 </div>
                                 <h3><?php echo $publication_name ?></h3>
                                 <p class="ys-carousel-card--date"><?php echo $published_date ?></p>
-                                <div class="ys-carousel-card--description"><?php echo $press_description ?></div>
+                                <div class="ys-carousel-card--description u-margin-top-2"><?php echo $press_description ?></div>
                                 <a class="ys-btn ys-btn--yellow ys-skew u-margin-top-2" href="<?php echo esc_url($press_link); ?>">
                                     <span>Read More</span></a>
                             </article>

@@ -20,6 +20,7 @@
   overflow: hidden;
   height: 100%;
   &--date {
+    margin-top: 0.25rem;
     font-family: vars.$font-italic-reg;
     font-size: 1.25rem;
   }
@@ -84,7 +85,7 @@
 .slick-slide {
   padding: 0;
   @include vars.breakpoint(medium) {
-    padding: 0 1.4rem;
+    padding: 0 1.5rem;
     width: 26rem;
   }
 

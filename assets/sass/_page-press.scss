@@ -79,6 +79,9 @@ body.page-press {
     justify-content: space-between;
     display: flex;
     flex-direction: column;
+    @include vars.breakpoint(medium){
+      height: 41.75rem;
+    }
     .ys-carousel-card--image-container {
       left: 0;
       transform: skew(0);
@@ -96,8 +99,6 @@ body.page-press {
       margin: 0.5rem 0 1rem;
     }
     .ys-carousel-card--description {
-      -webkit-line-clamp: 5;
-
       p {
         margin-bottom: 0;
       }

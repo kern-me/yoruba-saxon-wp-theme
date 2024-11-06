@@ -84,6 +84,12 @@
   .ys-carousel-card {
     overflow: visible;
     justify-content: space-between;
+    display: flex !important;
+    flex-direction: column;
+    height: auto;
+    @include vars.breakpoint(medium) {
+      height: 47.75rem;
+    }
     &--image-container {
       overflow: hidden;
       width: 100%;
@@ -113,7 +119,7 @@
       line-height: 1.5;
       overflow: hidden;
       display: -webkit-box;
-      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 5;
       -webkit-box-orient: vertical;
     }
     h3, p, .ys-btn {
