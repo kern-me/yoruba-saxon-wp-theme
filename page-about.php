@@ -63,11 +63,7 @@ $partners = get_field('partners');
             <?php if ($featured_press):
             foreach ($featured_press as $press):
                 $pid = $press->ID;
-
-                $press_image = get_field('press_image', $pid);
                 $publication_name = get_field('publication', $pid);
-                $published_date = get_field('published_date', $pid);
-                $press_description = get_field('press_description', $pid);
                 $press_link = get_field('press_link', $pid);
                 ?>
                 <div class="skewed-col skewed-col--first skewed-img-container">
@@ -77,8 +73,8 @@ $partners = get_field('partners');
                 <div class="skewed-col skewed-col--last">
                     <h2 class="heading-xl ys-skew--reversed show-desktop-only--block">Press</h2>
                     <h3><?php echo $publication_name ?></h3>
-                    <p class="ys-carousel-card--date"><?php echo $published_date ?></p>
-                    <div class="description"><?php echo $press_description ?></div>
+                    <p class="ys-carousel-card--date"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
+                    <div class="description"><?php echo apply_filters('the_content', $press->post_content); ?></div>
                 </div>
             <?php endforeach; ?>
         </div>

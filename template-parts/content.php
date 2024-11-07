@@ -125,11 +125,7 @@ if (is_singular('project')):
                     <div class="ys-carousel-cards--container-grid">
                         <?php foreach ($related_press as $related_press_article):
                             $press_id = $related_press_article->ID;
-
-                            $press_image = get_field('press_image', $press_id);
                             $publication_name = get_field('publication', $press_id);
-                            $published_date = get_field('published_date', $press_id);
-                            $press_description = get_field('press_description', $press_id);
                             $press_link = get_field('press_link', $press_id);
 
                             ?>
@@ -138,8 +134,8 @@ if (is_singular('project')):
                                     <?php echo get_the_post_thumbnail($related_press_article->ID); ?>
                                 </div>
                                 <h3><?php echo $publication_name ?></h3>
-                                <p class="ys-carousel-card--date"><?php echo $published_date ?></p>
-                                <div class="ys-carousel-card--description u-margin-top-2"><?php echo $press_description ?></div>
+                                <p class="ys-carousel-card--date"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
+                                <div class="ys-carousel-card--description u-margin-top-2"><?php echo apply_filters('the_content', $related_press_article->post_content); ?></div>
                                 <a class="ys-btn ys-btn--yellow ys-skew u-margin-top-2" href="<?php echo esc_url($press_link); ?>">
                                     <span>Read More</span></a>
                             </article>
