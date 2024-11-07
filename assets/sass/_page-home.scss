@@ -5,7 +5,6 @@ body {
     .ys-hero-heading {
       @include vars.breakpoint(medium){
         position: relative;
-        top: 2rem;
       }
     }
   }
@@ -66,7 +65,8 @@ h1 {
         img {
           transform: none;
           width: 100%;
-          height: 30vh;
+          //height: 30vh;
+          height: auto;
           object-fit: cover;
           object-position: top;
           max-width: 100%;

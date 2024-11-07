@@ -11,8 +11,12 @@
   }
 }
 
-.skew-reverse {
-  transform: skew(0deg)
+.u-skew-reverse {
+  transform: skew(0deg);
+}
+
+.u-skew-base {
+  transform: skew(vars.$skew-base);
 }
 
 .ys-skew {
@@ -131,6 +135,13 @@
 }
 
 // Alignment
+.heading-offset {
+  position: relative;
+  @include vars.breakpoint(medium) {
+    left: 7rem;
+  }
+}
+
 .u-centered {
   margin-left: auto;
   margin-right: auto;

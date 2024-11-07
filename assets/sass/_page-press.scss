@@ -17,6 +17,7 @@ body.page-press {
 
     img {
       width: 100%;
+      height: auto;
     }
 
     h2, p {
@@ -80,7 +81,7 @@ body.page-press {
     display: flex;
     flex-direction: column;
     @include vars.breakpoint(medium){
-      height: 41.75rem;
+      height: 38.75rem;
     }
     .ys-carousel-card--image-container {
       left: 0;
