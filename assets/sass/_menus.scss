@@ -74,7 +74,7 @@
 
 .menu-item {
   position: absolute;
-  width: 100vw;
+  width: 106vw;
   padding: 125px 50px 50px 50px;
   background: vars.$black;
   list-style-type: none;
@@ -82,7 +82,7 @@
   transform-origin: 0 0;
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   @include vars.breakpoint(medium) {
-    width: 375px;
+    width: 23.4375rem;
   }
   li {
     line-height: 1.5;
@@ -94,7 +94,7 @@
 
 .menu--right {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   .menu-toggle {
     position: fixed;
     right: -25px;
@@ -152,7 +152,7 @@
   left: 0;
   top: 0;
   &.active {
-    z-index: 2;
+    z-index: 3;
     opacity: 0.4;
   }
 }
