@@ -3,8 +3,11 @@
 body.single-project {
   .ys-hero {
     justify-content: end;
-    padding: 0 vars.$section-gutter;
+    padding: 0 vars.$section-gutter-mobile;
     min-height: 30vh;
+    @include vars.breakpoint(medium){
+      padding: 0 vars.$section-gutter;
+    }
     &.ys-hero-image {
       h1 {
         position: relative;
@@ -22,10 +25,14 @@ body.single-project {
       margin: 0;
       text-transform: uppercase;
       color: white;
-      font-size: 6rem;
+      font-size: 4rem;
       letter-spacing: 0.5rem;
       line-height: 0.75;
       z-index: 3;
+
+      @include vars.breakpoint(small){
+        font-size: 6rem;
+      }
 
       @include vars.breakpoint(medium){
         font-size: 11rem;
@@ -85,7 +92,10 @@ body.single-project {
 
 
   .single-project-supplemental {
-    padding-block: vars.$section-gutter;
+    padding-bottom: vars.$section-gutter;
+    @include vars.breakpoint(medium) {
+      padding-block: vars.$section-gutter;
+    }
     &--grid {
       @include vars.breakpoint(medium) {
         grid-auto-rows: 1fr;
@@ -99,6 +109,27 @@ body.single-project {
         object-position: top;
         @include vars.breakpoint(medium) {
           height: 100%;
+        }
+        &.u-img-position-top {
+          @include vars.breakpoint(medium) {
+            object-position: center;
+          }
+        }
+        &.u-img-position-left {
+          @include vars.breakpoint(medium) {
+            object-position: left;
+          }
+        }
+        &.u-img-position-right {
+          @include vars.breakpoint(medium) {
+            object-position: right;
+          }
+        }
+        &.u-img-position-center {
+          @include vars.breakpoint(medium) {
+            object-position: center;
+          }
+
         }
       }
     }
@@ -120,15 +151,22 @@ body.single-project {
   justify-content: center;
   gap: 2rem;
   position: relative;
-  top: -5rem;
   min-height: 20rem;
-  padding: 10rem vars.$section-gutter 5rem;
+  padding: vars.$section-gutter-mobile;
+  @include vars.breakpoint(medium){
+    top: -5rem;
+    margin-bottom: -5rem;
+    padding: 10rem vars.$section-gutter 5rem;
+  }
 
   p {
     font-family: vars.$font-italic-reg;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     margin: 0;
+    @include vars.breakpoint(small){
+      font-size: 1.8rem;
+    }
     @include vars.breakpoint(medium){
       font-size: 2.5rem;
     }

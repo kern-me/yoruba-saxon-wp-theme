@@ -151,23 +151,23 @@ if (is_singular('project')):
         $supplemental_image2 = get_field('supplemental_image2');
         $supplemental_image3 = get_field('supplemental_image3');
 
+        $supplemental_image1_position = get_field('supplemental_image1_position');
+        $supplemental_image2_position = get_field('supplemental_image2_position');
+        $supplemental_image3_position = get_field('supplemental_image3_position');
         ?>
         <section class="single-project-supplemental">
             <div class="inner">
                 <div class="single-project-supplemental--grid">
             <?php if ($supplemental_image1): ?>
-                <img src="<?php echo esc_url($supplemental_image1['url']) ?>"
-                     alt="<?php echo esc_attr($supplemental_image1['alt']) ?>"/>
+                <img class="<?php echo $supplemental_image1_position ?>" src="<?php echo esc_url($supplemental_image1['url']) ?>" alt="<?php echo esc_attr($supplemental_image1['alt']) ?>"/>
             <?php endif; ?>
 
             <?php if ($supplemental_image2): ?>
-                <img src="<?php echo esc_url($supplemental_image2['url']) ?>"
-                     alt="<?php echo esc_attr($supplemental_image2['alt']) ?>"/>
+                <img class="<?php echo $supplemental_image2_position ?>" src="<?php echo esc_url($supplemental_image2['url']) ?>" alt="<?php echo esc_attr($supplemental_image2['alt']) ?>"/>
             <?php endif; ?>
 
             <?php if ($supplemental_image3): ?>
-                <img src="<?php echo esc_url($supplemental_image3['url']) ?>"
-                     alt="<?php echo esc_attr($supplemental_image3['alt']) ?>"/>
+                <img class="<?php echo $supplemental_image3_position ?>" src="<?php echo esc_url($supplemental_image3['url']) ?>" alt="<?php echo esc_attr($supplemental_image3['alt']) ?>"/>
             <?php endif; ?>
             </div>
         </section>
