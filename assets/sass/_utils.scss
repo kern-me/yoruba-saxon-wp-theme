@@ -11,6 +11,13 @@
   }
 }
 
+.u-skew-base--desktop {
+  transform: none;
+  @include vars.breakpoint(medium) {
+    transform: skew(vars.$skew-base);
+  }
+}
+
 .u-skew-reverse {
   transform: skew(0deg);
 }

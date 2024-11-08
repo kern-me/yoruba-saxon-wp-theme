@@ -55,7 +55,7 @@ $project_cards = get_field('project_cards');
                                 <?php echo get_the_post_thumbnail($project_card->ID); ?>
                                 <div class="ys-carousel-card--entry-content">
                                     <h3 class="ys-carousel-card--heading"><?php echo $title ?></h3>
-                                    <p class="ys-carousel-card--date u-skew-base"><?php echo $studio ?></p>
+                                    <p class="ys-carousel-card--date u-skew-base--desktop"><?php echo $studio ?></p>
                                 </div>
                             </div>
                             <a class="ys-btn ys-btn--yellow u-margin-top-2" href="<?php echo $permalink; ?>"><span>Read More</span></a>
