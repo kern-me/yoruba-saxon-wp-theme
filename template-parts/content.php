@@ -121,7 +121,7 @@ if (is_singular('project')):
         if ($related_press): ?>
             <section class="single-project-press ys-carousel-cards--container">
                 <div class="inner">
-                    <h2 class="heading-xl">Press</h2>
+                    <h2 class="heading-xl heading-offset">Press</h2>
                     <div class="ys-carousel-cards--container-grid">
                         <?php foreach ($related_press as $related_press_article):
                             $press_id = $related_press_article->ID;

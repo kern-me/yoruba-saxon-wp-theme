@@ -90,6 +90,16 @@ body.single-project {
     }
   }
 
+  .single-project-description {
+    .ys-two-col--content {
+      p {
+        margin-bottom: 1.5rem;
+        @include vars.breakpoint(medium) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
 
   .single-project-supplemental {
     padding-bottom: vars.$section-gutter;

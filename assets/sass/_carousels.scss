@@ -1,9 +1,9 @@
 @use 'vars';
 
 .ys-carousel-cards--container {
-  padding-top: vars.$pad-l;
+  padding: vars.$pad-l 0;
   &-grid {
-    padding-top: 3.5rem;
+    padding: 3.5rem 0 0;
     display: grid;
     gap: 8rem;
     grid-template-columns: 1fr;
