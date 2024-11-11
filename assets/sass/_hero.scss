@@ -41,14 +41,14 @@ img.ys-hero-heading {
   overflow: hidden;
 
   .video-container {
+    padding: 0;
+    position: relative;
+    z-index: 1;
     width: 140%;
     height: 100%;
     right: 20%;
     max-width: none;
     margin-inline: auto;
-    position: relative;
-    //overflow: hidden;
-    //padding-bottom: 56.25%;
 
     &:after {
       content: '';
