@@ -37,7 +37,9 @@ if (is_singular('project')):
             <div class="inner inner--lines">
                 <div class="ys-two-col ys-two-col--mobile-reversed">
                     <div class="ys-col ys-col--first ys-two-col--content">
-                        <?php the_content(); ?>
+                        <div class="single-project--intro-content">
+                            <?php the_content(); ?>
+                        </div>
                         <?php if ($directed_by): ?>
                         <p><strong>Directed By: </strong><?php echo $directed_by ?></p>
                         <?php endif; ?>
