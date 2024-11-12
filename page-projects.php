@@ -4,8 +4,10 @@ include_once ('template-parts/ys-hero.php');
 ?>
 <section class="ys-section ys-section--projects pad-bottom-0">
     <div class="inner">
-        <img class="u-centered u-heading-width--l" src="<?php echo get_template_directory_uri() . '/assets/images/heading-coming-soon.svg' ?>" alt="Coming Soon" />
-        <div class="ys-projects-grid ys-projects-grid--coming-soon pad-top--l">
+        <h2 aria-hidden="true" class="heading-branded">Coming&nbsp;&nbsp;<span></span>&nbsp;&nbsp;Soon</h2>
+        <h2 aria-hidden="false" class="sr-only" >Coming Soon</h2>
+
+        <div class="ys-projects-grid ys-projects-grid--coming-soon u-margin-top-xxl">
             <?php
             $projects_coming_soon = get_field('projects_coming_soon');
 
@@ -27,9 +29,10 @@ include_once ('template-parts/ys-hero.php');
             <?php endforeach; endif; ?>
         </div>
 
-        <img class="u-centered u-margin-top-xl u-heading-width--l" src="<?php echo get_template_directory_uri() . '/assets/images/heading-all-projects.svg' ?>" alt="All Projects" />
+        <h2 aria-hidden="true" class="heading-branded u-margin-top-xxl">All&nbsp;&nbsp;<span></span>&nbsp;&nbsp;Projects</h2>
+        <h2 aria-hidden="false" class="sr-only">All Projects</h2>
 
-        <div class="ys-projects-grid pad-top--l">
+        <div class="ys-projects-grid u-margin-top-xxl">
             <?php
             $projects_all = get_field('all_projects');
 

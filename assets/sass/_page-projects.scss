@@ -11,6 +11,37 @@
   }
 }
 
+.heading-branded {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  white-space: nowrap;
+  font-size: 2.5rem;
+  font-family: vars.$font-thin-reg;
+  @include vars.breakpoint(medium){
+    font-size: 4rem;
+  }
+  span {
+    display: inline-block;
+    position: absolute;
+    transform: skew(vars.$skew);
+    height: 7rem;
+    top: -1.5rem;
+    @include vars.breakpoint(medium){
+      height: 12rem;
+      top: -2.5rem;
+    }
+    &:before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      background: #000;
+      display: inline-block;
+      position: relative;
+    }
+  }
+}
+
 .ys-project {
   transform: skew(0deg);
   overflow: hidden;
