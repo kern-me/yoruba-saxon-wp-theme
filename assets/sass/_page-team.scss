@@ -11,12 +11,16 @@ body.page-team {
   .block--two-col {
     display: flex;
     flex-direction: column;
-    gap: 12rem;
+    gap: 6rem;
     position: relative;
+
+    @include vars.breakpoint(medium) {
+      gap: 12rem;
+    }
 
     &:before, &:after {
       content: '';
-      width: 5rem;
+      width: 7rem;
       background: vars.$yellow;
       height: 100%;
       position: absolute;
@@ -31,7 +35,7 @@ body.page-team {
     &:before {
       top: 0;
       @include vars.breakpoint(medium) {
-        left: -10rem;
+        left: -19rem;
         z-index: 3;
       }
     }
@@ -40,7 +44,7 @@ body.page-team {
       bottom: 0;
       right: 0;
       @include vars.breakpoint(medium) {
-        right: -10rem;
+        right: -26rem;
       }
     }
 
@@ -49,10 +53,10 @@ body.page-team {
       flex-direction: column;
       transform: skew(0deg);
       position: relative;
+      gap: 1rem;
       @include vars.breakpoint(medium) {
-        left: 12rem;
         display: grid;
-        grid-gap: 4rem;
+        grid-gap: 6rem;
         grid-template-columns: 1fr 1fr;
         transform: skew(vars.$skew);
       }
@@ -68,9 +72,18 @@ body.page-team {
           order: 2;
         }
       }
+
+
+
+      &:nth-child(odd) {
+        @include vars.breakpoint(medium) {
+          left: 5rem;
+        }
+      }
+
       &:nth-child(even) {
         @include vars.breakpoint(medium) {
-          left: -5rem;
+          //left: -5rem;
         }
         .col--text {
           order: 2;
@@ -86,21 +99,34 @@ body.page-team {
         }
       }
 
-      h2 {
-        text-transform: uppercase;
+      &:nth-child(1) {
+        @include vars.breakpoint(medium) {
+          left: 12rem;
+        }
       }
 
       h2 {
         font-family: vars.$font-bold-reg;
+        text-transform: uppercase;
+        font-size: 2rem;
+        @include vars.breakpoint(small) {
+          font-size: 2.5rem;
+        }
         @include vars.breakpoint(medium) {
+          font-size: 3rem;
           font-family: vars.$font-bold-rev;
         }
       }
 
       h3 {
         margin-bottom: 1rem;
+        font-family: vars.$font-italic-reg;
+        @include vars.breakpoint(medium) {
+          transform: skew(vars.$skew-base)
+          //font-family: vars.$font-ita;
+        }
       }
-      h3, p {
+      p {
         font-family: vars.$font-body-reg;
         @include vars.breakpoint(medium) {
           font-family: vars.$font-body-rev;
@@ -111,7 +137,7 @@ body.page-team {
         overflow: hidden;
         img, svg {
           width: 100%;
-          height: 20rem;
+          height: auto;
           object-fit: cover;
           object-position: top;
           @include vars.breakpoint(medium) {
