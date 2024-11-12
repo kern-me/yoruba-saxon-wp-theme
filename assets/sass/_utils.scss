@@ -1,5 +1,9 @@
 @use 'vars';
 
+.heading-thin {
+  font-family: vars.$font-thin-reg;
+}
+
 .text--no-skew {
   font-family: vars.$font-body-reg;
 }

@@ -112,17 +112,17 @@
 
                 if ($featured_review) {
                     $featured_review_source = get_field('featured_review_source');
-                    echo '<div class="featured-review">' . $featured_review . '<p>&mdash; ' . $featured_review_source . '</p></div>';
+                    echo '<div class="featured-review"><div class="inner">' . $featured_review . '<p>&mdash; ' . $featured_review_source . '</p></div></div>';
                 } ?>
             </section>
         <?php } ?>
 
         <?php
         if ($related_press) { ?>
-            <section class="single-project-press ys-carousel-cards--container">
+            <section class="single-project-press ys-carousel-cards--container pad-top--xl">
                 <div class="inner">
-                    <h2 class="heading-xl heading-offset">Press</h2>
-                    <div class="ys-carousel-cards--container-grid">
+                    <h2 class="heading-xl heading-offset heading-thin">Press</h2>
+                    <div class="ys-carousel-cards--container-grid pad-top--l">
                         <?php foreach ($related_press as $related_press_article) {
                             $press_id = $related_press_article->ID;
                             $publication_name = get_field('publication', $press_id);
@@ -147,7 +147,7 @@
 
         <?php
         if ($supplemental_image1 || $supplemental_image2 || $supplemental_image3) { ?>
-            <section class="single-project-supplemental">
+            <section class="single-project-supplemental pad-top--xxl">
                 <div class="inner">
                     <div class="single-project-supplemental--grid">
                         <?php if ($supplemental_image1) { ?>

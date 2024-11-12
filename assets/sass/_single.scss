@@ -26,7 +26,7 @@ body.single-project {
       text-transform: uppercase;
       color: white;
       font-size: 4rem;
-      letter-spacing: 0.5rem;
+      letter-spacing: 0.25rem;
       line-height: 0.75;
       z-index: 2;
 
@@ -197,6 +197,7 @@ body.single-project {
     &:last-child {
       font-size: 1.25rem;
       font-family: vars.$font-body-reg;
+      margin-top: 2rem;
       @include vars.breakpoint(medium){
         font-size: 1.75rem;
       }

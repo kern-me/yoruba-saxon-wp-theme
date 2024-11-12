@@ -3,11 +3,10 @@
 .ys-carousel-cards--container {
   &-grid {
     display: grid;
-    gap: 8rem;
+    gap: 4rem;
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     @include vars.breakpoint(medium) {
-      gap: 3.5rem;
       row-gap: 14rem;
       grid-template-columns: 1fr 1fr 1fr;
     }
