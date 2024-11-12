@@ -29,6 +29,7 @@ $pad-xxl: 16rem;
 $pad-xl: 8rem;
 $pad-l: 4rem;
 $pad-m: 2rem;
+$pad-s: 1rem;
 
 @mixin breakpoint($point) {
   @if $point == small {

@@ -3,7 +3,6 @@
 // Two Column
 .ys-two-col {
   display: grid;
-  gap: vars.$pad-m;
 
   @include vars.breakpoint(medium) {
     gap: 9%;

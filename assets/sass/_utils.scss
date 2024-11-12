@@ -64,7 +64,12 @@
   }
 }
 
-
+.pad-top--m {
+  padding-top: vars.$pad-s;
+  @include vars.breakpoint(medium) {
+    padding-top: vars.$pad-m;
+  }
+}
 
 .pad-bottom-0 {
   padding-bottom: 0;
