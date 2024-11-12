@@ -94,6 +94,10 @@ img.ys-hero-heading {
     translate: -50% -50%;
   }
   &.ys-hero-video-custom {
+    padding: 0 !important;
+    h1 {
+      padding-left: 4vw;
+    }
     .ys-hero-heading {
       position: absolute;
     }

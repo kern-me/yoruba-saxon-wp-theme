@@ -193,6 +193,13 @@
   margin-top: 4rem !important;
 }
 
+.u-margin-bottom-2--mobile {
+  margin-bottom: 2rem !important;
+  @include vars.breakpoint(medium) {
+    margin-top: 0 !important;
+  }
+}
+
 .u-margin-top-4--mobile {
   margin-top: 4rem !important;
   @include vars.breakpoint(medium) {

@@ -49,7 +49,7 @@
                 <div class="inner inner--lines">
                     <div class="ys-two-col ys-two-col--mobile-reversed">
                         <div class="ys-col ys-col--first ys-two-col--content">
-                            <div class="single-project--intro-content">
+                            <div class="single-project--intro-content u-margin-bottom-2--mobile">
                                 <?php the_content(); ?>
                             </div>
                             <?php if ($directed_by) { ?>

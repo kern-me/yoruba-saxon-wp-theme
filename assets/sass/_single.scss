@@ -43,7 +43,9 @@ body.single-project {
   .ys-col.ys-col--last {
     img {
       object-position: left;
+      display: none;
       @include vars.breakpoint(medium) {
+        display: block;
         max-width: none;
         width: 100%;
         position: absolute;
@@ -102,7 +104,6 @@ body.single-project {
   }
 
   .single-project--intro-content {
-    margin-bottom: 4rem;
     p {
       font-size: 1.5rem;
       line-height: 1.5;
