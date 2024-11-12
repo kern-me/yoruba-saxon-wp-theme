@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package yaroba-saxon
+ * @package yoruba-saxon
  */
 
 ?>
@@ -16,20 +16,20 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
-			yaroba_saxon_posted_on();
-			yaroba_saxon_posted_by();
+			yoruba_saxon_posted_on();
+			yoruba_saxon_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php yaroba_saxon_post_thumbnail(); ?>
+	<?php yoruba_saxon_post_thumbnail(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php yaroba_saxon_entry_footer(); ?>
+		<?php yoruba_saxon_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

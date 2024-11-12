@@ -14,8 +14,8 @@ get_header();
 
 			the_post_navigation(
 				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( '', 'yaroba-saxon' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( '', 'yaroba-saxon' ) . '</span> <span class="nav-title">%title</span>',
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( '', 'yoruba-saxon' ) . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__( '', 'yoruba-saxon' ) . '</span> <span class="nav-title">%title</span>',
 				)
 			);
 		endwhile;

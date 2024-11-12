@@ -15,7 +15,7 @@
 <body <?php body_class() ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'yaroba-saxon'); ?></a>
+    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'yoruba-saxon'); ?></a>
     <header>
         <nav class="menu--right" role="navigation">
             <div class="menu-toggle">

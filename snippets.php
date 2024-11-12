@@ -10,10 +10,10 @@
         <p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
     <?php
     endif;
-    $yaroba_saxon_description = get_bloginfo('description', 'display');
-    if ($yaroba_saxon_description || is_customize_preview()) :
+    $yoruba_saxon_description = get_bloginfo('description', 'display');
+    if ($yoruba_saxon_description || is_customize_preview()) :
         ?>
-        <p class="site-description"><?php echo $yaroba_saxon_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+        <p class="site-description"><?php echo $yoruba_saxon_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
             ?></p>
     <?php endif; ?>
 </div><!-- .site-branding -->
@@ -33,14 +33,14 @@
             ?>
             <div class="entry-meta">
                 <?php
-                yaroba_saxon_posted_on();
-                yaroba_saxon_posted_by();
+                yoruba_saxon_posted_on();
+                yoruba_saxon_posted_by();
                 ?>
             </div><!-- .entry-meta -->
         <?php endif; ?>
     </header><!-- .entry-header -->
     
-    <?php yaroba_saxon_post_thumbnail(); ?>
+    <?php yoruba_saxon_post_thumbnail(); ?>
 
     <div class="entry-content">
         <?php
@@ -48,7 +48,7 @@
             sprintf(
                 wp_kses(
                 /* translators: %s: Name of current post. Only visible to screen readers */
-                    __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'yaroba-saxon'),
+                    __('Continue reading<span class="screen-reader-text"> "%s"</span>', 'yoruba-saxon'),
                     array(
                         'span' => array(
                             'class' => array(),
@@ -61,7 +61,7 @@
         
         wp_link_pages(
             array(
-                'before' => '<div class="page-links">' . esc_html__('Pages:', 'yaroba-saxon'),
+                'before' => '<div class="page-links">' . esc_html__('Pages:', 'yoruba-saxon'),
                 'after' => '</div>',
             )
         );
@@ -69,7 +69,7 @@
     </div><!-- .entry-content -->
 
     <footer class="entry-footer">
-        <?php yaroba_saxon_entry_footer(); ?>
+        <?php yoruba_saxon_entry_footer(); ?>
     </footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
@@ -80,7 +80,7 @@
         <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
     </header><!-- .entry-header -->
     
-    <?php yaroba_saxon_post_thumbnail(); ?>
+    <?php yoruba_saxon_post_thumbnail(); ?>
 
     <div class="entry-content">
         <?php
@@ -88,7 +88,7 @@
         
         wp_link_pages(
             array(
-                'before' => '<div class="page-links">' . esc_html__('Pages:', 'yaroba-saxon'),
+                'before' => '<div class="page-links">' . esc_html__('Pages:', 'yoruba-saxon'),
                 'after' => '</div>',
             )
         );
@@ -102,7 +102,7 @@
                 sprintf(
                     wp_kses(
                     /* translators: %s: Name of current post. Only visible to screen readers */
-                        __('Edit <span class="screen-reader-text">%s</span>', 'yaroba-saxon'),
+                        __('Edit <span class="screen-reader-text">%s</span>', 'yoruba-saxon'),
                         array(
                             'span' => array(
                                 'class' => array(),

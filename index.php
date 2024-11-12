@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package yaroba-saxon
+ * @package yoruba-saxon
  */
 
 get_header();

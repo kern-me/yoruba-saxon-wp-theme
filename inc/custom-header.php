@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package yaroba-saxon
+ * @package yoruba-saxon
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses yaroba_saxon_header_style()
+ * @uses yoruba_saxon_header_style()
  */
-function yaroba_saxon_custom_header_setup() {
+function yoruba_saxon_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'yaroba_saxon_custom_header_args',
+			'yoruba_saxon_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'yaroba_saxon_header_style',
+				'wp-head-callback'   => 'yoruba_saxon_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'yaroba_saxon_custom_header_setup' );
+add_action( 'after_setup_theme', 'yoruba_saxon_custom_header_setup' );
 
-if ( ! function_exists( 'yaroba_saxon_header_style' ) ) :
+if ( ! function_exists( 'yoruba_saxon_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see yaroba_saxon_custom_header_setup().
+	 * @see yoruba_saxon_custom_header_setup().
 	 */
-	function yaroba_saxon_header_style() {
+	function yoruba_saxon_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
