@@ -20,9 +20,9 @@ $project_cards = get_field('project_cards');
             <div class="ys-two-col">
                 <div class="ys-col ys-col--first ys-two-col--content">
                     <h2 class="heading-xl text--no-wrap"><?php echo $main_heading; ?></h2>
-
-                    <?php echo $main_subheading; ?>
-
+                    <div class="home-main-subheading">
+                        <?php echo $main_subheading; ?>
+                    </div>
                     <?php
                     $link = get_field('main_cta');
 
@@ -31,19 +31,22 @@ $project_cards = get_field('project_cards');
                         $link_title = $link['title'];
                         $link_target = $link['target'] ? $link['target'] : '_self';
                         ?>
-                        <a class="ys-btn ys-btn--yellow u-margin-top-2" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                        <a class="ys-btn ys-btn--yellow u-margin-top-2 show-desktop-only--flex" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                             <span><?php echo esc_html( $link_title ); ?></span>
                         </a>
                     <?php endif; ?>
                 </div>
-                <div class="ys-col ys-col--last">
+                <div class="ys-col ys-col--last u-margin-top-2--mobile">
                     <img src="<?php echo $main_image['url']; ?>" alt="<?php echo $main_image['alt']; ?>">
+                    <a class="ys-btn ys-btn--yellow u-margin-top-2 show-mobile-only--flex" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                        <span><?php echo esc_html( $link_title ); ?></span>
+                    </a>
                 </div>
             </div>
 
             <div class="ys-carousel-cards ys-section--pad-top">
                 <h2 class="heading-xl"><?php echo $latest_work_heading ?></h2>
-                <div class="ys-carousel-cards--container ys-slick">
+                <div class="ys-carousel-cards--container ys-slick pad-top--l">
                     <?php
                     if($project_cards): foreach($project_cards as $project_card):
                         $title = get_the_title($project_card->ID);
@@ -94,7 +97,7 @@ endif;
                 <path d="M73 1L1 298L4 801.5L1265 790.5L1261.5 403L1362.5 1H73Z" fill="#D9D9D9" fill-opacity="0.6" stroke="black"/>
             </clipPath>
         </svg>
-        <div class="ys-carousel-cards--container-grid ys-slick">
+        <div class="ys-carousel-cards--container-grid ys-slick pad-top--l">
             <?php
             $press_cards = get_field('press_cards');
 

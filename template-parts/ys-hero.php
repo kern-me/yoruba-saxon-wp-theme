@@ -4,7 +4,7 @@ $media_selection = get_field('media_selection');
 
 <section class="ys-hero <?php
 if ($media_selection === 'video') {
-    echo 'ys-hero-video"';
+    echo 'ys-hero-video ys-hero-video-custom"';
 }
 
 if ($media_selection === 'youtube') {
