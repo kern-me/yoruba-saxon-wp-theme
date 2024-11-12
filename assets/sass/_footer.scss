@@ -12,6 +12,10 @@
     padding: vars.$section-padding 0;
   }
 
+  .ys-skewed {
+    position: relative;
+  }
+
   $ys-section-breakpoint: 1230px;
   $footer-font-size: 1.15rem;
 
@@ -24,12 +28,10 @@
       padding: 0 vars.$section-gutter;
     }
     @include vars.breakpoint(medium){
+      flex-direction: row;
       justify-content: end;
       gap: 20%;
       padding: 0;
-    }
-    @include vars.breakpoint(small){
-      flex-direction: row;
     }
   }
 
@@ -59,21 +61,29 @@
       position: absolute;
       background: vars.$white;
       left: -2em;
+      display: none;
+      @include vars.breakpoint(medium){
+        display: block;
+      }
     }
   }
 
-  .footer-logo {
+  svg {
     position: absolute;
-    opacity: .02;
-    top: -70%;
-    right: 50%;
-    width: 150%;
+    right: 0;
+    top: 50%;
+    width: 50%;
+    height: auto;
     max-width: none;
+    translate: 0 -50%;
+    display: none;
+    @include vars.breakpoint(small){
+      display: block;
+      width: 50%;
+    }
     @include vars.breakpoint(medium){
-      width: 800px;
-      height: auto;
-      top: -18vh;
-      left: -380px;
+      left: -25%;
+      top: 50%;
     }
   }
 }
