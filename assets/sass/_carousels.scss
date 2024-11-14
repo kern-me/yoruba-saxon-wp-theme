@@ -26,7 +26,7 @@
     font-family: vars.$font-italic-reg;
     font-size: 1.25rem;
     @include vars.breakpoint(medium) {
-      font-family: vars.$font-italic-rev;
+      transform: skew(vars.$skew-base)
     }
   }
 

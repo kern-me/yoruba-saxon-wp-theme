@@ -113,9 +113,14 @@
         }
       }
     }
-
     &--heading {
       font-family: vars.$font-bold-reg;
+    }
+    &--date {
+      margin-top: 0.15rem;
+      @include vars.breakpoint(medium) {
+        transform: none;
+      }
     }
     &--description {
       font-family: vars.$font-body-reg;
