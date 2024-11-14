@@ -81,6 +81,10 @@
     }
   }
 
+  .slick-next, .slick-prev {
+    transform: skew(0) !important;
+  }
+
   .ys-carousel-card {
     overflow: visible;
     justify-content: space-between;
@@ -88,7 +92,7 @@
     flex-direction: column;
     height: auto;
     @include vars.breakpoint(medium) {
-      height: 47.75rem;
+      height: 43.75rem;
     }
     &--image-container {
       overflow: hidden;

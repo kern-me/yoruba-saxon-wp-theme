@@ -116,7 +116,7 @@ endif;
                             </div>
                             <div class="ys-carousel-card--entry-content">
                                 <h3 class="ys-carousel-card--heading"><?php echo $publication_name ?></h3>
-                                <p class="ys-carousel-card--date"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
+                                <p class="ys-carousel-card--date u-text-italic"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
                             </div>
                             <div class="ys-carousel-card--description u-margin-top-2"><?php echo apply_filters('the_content', $press_card->post_content); ?></div>
                         </div>
