@@ -14,12 +14,13 @@ $latest_work_heading = get_field('latest_work_heading');
 $project_cards = get_field('project_cards');
 
 ?>
-<section class="ys-section ys-section--intro ys-section--pad-top">
+<section class="ys-section ys-section--intro ys-section--pad-top u-overflow-visible">
     <div class="ys-skewed">
         <div class="inner inner--lines">
             <div class="ys-two-col">
                 <div class="ys-col ys-col--first ys-two-col--content">
-                    <h2 class="heading-xl text--no-wrap"><?php echo $main_heading; ?></h2>
+                    <a class="u-heading-link u-text-black" href="<?php echo site_url() ?>/about"><h2 class="u-heading-lt u-skew-base--desktop"><?php echo $main_heading; ?></h2></a>
+
                     <div class="home-main-subheading">
                         <?php echo $main_subheading; ?>
                     </div>
@@ -45,7 +46,7 @@ $project_cards = get_field('project_cards');
             </div>
 
             <div class="ys-carousel-cards ys-section--pad-top">
-                <h2 class="heading-xl"><?php echo $latest_work_heading ?></h2>
+                <a class="u-heading-link u-text-black" href="<?php echo site_url() ?>/projects"><h2 class="u-heading-lt u-skew-base--desktop"><?php echo $latest_work_heading ?></h2></a>
                 <div class="ys-carousel-cards--container ys-slick pad-top--l">
                     <?php
                     if($project_cards): foreach($project_cards as $project_card):
@@ -53,16 +54,18 @@ $project_cards = get_field('project_cards');
                         $studio = get_field('studio', $project_card->ID);
                         $permalink =  get_permalink($project_card->ID);
                         ?>
-                        <article class="ys-carousel-card">
-                            <div class="ys-carousel-card--image-container">
-                                <?php echo get_the_post_thumbnail($project_card->ID); ?>
+                        <a class="u-card-link u-card-link--light" href="<?php echo $permalink; ?>">
+                            <article class="ys-carousel-card">
+                                <div class="ys-carousel-card--image-container">
+                                    <?php echo get_the_post_thumbnail($project_card->ID); ?>
+                                </div>
                                 <div class="ys-carousel-card--entry-content">
                                     <h3 class="ys-carousel-card--heading"><?php echo $title ?></h3>
-                                    <p class="ys-carousel-card--date u-skew-base--desktop"><?php echo $studio ?></p>
+                                    <p class="ys-carousel-card--date"><?php echo $studio ?></p>
                                 </div>
-                            </div>
-                            <a class="ys-btn ys-btn--yellow u-margin-top-2" href="<?php echo $permalink; ?>"><span>Read More</span></a>
-                        </article>
+                                <div class="ys-btn ys-btn--yellow u-margin-top-2"><span>Read More</span></div>
+                            </article>
+                        </a>
                     <?php endforeach; endif; ?>
                 </div>
 
@@ -91,7 +94,7 @@ endif;
     <div class="inner">
 
         <?php $press_heading = get_field('press_heading'); ?>
-        <h2 class="heading-xl heading-offset"><?php echo $press_heading ?></h2>
+        <a class="u-heading-link u-text-black heading-offset" href="<?php echo site_url() ?>/press"><h2 class="u-heading-lt"><?php echo $press_heading ?></h2></a>
         <svg class="carousel-clip-path" width="1364" height="802" viewBox="0 0 1364 802" fill="none" xmlns="http://www.w3.org/2000/svg">
             <clipPath id="carousel_clip_path">
                 <path d="M73 1L1 298L4 801.5L1265 790.5L1261.5 403L1362.5 1H73Z" fill="#D9D9D9" fill-opacity="0.6" stroke="black"/>
@@ -105,20 +108,22 @@ endif;
                 $publication_name = get_field('publication', $press_card->ID);
                 $press_link = get_field('press_link', $press_card->ID);
                 ?>
-                <article class="ys-carousel-card">
-                    <div>
-                        <div class="ys-carousel-card--image-container">
-                            <?php echo get_the_post_thumbnail($press_card->ID, ''); ?>
+                <a class="u-card-link u-card-link--light" href="<?php echo esc_url($press_link); ?>" target="_blank">
+                    <article class="ys-carousel-card">
+                        <div>
+                            <div class="ys-carousel-card--image-container">
+                                <?php echo get_the_post_thumbnail($press_card->ID, ''); ?>
+                            </div>
+                            <div class="ys-carousel-card--entry-content">
+                                <h3 class="ys-carousel-card--heading"><?php echo $publication_name ?></h3>
+                                <p class="ys-carousel-card--date"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
+                            </div>
+                            <div class="ys-carousel-card--description u-margin-top-2"><?php echo apply_filters('the_content', $press_card->post_content); ?></div>
                         </div>
-                        <div class="ys-carousel-card--entry-content">
-                            <h3 class="ys-carousel-card--heading"><?php echo $publication_name ?></h3>
-                            <p class="ys-carousel-card--date"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
-                        </div>
-                        <div class="ys-carousel-card--description u-margin-top-2"><?php echo apply_filters('the_content', $press_card->post_content); ?></div>
-                    </div>
 
-                    <a class="ys-btn ys-btn--yellow u-margin-top-2--mobile" href="<?php echo esc_url($press_link); ?>" target="_blank"><span>Read More</span></a>
-                </article>
+                        <div class="ys-btn ys-btn--yellow u-margin-top-2--mobile"><span>Read More</span></div>
+                    </article>
+                </a>
             <?php endforeach; endif; ?>
         </div>
 </section>

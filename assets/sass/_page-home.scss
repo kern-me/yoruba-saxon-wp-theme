@@ -58,7 +58,9 @@ h1 {
           }
         }
         &:after {
-          display: none;
+          right: -203px;
+          bottom: -135px;
+          top: unset;
         }
       }
     }

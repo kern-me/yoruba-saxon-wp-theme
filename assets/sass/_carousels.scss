@@ -16,10 +16,18 @@
 .ys-carousel-card {
   overflow: hidden;
   height: 100%;
+
+  &--image-container {
+    overflow: hidden;
+  }
+
   &--date {
     margin-top: 0.25rem;
     font-family: vars.$font-italic-reg;
     font-size: 1.25rem;
+    @include vars.breakpoint(medium) {
+      font-family: vars.$font-italic-rev;
+    }
   }
 
   &--description {
@@ -59,6 +67,8 @@
       transform: skew(vars.$skew-base);
     }
   }
+
+
 
   img {
     position: relative;
@@ -102,11 +112,11 @@ $arrow-spacing-mobile: -3vw;
   width: 24px !important;
   height: 40px !important;
   z-index: 1;
-  filter: drop-shadow(1px 1px 0px #666);
+  top: 39% !important;
   @include vars.breakpoint(medium) {
+    top: 33% !important;
     width: 56px !important;
     height: 78px !important;
-    filter: none;
     transform: skew(vars.$skew-base) !important;
   }
 }
@@ -141,7 +151,7 @@ $arrow-spacing-mobile: -3vw;
 
 .ys-no-skew {
   .slick-next {
-    right: -4px !important;
+    right: $arrow-spacing-mobile !important;
     @include vars.breakpoint(medium) {
       right: -25px !important;
     }

@@ -1,5 +1,10 @@
 @use 'vars';
 
+.sr-only {
+  display: none;
+  visibility: hidden;
+}
+
 .heading-thin {
   font-family: vars.$font-thin-reg;
 }
@@ -124,8 +129,79 @@
 }
 
 // Text
-.text--black {
+.u-text-black {
   color: vars.$black !important;
+}
+
+.u-text-white {
+  color: #ffffff !important;
+}
+
+.u-text-no-decor {
+  text-decoration: none;
+}
+
+.u-overflow-visible {
+  overflow: visible;
+}
+
+.u-card-link {
+  text-decoration: none;
+
+  &--light {
+    * {
+      color: vars.$black;
+    }
+
+    .ys-btn--yellow {
+      transition: all 0.15s ease-in;
+      span {
+        transition: all 0.15s ease-in;
+      }
+    }
+
+    img {
+      transition: transform 0.15s ease-in;
+      //transform: none;
+    }
+    &:hover {
+      @include vars.breakpoint(medium){
+
+        img {
+          transform: scale(1.05) skew(vars.$skew-base)
+        }
+
+        .ys-btn--yellow {
+          background: #000000;
+          span {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  &--dark {
+    * {
+      color: #ffffff;
+    }
+  }
+}
+
+.u-heading-link {
+  text-decoration: none;
+  white-space: nowrap;
+
+  h2, h3 {
+    transition: color 0.15s ease-in;
+  }
+
+  &.u-text-black {
+    &:hover {
+      h2 {
+        color: vars.$yellow
+      }
+    }
+  }
 }
 
 .u-clamp5 {
