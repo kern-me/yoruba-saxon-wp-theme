@@ -73,7 +73,7 @@ $partners = get_field('partners');
                 <div class="skewed-col skewed-col--last">
                     <h2 class="heading-xl ys-skew--reversed show-desktop-only--block">Press</h2>
                     <h3><?php echo $publication_name ?></h3>
-                    <p class="ys-carousel-card--date"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
+                    <p class="ys-carousel-card--date u-text-italic u-skew-0"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
                     <div class="description"><?php echo apply_filters('the_content', $press->post_content); ?></div>
                 </div>
             <?php endforeach; ?>

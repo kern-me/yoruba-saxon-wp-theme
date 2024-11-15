@@ -17,6 +17,10 @@
   font-family: vars.$font-body-reg;
 }
 
+.u-skew-0 {
+  transform: skew(0) !important;
+}
+
 .ys-skew--reversed {
   transform: skew(0);
   @include vars.breakpoint(medium) {
