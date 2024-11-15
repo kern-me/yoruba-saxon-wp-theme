@@ -44,7 +44,7 @@
             $link_target = $watch_link['target'] ? $watch_link['target'] : '_self';
         } ?>
 
-        <section class="single-project-description ys-section ys-section--intro pad-top--xl pad-bottom--xl">
+        <section class="single-project-description ys-section ys-section--intro u-pad-top--xl u-pad-bottom--xl">
             <div class="ys-skewed">
                 <div class="inner inner--lines">
                     <div class="ys-two-col ys-two-col--mobile-reversed">
@@ -77,7 +77,7 @@
                             <?php } ?>
 
                             <?php if ($watch_link) { ?>
-                                <a class="ys-btn ys-btn--yellow u-margin-top-l" href="<?php echo esc_url($link_url); ?>"
+                                <a class="ys-btn ys-btn--yellow u-margin-top--l" href="<?php echo esc_url($link_url); ?>"
                                    target="_blank">
                                     <span>Watch Now</span>
                                 </a>
@@ -119,10 +119,10 @@
 
         <?php
         if ($related_press) { ?>
-            <section class="single-project-press ys-carousel-cards--container pad-top--xl">
+            <section class="single-project-press ys-carousel-cards--container u-pad-top--xl">
                 <div class="inner">
-                    <h2 class="heading-xl heading-offset heading-thin">Press</h2>
-                    <div class="ys-carousel-cards--container-grid pad-top--l">
+                    <h2 class="heading-xl heading-offset u-heading-thin">Press</h2>
+                    <div class="ys-carousel-cards--container-grid u-pad-top--l">
                         <?php foreach ($related_press as $related_press_article) {
                             $press_id = $related_press_article->ID;
                             $publication_name = get_field('publication', $press_id);
@@ -136,7 +136,7 @@
                                 <p class="ys-carousel-card--date"><?php $post_date = get_the_date('F j, Y');
                                     echo $post_date; ?></p>
                                 <div class="ys-carousel-card--description u-margin-top-2"><?php echo apply_filters('the_content', $related_press_article->post_content); ?></div>
-                                <a class="ys-btn ys-btn--yellow ys-skew u-margin-top-2"
+                                <a class="ys-btn ys-btn--yellow u-skew u-margin-top-2"
                                    href="<?php echo esc_url($press_link); ?>"><span>Read More</span></a>
                             </article>
                         <?php } ?>
@@ -147,7 +147,7 @@
 
         <?php
         if ($supplemental_image1 || $supplemental_image2 || $supplemental_image3) { ?>
-            <section class="single-project-supplemental pad-top--xxl">
+            <section class="single-project-supplemental u-pad-top--xxl">
                 <div class="inner">
                     <div class="single-project-supplemental--grid">
                         <?php if ($supplemental_image1) { ?>

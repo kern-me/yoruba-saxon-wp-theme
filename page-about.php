@@ -19,10 +19,10 @@ $partners = get_field('partners');
     </div>
 </section>
 
-<section id="projects" class="ys-section u-margin-top-xxl block--masonry-grid">
+<section id="projects" class="ys-section u-margin-top--xxl block--masonry-grid">
     <div class="inner gutter">
         <h2 class="heading-xl u-text-center--mobile">Projects</h2>
-        <div class="grid pad-top--l">
+        <div class="grid u-pad-top--l">
         <?php if ($projects):
             foreach ($projects as $project):
                 $pr_id = $project->ID;
@@ -46,10 +46,10 @@ $partners = get_field('partners');
     </div>
 </section>
 
-<section class="ys-section u-margin-top-xxl block--two-col-img">
+<section class="ys-section u-margin-top--xxl block--two-col-img">
     <div class="inner gutter ys-lines-section">
         <h2 class="heading-xl u-text-center--mobile">Founders</h2>
-        <div id="founders" class="skewed-row u-margin-top-l">
+        <div id="founders" class="skewed-row u-margin-top--l">
             <div class="skewed-col skewed-col--first">
                 <h3><?php echo $founders_heading ?></h3>
                 <p class="description"><?php echo $founders_description ?></p>
@@ -59,7 +59,7 @@ $partners = get_field('partners');
                 <img src="<?php echo $founders_image['url']; ?>" alt="<?php echo $founders_image['alt']; ?>">
             </div>
         </div>
-        <div id="press" class="skewed-row skewed-row--reversed u-margin-top-xxl">
+        <div id="press" class="skewed-row skewed-row--reversed u-margin-top--xxl">
             <?php if ($featured_press):
             foreach ($featured_press as $press):
                 $pid = $press->ID;
@@ -67,11 +67,11 @@ $partners = get_field('partners');
                 $press_link = get_field('press_link', $pid);
                 ?>
                 <div class="skewed-col skewed-col--first skewed-img-container">
-                    <h2 aria-hidden="true" class="heading-xl ys-skew--reversed show-mobile-only--block u-text-center--mobile">Press</h2>
+                    <h2 aria-hidden="true" class="heading-xl u-skew--reversed u-show-mobile-only--block u-text-center--mobile">Press</h2>
                     <div class="u-margin-top-2--mobile"><?php echo get_the_post_thumbnail($pid); ?></div>
                 </div>
                 <div class="skewed-col skewed-col--last">
-                    <h2 class="heading-xl ys-skew--reversed show-desktop-only--block">Press</h2>
+                    <h2 class="heading-xl u-skew--reversed u-show-desktop-only--block">Press</h2>
                     <h3><?php echo $publication_name ?></h3>
                     <p class="ys-carousel-card--date u-text-italic u-skew-0"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
                     <div class="description"><?php echo apply_filters('the_content', $press->post_content); ?></div>
@@ -98,10 +98,10 @@ $partners = get_field('partners');
     </div>
 </section>
 
-<section id="partners" class="ys-section u-margin-top-xxl">
+<section id="partners" class="ys-section u-margin-top--xxl">
     <div class="inner gutter">
         <h2 class="heading-xl u-text-center--mobile">Partners</h2>
-        <div class="flex-grid flex-grid--partners pad-top--l">
+        <div class="flex-grid flex-grid--partners u-pad-top--l">
             <a class="partner size-m" href="https://tv.apple.com/" target="_blank">
                 <svg width="332" height="126" viewBox="0 0 332 126" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M69.5479 20.2149C74.2378 14.5669 76.5619 7.32319 76.0337 0C68.8458 0.693991 62.2106 4.16064 57.5345 9.66513C55.206 12.3017 53.4213 15.3726 52.283 18.7013C51.1446 22.03 50.6751 25.5509 50.9014 29.0617C54.482 29.1319 58.03 28.3694 61.2658 26.8342C64.5016 25.2989 67.3368 23.033 69.5479 20.2149ZM75.5915 30.3961C65.2732 29.799 56.5764 36.294 51.6384 36.294C46.7004 36.294 39.1828 30.7205 31.0756 30.868C25.7672 31.0176 20.591 32.5582 16.0643 35.3358C11.5376 38.1134 7.81895 42.0308 5.27995 46.6964C-5.77531 65.8644 2.33188 94.4175 13.0923 110.025C18.3252 117.441 24.5898 126.281 32.9181 125.993C41.2464 125.706 43.826 120.833 53.3335 120.833C62.8411 120.833 65.6417 125.993 73.8963 125.809C82.1509 125.625 87.8997 118.378 93.0588 110.327C96.7802 104.828 99.6848 98.8186 101.682 92.4859C96.7259 90.2912 92.5099 86.7102 89.5416 82.174C86.5733 77.6379 84.9793 72.3401 84.9516 66.9187C85.0126 62.1083 86.2794 57.3902 88.6357 53.1964C90.9921 49.0027 94.3628 45.4674 98.439 42.9143C95.8491 39.2101 92.4407 36.1526 88.4783 33.9791C84.516 31.8056 80.1063 30.5745 75.5915 30.3814M141.407 15.5188V36.5668H158.211V50.4636H141.407V100.264C141.407 107.695 144.724 111.484 152.094 111.484C154.115 111.448 156.133 111.3 158.137 111.042V125.05C154.848 125.582 151.519 125.829 148.188 125.787C130.794 125.787 124.087 119.026 124.087 102.077V50.7954H110.895V36.8617H123.719V15.5335L141.407 15.5188ZM216.952 125.02H198.526L167.571 36.8617H185.923L207.665 107.695H208.107L229.849 36.8617H247.833L216.952 125.02ZM297.876 125.02H281.956V88.8956H247.759V72.9861H281.883V36.8617H297.802V72.9861H332V88.8956H297.876V125.02Z" fill="white"/>

@@ -32,14 +32,14 @@ $project_cards = get_field('project_cards');
                         $link_title = $link['title'];
                         $link_target = $link['target'] ? $link['target'] : '_self';
                         ?>
-                        <a class="ys-btn ys-btn--yellow u-margin-top-2 show-desktop-only--flex" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                        <a class="ys-btn ys-btn--yellow u-margin-top-2 u-show-desktop-only--flex" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                             <span><?php echo esc_html( $link_title ); ?></span>
                         </a>
                     <?php endif; ?>
                 </div>
                 <div class="ys-col ys-col--last u-margin-top-2--mobile">
                     <img src="<?php echo $main_image['url']; ?>" alt="<?php echo $main_image['alt']; ?>">
-                    <a class="ys-btn ys-btn--yellow u-margin-top-2 show-mobile-only--flex" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
+                    <a class="ys-btn ys-btn--yellow u-margin-top-2 u-show-mobile-only--flex" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>">
                         <span><?php echo esc_html( $link_title ); ?></span>
                     </a>
                 </div>
@@ -47,7 +47,7 @@ $project_cards = get_field('project_cards');
 
             <div class="ys-carousel-cards ys-section--pad-top">
                 <a class="u-heading-link u-text-black" href="<?php echo site_url() ?>/projects"><h2 class="u-heading-lt u-skew-base--desktop"><?php echo $latest_work_heading ?></h2></a>
-                <div class="ys-carousel-cards--container ys-slick pad-top--l">
+                <div class="ys-carousel-cards--container ys-slick u-pad-top--l">
                     <?php
                     if($project_cards): foreach($project_cards as $project_card):
                         $title = get_the_title($project_card->ID);
@@ -84,7 +84,7 @@ if( $meet_the_team_link ):
     $link_target = $meet_the_team_link['target'] ? $meet_the_team_link['target'] : '_self';
 endif;
 ?>
-<section class="ys-section ys-section--bg ys-section--meet-the-team ys-section--margin-top" style="background-image: url('<?php echo esc_url($meet_the_team_image["url"]) ?>')">
+<section class="ys-section u-section--bg ys-section--meet-the-team ys-section--margin-top" style="background-image: url('<?php echo esc_url($meet_the_team_image["url"]) ?>')">
     <div class="inner">
         <a class="ys-btn ys-btn--white" href="<?php echo esc_url( $link_url ) ?>" target="<?php echo esc_attr( $link_target ) ?>'"><span><?php echo esc_html( $link_title ) ?></span></a>
     </div>
@@ -100,7 +100,7 @@ endif;
                 <path d="M73 1L1 298L4 801.5L1265 790.5L1261.5 403L1362.5 1H73Z" fill="#D9D9D9" fill-opacity="0.6" stroke="black"/>
             </clipPath>
         </svg>
-        <div class="ys-carousel-cards--container-grid ys-slick pad-top--l">
+        <div class="ys-carousel-cards--container-grid ys-slick u-pad-top--l">
             <?php
             $press_cards = get_field('press_cards');
 
