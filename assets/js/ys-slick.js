@@ -7,6 +7,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         //centerMode: true,
         variableWidth: true,
+        useTransform: false,
         responsive: [
             {
                 breakpoint: 1025,
