@@ -6,7 +6,7 @@ $press_featured_article = get_field('press_featured_article');
 
 ?>
 <?php if ($press_featured_article): ?>
-<section class="ys-section ys-lines-section pad-top--l">
+<section class="ys-section ys-lines-section u-pad-top--l">
     <div class="inner gutter">
         <div class="press-heading-content">
             <?php foreach ($press_featured_article as $pfa):
