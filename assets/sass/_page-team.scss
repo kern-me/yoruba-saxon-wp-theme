@@ -8,16 +8,7 @@ body.page-team {
     }
   }
 
-  .block--two-col {
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
-    position: relative;
-
-    @include vars.breakpoint(medium) {
-      gap: 12rem;
-    }
-
+  .ys-section {
     &:before, &:after {
       content: '';
       width: 7rem;
@@ -47,6 +38,19 @@ body.page-team {
         right: -26rem;
       }
     }
+
+  }
+
+  .block--two-col {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    position: relative;
+
+    @include vars.breakpoint(medium) {
+      gap: 12rem;
+    }
+
 
     .two-col--row {
       display: flex;
