@@ -7,7 +7,7 @@ $team_members = get_field('team_members');
 
 ?>
 
-<section class="ys-section">
+<section class="ys-section team-container">
     <div class="inner block--two-col gutter">
         <?php
         if (have_rows('team_members')):

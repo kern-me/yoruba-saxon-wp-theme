@@ -1,6 +1,7 @@
 @use 'vars';
 
 body.page-team {
+
   .gutter {
     padding-inline: 5vw;
     @include vars.breakpoint(medium) {
@@ -8,37 +9,55 @@ body.page-team {
     }
   }
 
-  .ys-section {
-    &:before, &:after {
-      content: '';
-      width: 7rem;
-      background: vars.$yellow;
-      height: 100%;
-      position: absolute;
-      transform: skew(vars.$skew);
-      z-index: -1;
-      display: none;
-      @include vars.breakpoint(medium) {
-        display: block;
-      }
+  .team-container {
+    padding-top: 0;
+    @include vars.breakpoint(small) {
+      padding-top: vars.$section-padding-mobile;
+    }
+    @include vars.breakpoint(medium) {
+      padding-top: vars.$section-padding;
     }
 
-    &:before {
-      top: 0;
-      @include vars.breakpoint(medium) {
-        left: -19rem;
-        z-index: 3;
+    .inner {
+      &:before, &:after {
+        content: '';
+        width: 7rem;
+        background: vars.$yellow;
+        height: 100%;
+        position: absolute;
+        transform: skew(vars.$skew);
+        z-index: -1;
+        display: none;
+        @include vars.breakpoint(medium) {
+          display: block;
+        }
+      }
+
+      &:before {
+        top: 0;
+        left: 0;
+        @include vars.breakpoint(medium) {
+          left: -36rem;
+        }
+      }
+
+      &:after {
+        bottom: 0;
+        right: 0;
+        @include vars.breakpoint(medium) {
+          right: -36rem;
+        }
       }
     }
+  }
 
-    &:after {
-      bottom: 0;
-      right: 0;
-      @include vars.breakpoint(medium) {
-        right: -26rem;
-      }
+  .ys-hero {
+    @include vars.breakpoint(medium) {
+      height: 40vh;
     }
-
+    @include vars.breakpoint(large) {
+      height: 60vh;
+    }
   }
 
   .block--two-col {
@@ -51,7 +70,6 @@ body.page-team {
       gap: 12rem;
     }
 
-
     .two-col--row {
       display: flex;
       flex-direction: column;
@@ -63,6 +81,7 @@ body.page-team {
         grid-gap: 6rem;
         grid-template-columns: 1fr 1fr;
         transform: skew(vars.$skew);
+        max-width: 95%;
       }
       .col--text {
         order: 2;
@@ -72,12 +91,17 @@ body.page-team {
       }
       .col--img {
         order: 1;
+        max-height: 15rem;
+        @include vars.breakpoint(small) {
+          max-height: 30rem;
+        }
         @include vars.breakpoint(medium) {
           order: 2;
+          clip-path: none;
+          aspect-ratio: auto;
+          max-height: none;
         }
       }
-
-
 
       &:nth-child(odd) {
         @include vars.breakpoint(medium) {
