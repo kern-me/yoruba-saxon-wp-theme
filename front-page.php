@@ -107,6 +107,7 @@ endif;
             if($press_cards): foreach($press_cards as $press_card):
                 $publication_name = get_field('publication', $press_card->ID);
                 $press_link = get_field('press_link', $press_card->ID);
+                $post_date = get_the_date( 'F j, Y', $press_card->ID );
                 ?>
                 <a class="u-card-link u-card-link--light" href="<?php echo esc_url($press_link); ?>" target="_blank">
                     <article class="ys-carousel-card">
@@ -116,7 +117,7 @@ endif;
                             </div>
                             <div class="ys-carousel-card--entry-content">
                                 <h3 class="ys-carousel-card--heading"><?php echo $publication_name ?></h3>
-                                <p class="ys-carousel-card--date u-text-italic"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
+                                <p class="ys-carousel-card--date u-text-italic"><?php echo $post_date; ?></p>
                             </div>
                             <div class="ys-carousel-card--description u-margin-top-2"><?php echo apply_filters('the_content', $press_card->post_content); ?></div>
                         </div>
