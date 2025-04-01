@@ -105,7 +105,7 @@
 }
 
 $arrow-spacing: -60px;
-$arrow-spacing-mobile: -3vw;
+$arrow-spacing-mobile: -3.5vw;
 
 .slick-next, .slick-prev {
   opacity: 1;
@@ -151,9 +151,9 @@ $arrow-spacing-mobile: -3vw;
 
 .ys-no-skew {
   .slick-next {
-    right: $arrow-spacing-mobile !important;
-    @include vars.breakpoint(medium) {
-      right: -25px !important;
-    }
+    //right: $arrow-spacing-mobile !important;
+    //@include vars.breakpoint(medium) {
+    //  right: -25px !important;
+    //}
   }
 }
