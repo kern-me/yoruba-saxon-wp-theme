@@ -15,7 +15,7 @@ body.page-team {
       padding-top: vars.$section-padding-mobile;
     }
     @include vars.breakpoint(large) {
-      padding-top: 0;
+      padding-top: vars.$section-padding;
     }
 
     .inner {
