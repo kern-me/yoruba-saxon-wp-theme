@@ -3,7 +3,6 @@
 !.github/
 !.deployignore
 node_modules/**
-build/**
 .idea/**
 vendor/**
 design
