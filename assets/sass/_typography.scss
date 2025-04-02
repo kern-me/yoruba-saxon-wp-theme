@@ -53,6 +53,7 @@
   line-height: 1.3;
 
   @include vars.breakpoint(medium){
+    margin-top: -1.1rem; // Accounts for additional whitespace
     font-size: 3.25rem;
     white-space: nowrap;
   }
