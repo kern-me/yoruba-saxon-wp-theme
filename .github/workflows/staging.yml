@@ -11,6 +11,7 @@ jobs:
       - name: GitHub Action Deploy to WP Engine
         uses: wpengine/github-action-wpe-site-deploy@v3
         with:
+
           # Deploy vars
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
           WPE_ENV: yorubasaxonstg
@@ -19,5 +20,5 @@ jobs:
           REMOTE_PATH: "wp-content/themes/yoruba-saxon/"
           PHP_LINT: TRUE
           # FLAGS: -azvr --inplace --delete --exclude=.* --exclude-from=.deployignore
-          SCRIPT: "wpe-deploy.sh"
+          SCRIPT: "wp-content/themes/yoruba-saxon/wpe-deploy.sh"
           CACHE_CLEAR: TRUE
