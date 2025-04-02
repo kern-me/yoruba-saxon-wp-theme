@@ -5,7 +5,7 @@
   "author": "",
   "license": "GPL-2.0-or-later",
   "keywords": [],
-  "homepage": "https://github.com/Automattic/_s#readme",
+  "homepage": "",
   "repository": {
     "type": "git",
     "url": ""
@@ -19,7 +19,8 @@
     "sass": "^1.49.9"
   },
   "devDependencies": {
-    "gulp-minify": "^3.1.0"
+    "gulp-minify": "^3.1.0",
+    "gulp-rimraf": "^1.0.0"
   },
   "rtlcssConfig": {
     "options": {
