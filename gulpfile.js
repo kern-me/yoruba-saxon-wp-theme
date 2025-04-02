@@ -25,7 +25,7 @@ var paths = {
         dest: 'build/images/'
     },
     vendor: {
-        src: 'assets/vendor/**/',
+        src: 'assets/vendor/**/*',
         dest: 'build/vendor/'
     }
 };
