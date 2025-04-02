@@ -18,6 +18,6 @@ jobs:
           SRC_PATH: ""
           REMOTE_PATH: "wp-content/themes/yoruba-saxon/"
           PHP_LINT: TRUE
-          FLAGS: -azvr --inplace --delete --exclude=.* --exclude-from=.deployignore
-          SCRIPT: "wpe-deploy.sh"
+          # FLAGS: -azvr --inplace --delete --exclude=.* --exclude-from=.deployignore
+          # SCRIPT: "wpe-deploy.sh"
           CACHE_CLEAR: TRUE
