@@ -5,7 +5,7 @@
     font-family: vars.$font-body-rev;
     transform: skew(vars.$skew);
     position: relative;
-    left: -5%;
+    left: -5%; // Needed to horizontally center skewed content
   }
 
   h1, .heading-xl {

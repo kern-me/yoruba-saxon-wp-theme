@@ -93,7 +93,7 @@
   padding: 0;
   @include vars.breakpoint(medium) {
     padding: 0 1.5rem;
-    width: 26rem;
+    width: 26.5rem;
   }
 
   .ys-btn {
@@ -104,7 +104,7 @@
   }
 }
 
-$arrow-spacing: -60px;
+$arrow-spacing: -3.7rem;
 $arrow-spacing-mobile: -3.5vw;
 
 .slick-next, .slick-prev {
