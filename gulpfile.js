@@ -2,6 +2,7 @@ var gulp = require('gulp');
 
 const sass = require('gulp-sass')(require('sass'));
 const minify = require('gulp-minify');
+//const cache = require('gulp-cache');
 const clean = require('gulp-rimraf')
 
 // ------------------------------------------------- configs
@@ -24,7 +25,7 @@ var paths = {
         dest: 'build/images/'
     },
     vendor: {
-        src: 'assets/vendor/**/*',
+        src: 'assets/vendor/**/',
         dest: 'build/vendor/'
     }
 };
@@ -91,9 +92,9 @@ gulp.task('watch',
 
 
 // -------------------------------------------- Default task
-gulp.task('default', gulp.series('clean', 'move-vendor-scripts', 'sass', 'min-js', 'move-images', 'move-fonts',
+gulp.task('default', gulp.series('move-vendor-scripts', 'sass', 'min-js', 'move-images', 'move-fonts',
     gulp.parallel('message', 'watch')
 ));
 
-gulp.task('build', gulp.series('clean', 'move-vendor-scripts', 'sass', 'min-js', 'move-images', 'move-fonts')
+gulp.task('build', gulp.series('move-vendor-scripts', 'sass', 'min-js', 'move-images', 'move-fonts')
 );
