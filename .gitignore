@@ -1,6 +1,7 @@
 .*
 ~*
 !.github/
+!.deployignore
 node_modules/**
 build/**
 .idea/**
