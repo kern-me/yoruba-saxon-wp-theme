@@ -2,6 +2,7 @@
 .stylelintrc.json
 .github
 .gitignore
+node_modules
 README.md
 readme.txt
 gulpfile.js
