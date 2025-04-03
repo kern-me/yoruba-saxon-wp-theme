@@ -12,21 +12,15 @@
                     <li><a href="<?php echo site_url() ?>/team">Team</a></li>
                     <li><a href="<?php echo site_url() ?>/press">Press</a></li>
                 </ul>
+            </div>
+            <div class="site-footer--right-col">
                 <ul class="ys-list ys-list--clean">
                     <li><strong>Contact</strong></li>
                     <li><a href="https://instagram.com/yorubasaxon">Instagram</a></li>
                     <li><a href="https://twitter.com/yorubasaxon">X (Twitter)</a></li>
                 </ul>
-            </div>
-            <div class="site-footer--right-col">
-                <ul class="ys-list ys-list--clean">
-                    <li><strong>Legal</strong></li>
-                    <li><a href="#">Terms of Use</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                </ul>
                 <p class="site-footer--copyright">
-                    <span>&copy; Yoruba Saxon 2024</span>
+                    <span>&copy; Yoruba Saxon <?php echo date("Y"); ?></span>
                     <br>
                     <span>All Rights Reserved.</span>
                 </p>
