@@ -3,6 +3,7 @@
 .github
 .gitignore
 node_modules
+design
 README.md
 readme.txt
 gulpfile.js
