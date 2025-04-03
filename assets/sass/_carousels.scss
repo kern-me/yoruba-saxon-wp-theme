@@ -104,6 +104,14 @@
   }
 }
 
+.ys-section--press {
+  .slick-slide {
+    @include vars.breakpoint(medium) {
+      width: 26rem;
+    }
+  }
+}
+
 $arrow-spacing: -3.7rem;
 $arrow-spacing-mobile: -3.5vw;
 
