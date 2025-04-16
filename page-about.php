@@ -26,8 +26,6 @@ $partners = get_field('partners');
         <?php if ($projects):
             foreach ($projects as $project):
                 $pr_id = $project->ID;
-
-                $project_image = get_field('description_image', $pr_id);
                 $project_title = get_the_title($pr_id);
                 $studio = get_field('studio', $pr_id);
                 $project_link = get_permalink($pr_id);
@@ -37,7 +35,7 @@ $partners = get_field('partners');
                         <p class="project-title"><?php echo $project_title ?></p>
                         <p class="project-studio"><?php echo $studio ?></p>
                     </div>
-                    <img src="<?php echo $project_image['url']; ?>" alt="<?php echo $project_image['alt']; ?>">
+                    <?php echo get_the_post_thumbnail($project->ID); ?>
                 </a>
             <?php endforeach; ?>
         <?php endif; ?>
