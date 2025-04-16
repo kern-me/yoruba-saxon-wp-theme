@@ -69,7 +69,7 @@ if ($media_selection === 'image') {
         $youtube_start = get_field('youtube_start');
         echo
             '<div class="iframe-overlay"></div>
-            <iframe width="100%" height="" src="https://www.youtube.com/embed/' . $youtubeID . '?start='.$youtube_start.'&autoplay=1&mute=1&loop=1&playlist='. $youtubeID . '"  allow="autoplay" title="' . $youtube_title . '" frameborder="0" allowfullscreen></iframe>';
+            <iframe aria-hidden="true" tabindex="-1" width="100%" height="" src="https://www.youtube.com/embed/' . $youtubeID . '?start='.$youtube_start.'&autoplay=1&mute=1&loop=1&playlist='. $youtubeID . '"  allow="autoplay" title="' . $youtube_title . '" frameborder="0" allowfullscreen></iframe>';
     }
     ?>
 </section>
