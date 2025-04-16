@@ -84,9 +84,15 @@ if( $meet_the_team_link ):
     $link_target = $meet_the_team_link['target'] ? $meet_the_team_link['target'] : '_self';
 endif;
 ?>
-<section class="ys-section u-section--bg ys-section--meet-the-team ys-section--margin-top" style="background-image: url('<?php echo esc_url($meet_the_team_image["url"]) ?>')">
+<section class="ys-section u-section--bg ys-section--meet-the-team ys-section--margin-top">
     <div class="inner">
-        <a class="ys-btn ys-btn--white" href="<?php echo esc_url( $link_url ) ?>" target="<?php echo esc_attr( $link_target ) ?>'"><span><?php echo esc_html( $link_title ) ?></span></a>
+        <a class="u-heading-link u-text-black u-show-mobile-only--inline-block" href="<?php echo site_url() ?>/projects">
+            <h2 class="u-heading-lt u-skew-base--desktop">Our Team</h2>
+        </a>
+
+        <a class="ys-btn ys-btn--white u-show-desktop-only--flex" href="<?php echo esc_url( $link_url ) ?>" target="<?php echo esc_attr( $link_target ) ?>'"><span><?php echo esc_html( $link_title ) ?></span></a>
+        <img src="<?php echo esc_url($meet_the_team_image["url"]) ?>" alt="" />
+        <a class="ys-btn ys-btn--yellow u-show-mobile-only--flex u-margin-top--l" href="<?php echo esc_url( $link_url ) ?>" target="<?php echo esc_attr( $link_target ) ?>'"><span><?php echo esc_html( $link_title ) ?></span></a>
     </div>
 </section>
 

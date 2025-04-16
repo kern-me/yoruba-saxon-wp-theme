@@ -87,6 +87,13 @@
   }
 }
 
+.u-show-mobile-only--inline-block {
+  display: inline-block !important;
+  @include vars.breakpoint(medium) {
+    display: none !important;
+  }
+}
+
 .u-show-mobile-only--flex {
   display: flex !important;
   @include vars.breakpoint(medium) {
@@ -170,9 +177,11 @@
 .u-heading-link {
   text-decoration: none;
   white-space: nowrap;
+  display: inline-block;
 
   h2, h3 {
     transition: color 0.15s ease-in;
+    display: inline-block;
   }
 
   &.u-text-black {
