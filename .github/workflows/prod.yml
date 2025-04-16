@@ -3,6 +3,18 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '.gitignore'
+      - '.idea'
+      - '.github'
+      - 'node_modules'
+      - '.eslintrc'
+      - '.stylelintrc.json'
+      - 'assets'
+      - 'notes.txt'
+      - 'README.md'
+      - 'readme.txt'
+      - 'LICENSE'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -17,6 +29,5 @@ jobs:
           SRC_PATH: ""
           REMOTE_PATH: "wp-content/themes/yoruba-saxon/"
           PHP_LINT: TRUE
-          FLAGS: -azvr --inplace --delete --exclude=.* --exclude-from=.deployignore
-          # SCRIPT: "wp-content/themes/yoruba-saxon/wpe-deploy.sh"
+          FLAGS: -azvr --inplace --delete --exclude=.*
           CACHE_CLEAR: TRUE

@@ -1,7 +1,6 @@
 .*
 ~*
 !.github/
-!.deployignore
 node_modules/**
 .idea/**
 vendor/**
