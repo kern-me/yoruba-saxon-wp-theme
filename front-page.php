@@ -100,7 +100,7 @@ endif;
                 <path d="M73 1L1 298L4 801.5L1265 790.5L1261.5 403L1362.5 1H73Z" fill="#D9D9D9" fill-opacity="0.6" stroke="black"/>
             </clipPath>
         </svg>
-        <div class="ys-carousel-cards--container-grid ys-slick u-pad-top--l">
+        <div class="ys-carousel-cards--container-grid u-pad-top--l">
             <?php
             $press_cards = get_field('press_cards');
 
