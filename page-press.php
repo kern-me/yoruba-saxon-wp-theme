@@ -15,7 +15,7 @@ $press_featured_article = get_field('press_featured_article');
             ?>
             <h2><?php echo get_the_title($pfa->ID); ?></h2>
             <?php echo apply_filters('the_content', $pfa->post_content); ?>
-            <a target="_blank" href="<?php echo esc_url($press_link); ?>" class="ys-btn ys-btn--skewed ys-btn--yellow u-margin-top-2"><span>Read More</span></a>
+            <a href="<?php echo esc_url($press_link); ?>" class="ys-btn ys-btn--skewed ys-btn--yellow u-margin-top-2" target="_blank" rel="noopener"><span>Read More</span></a>
             <?php endforeach; ?>
         </div>
     </div>

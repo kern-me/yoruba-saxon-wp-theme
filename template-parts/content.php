@@ -77,8 +77,7 @@
                             <?php } ?>
 
                             <?php if ($watch_link) { ?>
-                                <a class="ys-btn ys-btn--yellow u-margin-top--l" href="<?php echo esc_url($link_url); ?>"
-                                   target="_blank">
+                                <a class="ys-btn ys-btn--yellow u-margin-top--l" href="<?php echo esc_url($link_url); ?>" target="_blank" rel="noopener">
                                     <span>Watch Now</span>
                                 </a>
                             <?php } ?>
@@ -197,7 +196,7 @@
                     <h3 class="press-card--publication-name"><?php echo $publication ?></h3>
                     <p class="press-card--published-date"></p>
                     <p class="press-card--description"></p>
-                    <a href="<?php echo $press_link ?>" target="_blank">Read More</a>
+                    <a href="<?php echo $press_link ?>" target="_blank" rel="noopener">Read More</a>
                 </article>
             </div>
         </section>

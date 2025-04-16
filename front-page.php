@@ -109,7 +109,7 @@ endif;
                 $press_link = get_field('press_link', $press_card->ID);
                 $post_date = get_the_date( 'F j, Y', $press_card->ID );
                 ?>
-                <a class="u-card-link u-card-link--light" href="<?php echo esc_url($press_link); ?>" target="_blank">
+                <a class="u-card-link u-card-link--light" href="<?php echo esc_url($press_link); ?>" target="_blank" rel="noopener">
                     <article class="ys-carousel-card">
                         <div>
                             <div class="ys-carousel-card--image-container">

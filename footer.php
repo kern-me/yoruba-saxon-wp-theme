@@ -16,8 +16,8 @@
             <div class="site-footer--right-col">
                 <ul class="ys-list ys-list--clean">
                     <li><strong>Contact</strong></li>
-                    <li><a href="https://instagram.com/yorubasaxon">Instagram</a></li>
-                    <li><a href="https://twitter.com/yorubasaxon">X (Twitter)</a></li>
+                    <li><a href="https://instagram.com/yorubasaxon" target="_blank" rel="noopener">Instagram</a></li>
+                    <li><a href="https://twitter.com/yorubasaxon" target="_blank" rel="noopener">X (Twitter)</a></li>
                 </ul>
                 <p class="site-footer--copyright">
                     <span>&copy; Yoruba Saxon <?php echo date("Y"); ?></span>
