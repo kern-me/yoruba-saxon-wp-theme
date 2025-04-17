@@ -141,19 +141,19 @@ body {
     .ys-hero {
       height: 15rem;
       @include vars.breakpoint(small) {
-        height: 25rem;
+        height: 23rem;
       }
       @include vars.breakpoint(medium) {
-        height: 40rem;
+        height: 30rem;
       }
     }
     img.ys-hero-heading {
       max-width: 70%;
       @include vars.breakpoint(small) {
-        max-width: 65%;
+        max-width: 55%;
       }
       @include vars.breakpoint(medium) {
-        max-width: 40rem;
+        max-width: 32rem;
       }
     }
   }
