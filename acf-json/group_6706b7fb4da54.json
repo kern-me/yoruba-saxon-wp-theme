@@ -1,0 +1,238 @@
+{
+    "key": "group_6706b7fb4da54",
+    "title": "Hero Section",
+    "fields": [
+        {
+            "key": "field_670429d06d502",
+            "label": "Media Selection",
+            "name": "media_selection",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "video": "Custom Video",
+                "youtube": "YouTube Video",
+                "image": "Image"
+            },
+            "default_value": "Image",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_67042a796d503",
+            "label": "Choose Video File",
+            "name": "video_file",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_670429d06d502",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6706b9be8f200",
+            "label": "Video Start Time",
+            "name": "video_start_time",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Choose the video start time in seconds. E.G. \"10\" would start at 0:10.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_670429d06d502",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_66f6fa3ba030d",
+            "label": "Choose Hero Image",
+            "name": "hero_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_670429d06d502",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_671d0ce18f5b2",
+            "label": "YouTube ID",
+            "name": "youtubeID",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Copy the youtube video ID from the URL. \r\nExample: The YouTube ID of https:\/\/youtu.be\/Iu8IcplAr4M is Iu8IcplAr4M",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_670429d06d502",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_671d0d548f5b3",
+            "label": "YouTube Title",
+            "name": "youtube_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_670429d06d502",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_671d557b31feb",
+            "label": "YouTube Start Time",
+            "name": "youtube_start",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Number in seconds where you would like the video to start.\r\nExample: \"6\" starts 6 seconds into the video.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_670429d06d502",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "8"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "project"
+            }
+        ],
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "92"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1744906607
+}
