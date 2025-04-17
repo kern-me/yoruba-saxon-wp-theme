@@ -1,14 +1,6 @@
 @use 'vars';
 
 body.page-press {
-  .ys-hero {
-    .ys-hero-heading {
-      max-width: 60%;
-      @include vars.breakpoint(medium){
-        max-width: 800px;
-      }
-    }
-  }
   .press-heading-content {
     display: flex;
     flex-direction: column;

@@ -7,12 +7,15 @@
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  height: 20rem;
+  //height: 20rem;
   justify-content: center;
   align-items: center;
-  @media (min-width: 1025px) and (min-height: 665px) {
-    height: 60vh;
+  padding: 0 4vw;
+
+  @include vars.breakpoint(medium){
+    padding: 0;
   }
+
   @include vars.breakpoint(large){
     background-position: top;
   }
@@ -98,9 +101,61 @@
 img.ys-hero-heading {
   z-index: 2;
   margin: 0 auto;
-  max-width: 60%;
+  max-width: 100%;
   @include vars.breakpoint(medium){
-    max-width: 50%;
+    max-width: 40rem;
+  }
+}
+
+body {
+  &.page-projects,
+  &.page-home {
+    .ys-hero {
+      height: 20rem;
+      @include vars.breakpoint(medium) {
+        height: 60vh;
+      }
+    }
+  }
+  &.page-team {
+    .ys-hero {
+      height: 15rem;
+      @include vars.breakpoint(small) {
+        height: 25rem;
+      }
+      @include vars.breakpoint(medium) {
+        height: 35rem;
+      }
+    }
+    img.ys-hero-heading {
+      max-width: 80%;
+      @include vars.breakpoint(small) {
+        max-width: 75%;
+      }
+      @include vars.breakpoint(medium) {
+        max-width: 40rem;
+      }
+    }
+  }
+  &.page-press {
+    .ys-hero {
+      height: 15rem;
+      @include vars.breakpoint(small) {
+        height: 25rem;
+      }
+      @include vars.breakpoint(medium) {
+        height: 40rem;
+      }
+    }
+    img.ys-hero-heading {
+      max-width: 70%;
+      @include vars.breakpoint(small) {
+        max-width: 65%;
+      }
+      @include vars.breakpoint(medium) {
+        max-width: 40rem;
+      }
+    }
   }
 }
 

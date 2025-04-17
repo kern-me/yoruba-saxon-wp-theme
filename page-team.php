@@ -8,7 +8,7 @@ $team_members = get_field('team_members');
 ?>
 
 <section class="ys-section team-container">
-    <div class="inner block--two-col gutter">
+    <div class="inner block--two-col">
         <?php
         if (have_rows('team_members')):
             while ( have_rows('team_members')): the_row();

@@ -68,6 +68,13 @@
   }
 }
 
+.u-pad-bottom--l {
+  padding-bottom: vars.$pad-m;
+  @include vars.breakpoint(medium) {
+    padding-bottom: vars.$pad-l;
+  }
+}
+
 .u-pad-bottom-0 {
   padding-bottom: 0;
 }
