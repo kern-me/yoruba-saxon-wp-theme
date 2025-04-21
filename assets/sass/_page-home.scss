@@ -1,16 +1,5 @@
 @use 'vars';
 
-body {
-  &.page-home {
-    .ys-hero-heading {
-      @include vars.breakpoint(medium){
-        position: relative;
-      }
-    }
-  }
-}
-
-
 h1 {
   margin-top: 1rem;
   margin-bottom: 1.5rem;

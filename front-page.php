@@ -109,7 +109,7 @@ endif;
     </div>
 </section>
 
-<section class="ys-section ys-section--intro ys-section--press ys-no-skew ys-section--pad-top">
+<section class="ys-section ys-section--intro ys-section--press ys-no-skew ys-section--pad-top ys-section--pad-bottom">
     <div class="inner">
 
         <?php $press_heading = get_field('press_heading'); ?>

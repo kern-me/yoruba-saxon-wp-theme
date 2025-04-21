@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: center;
   padding: 0 4vw;
+  position: relative;
 
   @include vars.breakpoint(medium){
     padding: 0;
@@ -70,13 +71,6 @@
       left: 0;
       top: 0;
     }
-
-    img.ys-hero-heading {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      translate: -50% -50%;
-    }
   }
 
   &.ys-hero-video-custom {
@@ -100,8 +94,15 @@
 img.ys-hero-heading {
   z-index: 2;
   margin: 0 auto;
-  max-width: 100%;
-  @include vars.breakpoint(medium){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  max-width: 80%;
+  @include vars.breakpoint(small) {
+    max-width: 20rem;
+  }
+  @include vars.breakpoint(medium) {
     max-width: 40rem;
   }
 }
@@ -120,17 +121,6 @@ body {
       }
     }
   }
-  &.page-projects {
-    img.ys-hero-heading {
-      max-width: 80%;
-      @include vars.breakpoint(small) {
-        max-width: 20rem;
-      }
-      @include vars.breakpoint(medium) {
-        max-width: 40rem;
-      }
-    }
-  }
   &.page-team {
     .ys-hero {
       height: 15rem;
@@ -139,15 +129,6 @@ body {
       }
       @include vars.breakpoint(medium) {
         height: 35rem;
-      }
-    }
-    img.ys-hero-heading {
-      max-width: 80%;
-      @include vars.breakpoint(small) {
-        max-width: 75%;
-      }
-      @include vars.breakpoint(medium) {
-        max-width: 40rem;
       }
     }
   }
@@ -161,17 +142,9 @@ body {
         height: 30rem;
       }
     }
-    img.ys-hero-heading {
-      max-width: 70%;
-      @include vars.breakpoint(small) {
-        max-width: 55%;
-      }
-      @include vars.breakpoint(medium) {
-        max-width: 32rem;
-      }
-    }
   }
 }
+
 
 
 

@@ -39,6 +39,12 @@
       padding-top: vars.$section-padding;
     }
   }
+  &--pad-bottom {
+    padding-bottom: vars.$section-padding-mobile;
+    @include vars.breakpoint(medium) {
+      padding-bottom: vars.$section-padding;
+    }
+  }
   &--margin-top {
     margin-top: vars.$section-padding-mobile;
     @include vars.breakpoint(medium) {
