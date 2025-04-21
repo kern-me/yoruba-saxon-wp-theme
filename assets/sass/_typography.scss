@@ -164,7 +164,7 @@ body {
   &.page-team {
     @include vars.breakpoint(medium){
       h2 {
-        margin-top: -1rem;
+        margin-top: -0.7rem;
       }
     }
   }

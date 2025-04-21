@@ -3,8 +3,8 @@
 body.page-team {
   .team-container {
     .inner {
-      $team-section-gutter--desktop: -50rem;
-      $team-section-gutter--tablet: -55rem;
+      $team-section-gutter--desktop: -38rem;
+      $team-section-gutter--tablet: -48rem;
 
       padding: 0 vars.$section-gutter-mobile;
 
@@ -53,11 +53,11 @@ body.page-team {
   .block--two-col {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 4rem;
     position: relative;
 
     @include vars.breakpoint(medium) {
-      gap: 12rem;
+      gap: 8rem;
     }
 
     .two-col--row {
@@ -73,6 +73,17 @@ body.page-team {
         grid-template-columns: 1fr 1fr;
         max-width: 86%;
         transform: skew(vars.$skew);
+      }
+
+      @include vars.breakpoint(large) {
+        left: 8rem;
+      }
+
+      &:last-child {
+        padding-bottom: 4rem;
+        @include vars.breakpoint(medium) {
+          padding-bottom: 8rem;
+        }
       }
       .col--text {
         order: 2;
@@ -136,6 +147,7 @@ body.page-team {
       }
       p {
         font-family: vars.$font-body-reg;
+        margin: 0;
         @include vars.breakpoint(medium) {
           font-family: vars.$font-body-rev;
         }

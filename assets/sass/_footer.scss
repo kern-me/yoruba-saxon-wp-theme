@@ -3,12 +3,10 @@
 .site-footer {
   position: relative;
   overflow: hidden;
-  margin-top: vars.$section-padding-mobile;
   padding: vars.$section-padding-mobile 0;
   background: vars.$black;
   color: vars.$white;
   @include vars.breakpoint(medium){
-    margin-top: vars.$section-padding;
     padding: vars.$section-padding 0;
   }
 
