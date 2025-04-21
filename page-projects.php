@@ -2,7 +2,7 @@
 get_header();
 include_once ('template-parts/ys-hero.php');
 ?>
-<section class="ys-section ys-section--projects u-pad-bottom-0">
+<section class="ys-section ys-section--projects">
     <div class="inner">
         <div class="ys-projects-grid u-margin-top--xl">
             <?php

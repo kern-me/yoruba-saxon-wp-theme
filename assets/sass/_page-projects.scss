@@ -1,7 +1,10 @@
 @use 'vars';
 
 .ys-section--projects {
-  padding: vars.$section-padding 0;
+  padding: vars.$section-padding-mobile 0;
+  @include vars.breakpoint(medium) {
+    padding: vars.$section-padding 0;
+  }
 
   .inner {
     padding: 0 vars.$section-gutter-mobile;
@@ -47,6 +50,11 @@
   overflow: hidden;
   position: relative;
   text-decoration: none;
+  margin-inline: auto;
+  @include vars.breakpoint(small){
+    width: 80%;
+    height: 30rem;
+  }
 
   @include vars.breakpoint(medium){
     transform: skew(vars.$skew);
@@ -70,15 +78,13 @@
   }
 
   &-image-container {
-    height: auto;
-    @include vars.breakpoint(medium){
-      height: 100%;
-    }
+    height: 100%;
     img {
       position: relative;
       width: 100%;
-      height: 20rem;
+      height: 100%;
       object-fit: cover;
+      object-position: top;
       @include vars.breakpoint(medium){
         height: 100%;
         object-fit: cover;
@@ -115,19 +121,22 @@
       background: none;
     }
 
+    h3, p {
+      transform: skew(0deg);
+    }
+
     h3 {
       font-family: vars.$font-bold-reg;
       margin-bottom: 0.5rem;
+      line-height: 1;
     }
     p {
       font-family: vars.$font-body-reg;
+      font-size: 1.25rem;
       margin-bottom: 0;
       margin-left: auto;
       margin-right: auto;
-    }
-    h3, p {
-      transform: skew(0deg);
-      line-height: 1;
+      line-height: 1.15;
     }
   }
 
