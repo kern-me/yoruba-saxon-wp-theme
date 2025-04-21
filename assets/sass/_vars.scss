@@ -34,6 +34,8 @@ $pad-l: 4rem;
 $pad-m: 2rem;
 $pad-s: 1rem;
 
+$max-content-width: 1512px;
+
 @mixin breakpoint($point) {
   @if $point == small {
     @media (min-width: 430px) { @content; }

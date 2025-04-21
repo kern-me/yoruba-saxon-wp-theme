@@ -54,7 +54,7 @@
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  max-width: 1512px;
+  max-width: vars.$max-content-width;
 
   @media (max-width: 768px) {
     padding: 0;
