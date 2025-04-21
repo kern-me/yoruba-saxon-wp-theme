@@ -73,6 +73,7 @@ body.page-team {
         grid-template-columns: 1fr 1fr;
         max-width: 86%;
         transform: skew(vars.$skew);
+        left: 4rem;
       }
 
       @include vars.breakpoint(large) {

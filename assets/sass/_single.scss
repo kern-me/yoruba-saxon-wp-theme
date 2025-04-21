@@ -17,7 +17,7 @@ body.single-project {
     &.ys-hero-video {
       h1 {
         position: absolute;
-        bottom: -0.3rem;
+        bottom: -0.4rem;
       }
     }
     h1 {
@@ -58,7 +58,7 @@ body.single-project {
   }
 
   .single-project-press {
-    padding-inline: 5vw;
+    padding-inline: 4vw;
 
     article.ys-carousel-card {
       overflow: visible;
@@ -116,7 +116,7 @@ body.single-project {
   .single-project-supplemental {
     padding-bottom: 4rem;
     @include vars.breakpoint(medium) {
-      padding-block: vars.$section-gutter;
+      padding-block: 8rem;
     }
     &--grid {
       @include vars.breakpoint(medium) {
@@ -171,19 +171,16 @@ body.single-project {
   justify-content: center;
   gap: 2rem;
   position: relative;
-  min-height: 20rem;
-  padding: vars.$section-gutter-mobile;
+  padding: 2rem 4vw;
   @include vars.breakpoint(medium){
-    top: -5rem;
-    margin-bottom: -5rem;
-    padding: 10rem vars.$section-gutter 5rem;
+    padding: 12rem 4vw 8rem;
   }
 
   p {
     font-family: vars.$font-italic-reg;
     font-size: 1.5rem;
     line-height: 1.5;
-    margin: 0;
+    margin: 0 auto;
     @include vars.breakpoint(small){
       font-size: 1.8rem;
     }
@@ -213,9 +210,14 @@ body.single-project {
 }
 
 .post-navigation {
-  padding: 0 4vw;
+  padding: 0 4vw 4rem;
+  margin-inline: auto;
   @include vars.breakpoint(medium){
-    padding: 0 2rem;
+    max-width: vars.$max-content-width;
+    padding: 0 2rem 8rem;
+  }
+  @include vars.breakpoint(large){
+    padding: 0 0 8rem;
   }
   a {
     color: vars.$gray;
@@ -241,10 +243,10 @@ body.single-project {
     width: 100%;
     height: auto;
     @include vars.breakpoint(medium){
-      bottom: -2rem;
+      bottom: -8rem;
       z-index: 1;
-      width: 80%;
-      margin: auto;
+      width: calc(100% - 8vw);
+      margin: -4rem auto 0;
     }
   }
   .video-container {
