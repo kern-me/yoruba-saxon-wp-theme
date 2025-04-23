@@ -1,42 +1,24 @@
 @use 'vars';
 
 body.single-project {
-  .ys-hero {
-    justify-content: end;
-    padding: 0 vars.$section-gutter-mobile;
-    min-height: 30vh;
+  h1 {
+    position: absolute;
+    bottom: -0.4rem;
+    font-family: "din", sans-serif;
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+    font-size: 4rem;
+    letter-spacing: 0.25rem;
+    line-height: 0.75;
+    z-index: 2;
+
+    @include vars.breakpoint(small){
+      font-size: 6rem;
+    }
+
     @include vars.breakpoint(medium){
-      padding: 0 vars.$section-gutter;
-    }
-    &.ys-hero-image {
-      h1 {
-        position: relative;
-        bottom: -0.3rem;
-      }
-    }
-    &.ys-hero-video {
-      h1 {
-        position: absolute;
-        bottom: -0.4rem;
-      }
-    }
-    h1 {
-      font-family: "din", sans-serif;
-      margin: 0;
-      text-transform: uppercase;
-      color: white;
-      font-size: 4rem;
-      letter-spacing: 0.25rem;
-      line-height: 0.75;
-      z-index: 2;
-
-      @include vars.breakpoint(small){
-        font-size: 6rem;
-      }
-
-      @include vars.breakpoint(medium){
-        font-size: 11rem;
-      }
+      font-size: 11rem;
     }
   }
 
@@ -63,7 +45,6 @@ body.single-project {
     article.ys-carousel-card {
       overflow: visible;
       .ys-carousel-card--image-container {
-
         @include vars.breakpoint(medium) {
           overflow: hidden;
           transform: skew(vars.$skew);
@@ -84,6 +65,7 @@ body.single-project {
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
+          min-height: 5.6rem;
         }
         p {
           margin-bottom: 0;
