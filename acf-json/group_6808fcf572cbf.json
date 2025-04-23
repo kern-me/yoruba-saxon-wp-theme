@@ -8,7 +8,7 @@
             "name": "meta_description",
             "aria-label": "",
             "type": "textarea",
-            "instructions": "",
+            "instructions": "The page description displayed in search engine results.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -49,5 +49,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745420164
+    "modified": 1745420633
 }
