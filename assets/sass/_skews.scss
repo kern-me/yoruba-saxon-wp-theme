@@ -63,9 +63,9 @@
   }
 
   .inner {
-    padding: 0 vars.$section-gutter-mobile;
+    padding: 0 4vw;
     @include vars.breakpoint(medium) {
-      padding: 0 vars.$section-gutter;
+      padding: 0 4rem;
     }
   }
 

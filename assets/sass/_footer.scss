@@ -3,11 +3,11 @@
 .site-footer {
   position: relative;
   overflow: hidden;
-  padding: vars.$section-padding-mobile 0;
+  padding: 4rem 0;
   background: vars.$black;
   color: vars.$white;
   @include vars.breakpoint(medium){
-    padding: vars.$section-padding 0;
+    padding: 8rem 0;
   }
 
   .ys-skewed {
@@ -21,9 +21,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0 vars.$section-gutter-mobile;
+    padding: 0 4vw;
     @include vars.breakpoint(medium) {
-      padding: 0 vars.$section-gutter;
+      padding: 0 4rem;
     }
     @include vars.breakpoint(medium){
       flex-direction: row;

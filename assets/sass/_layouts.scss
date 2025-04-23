@@ -34,21 +34,21 @@
   position: relative;
   overflow: hidden;
   &--pad-top {
-    padding-top: vars.$section-padding-mobile;
+    padding-top: 4rem;
     @include vars.breakpoint(medium) {
-      padding-top: vars.$section-padding;
+      padding-top: 8rem;
     }
   }
   &--pad-bottom {
-    padding-bottom: vars.$section-padding-mobile;
+    padding-bottom: 4rem;
     @include vars.breakpoint(medium) {
-      padding-bottom: vars.$section-padding;
+      padding-bottom: 8rem;
     }
   }
   &--margin-top {
-    margin-top: vars.$section-padding-mobile;
+    margin-top: 4rem;
     @include vars.breakpoint(medium) {
-      margin-top: vars.$section-padding;
+      margin-top: 8rem;
     }
   }
 }
@@ -68,9 +68,9 @@
 }
 
 .gutter {
-  padding-inline: vars.$section-gutter-mobile;
+  padding-inline: 4vw;
   @include vars.breakpoint(medium) {
-    padding-inline: vars.$section-gutter;
+    padding-inline: 4rem;
   }
 }
 
