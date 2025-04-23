@@ -46,11 +46,14 @@
 
 .u-heading-lt {
   font-family: vars.$font-thin-reg;
-  font-size: 2.65rem;
+  font-size: 11vw;
   text-transform: uppercase;
   overflow-wrap: break-word;
   text-wrap: balance;
   line-height: 1.3;
+  @include vars.breakpoint(small){
+    font-size: 2.65rem;
+  }
 
   @include vars.breakpoint(medium){
     margin-top: -1.1rem; // Accounts for additional whitespace
@@ -65,22 +68,6 @@
   @include vars.breakpoint(medium){
     font-size: 2.5rem;
   }
-}
-
-.u-heading-mb {
-
-}
-
-.u-heading-mi {
-
-}
-
-.u-heading-sb {
-
-}
-
-.u-heading-xxs {
-
 }
 
 .heading-xl {
