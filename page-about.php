@@ -14,7 +14,7 @@ $partners = get_field('partners');
 ?>
 
 <section class="ys-section ys-section--about-intro">
-    <div class="inner gutter">
+    <div class="inner">
         <?php echo $hero_subheading ?>
     </div>
 </section>
