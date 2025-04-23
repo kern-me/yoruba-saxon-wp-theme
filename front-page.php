@@ -95,7 +95,7 @@ endif;
     </div>
 
     <div class="meet-the-team--photo-grid">
-        <a class="ys-btn ys-btn--white" href="<?php echo esc_url( $link_url ) ?>" target="<?php echo esc_attr( $link_target ) ?>'"><span><?php echo esc_html( $link_title ) ?></span></a>
+        <a class="ys-btn ys-btn--white" href="<?php echo esc_url( $link_url ) ?>"><span><?php echo esc_html( $link_title ) ?></span></a>
 
         <img src="<?php echo esc_url($meet_the_team_image["url"]) ?>" alt="<?php echo $meet_the_team_image['alt'] ?>" />
 
