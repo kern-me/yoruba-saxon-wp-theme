@@ -11,14 +11,21 @@
   align-items: center;
   padding: 0 4vw;
   position: relative;
+  height: 15rem;
+
+  @include vars.breakpoint(small) {
+    height: 25rem;
+  }
 
   @include vars.breakpoint(medium){
-    padding: 0;
+    padding: 0 4rem;
+    height: 35rem;
   }
 
   @include vars.breakpoint(large){
     background-position: top;
   }
+
   &.ys-hero-video {
     display: block;
     position: relative;
@@ -108,44 +115,27 @@ img.ys-hero-heading {
 }
 
 body {
-  &.single-project,
-  &.page-projects,
-  &.page-home {
-    .ys-hero {
-      height: 15rem;
-      @include vars.breakpoint(small) {
-        height: 20rem;
+  &.page-team {
+    img.ys-hero-heading {
+      @include vars.breakpoint(medium) {
+        max-width: 32rem;
       }
+    }
+  }
+  &.page-press {
+    img.ys-hero-heading {
+      @include vars.breakpoint(medium) {
+        max-width: 28rem;
+      }
+    }
+  }
+  &.page-home,
+  &.single-project,
+  &.page-projects {
+    .ys-hero {
       @include vars.breakpoint(medium) {
         height: 60vh;
       }
     }
   }
-  &.page-team {
-    .ys-hero {
-      height: 15rem;
-      @include vars.breakpoint(small) {
-        height: 25rem;
-      }
-      @include vars.breakpoint(medium) {
-        height: 35rem;
-      }
-    }
-  }
-  &.page-press {
-    .ys-hero {
-      height: 15rem;
-      @include vars.breakpoint(small) {
-        height: 23rem;
-      }
-      @include vars.breakpoint(medium) {
-        height: 30rem;
-      }
-    }
-  }
 }
-
-
-
-
-
