@@ -40,8 +40,6 @@ body.single-project {
   }
 
   .single-project-press {
-    padding-inline: 4vw;
-
     article.ys-carousel-card {
       overflow: visible;
       .ys-carousel-card--image-container {
@@ -155,7 +153,7 @@ body.single-project {
   position: relative;
   padding: 2rem 4vw;
   @include vars.breakpoint(medium){
-    padding: 12rem 4vw 8rem;
+    padding: 12rem 0 8rem;
   }
 
   p {

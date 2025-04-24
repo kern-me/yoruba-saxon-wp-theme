@@ -54,7 +54,7 @@
 }
 
 .inner {
-  padding: 0;
+  padding: 0 4vw;
   margin: 0 auto;
   z-index: 1;
   position: relative;
@@ -62,15 +62,8 @@
   width: 100%;
   max-width: vars.$max-content-width;
 
-  @media (max-width: 768px) {
-    padding: 0;
-  }
-}
-
-.gutter {
-  padding-inline: 4vw;
   @include vars.breakpoint(medium) {
-    padding-inline: 4rem;
+    padding: 0 4rem;
   }
 }
 

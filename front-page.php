@@ -109,7 +109,7 @@ endif;
     </div>
 </section>
 
-<section class="ys-section ys-section--intro ys-section--press ys-no-skew ys-section--pad-top ys-section--pad-bottom">
+<section class="ys-section ys-section--press ys-no-skew ys-section--pad-top ys-section--pad-bottom">
     <div class="inner">
 
         <?php $press_heading = get_field('press_heading'); ?>
@@ -136,7 +136,7 @@ endif;
                             </div>
                             <div class="ys-carousel-card--entry-content">
                                 <h3 class="ys-carousel-card--heading"><?php echo $publication_name ?></h3>
-                                <p class="ys-carousel-card--date u-text-italic"><?php echo $post_date; ?></p>
+                                <p class="ys-carousel-card--date"><?php echo $post_date; ?></p>
                             </div>
                             <div class="ys-carousel-card--description u-margin-top-2"><?php echo apply_filters('the_content', $press_card->post_content); ?></div>
                         </div>

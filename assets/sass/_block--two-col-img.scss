@@ -99,23 +99,6 @@
       }
     }
   }
-
-  .ys-btn {
-    transform: skew(vars.$skew);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    @include vars.breakpoint(medium) {
-      transform: skew(0);
-    }
-    span {
-      @include vars.breakpoint(medium) {
-        transform: skew(vars.$skew-base);
-        font-family: vars.$font-bold-reg;
-      }
-    }
-  }
 }
 
 

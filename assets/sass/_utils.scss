@@ -5,14 +5,6 @@
   visibility: hidden;
 }
 
-.u-heading-thin {
-  font-family: vars.$font-thin-reg;
-}
-
-.u-text-italic {
-  font-family: vars.$font-italic-reg;
-}
-
 .u-skew-0 {
   transform: skew(0) !important;
 }
@@ -211,7 +203,7 @@
 .heading-offset {
   position: relative;
   @include vars.breakpoint(medium) {
-    left: 7rem;
+    left: 6rem;
   }
 }
 

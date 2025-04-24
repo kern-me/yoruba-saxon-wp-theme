@@ -6,8 +6,6 @@ body.page-team {
       $team-section-gutter--desktop: -38rem;
       $team-section-gutter--tablet: -48rem;
 
-      padding: 0 4vw;
-
       @include vars.breakpoint(medium) {
         padding: 0;
       }

@@ -20,7 +20,7 @@ $partners = get_field('partners');
 </section>
 
 <section id="projects" class="ys-section u-margin-top--xxl block--masonry-grid">
-    <div class="inner gutter">
+    <div class="inner">
         <h2 class="heading-xl u-text-center--mobile">Projects</h2>
         <div class="grid u-pad-top--l">
         <?php if ($projects):
@@ -45,7 +45,7 @@ $partners = get_field('partners');
 </section>
 
 <section class="ys-section u-margin-top--xxl block--two-col-img">
-    <div class="inner gutter ys-lines-section">
+    <div class="inner ys-lines-section">
         <h2 class="heading-xl u-text-center--mobile">Founders</h2>
         <div id="founders" class="skewed-row u-margin-top--l">
             <div class="skewed-col skewed-col--first">
@@ -71,7 +71,7 @@ $partners = get_field('partners');
                 <div class="skewed-col skewed-col--last">
                     <h2 class="heading-xl u-skew--reversed u-show-desktop-only--block">Press</h2>
                     <h3><?php echo $publication_name ?></h3>
-                    <p class="ys-carousel-card--date u-text-italic u-skew-0"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
+                    <p class="ys-carousel-card--date u-skew-0"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
                     <div class="description"><?php echo apply_filters('the_content', $press->post_content); ?></div>
                 </div>
             <?php endforeach; ?>
@@ -97,7 +97,7 @@ $partners = get_field('partners');
 </section>
 
 <section id="partners" class="ys-section u-margin-top--xxl">
-    <div class="inner gutter">
+    <div class="inner">
         <h2 class="heading-xl u-text-center--mobile">Partners</h2>
         <div class="flex-grid flex-grid--partners u-pad-top--l">
             <a class="partner size-m" href="https://tv.apple.com/" target="_blank" rel="noopener">

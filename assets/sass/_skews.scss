@@ -31,21 +31,6 @@
     }
   }
 
-  .ys-btn {
-    transform: skew(vars.$skew);
-    @include vars.breakpoint(medium){
-      transform: skew(0);
-    }
-    span {
-      font-family: vars.$font-bold-reg;
-      transform: skew(vars.$skew-base);
-      @include vars.breakpoint(medium) {
-        font-family: vars.$font-bold-reg;
-        transform: skew(vars.$skew-base);
-      }
-    }
-  }
-
   img, svg {
     @include vars.breakpoint(medium){
       transform: skew(vars.$skew-base)
@@ -53,27 +38,15 @@
   }
 }
 
+.carousel-clip-path {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
 
 .ys-no-skew {
   font-family: vars.$font-body-reg !important;
   transform: skew(0deg);
-
-  h1, .heading-xl {
-    font-family: vars.$font-thin-reg;
-  }
-
-  .inner {
-    padding: 0 4vw;
-    @include vars.breakpoint(medium) {
-      padding: 0 4rem;
-    }
-  }
-
-  .carousel-clip-path {
-    position: absolute;
-    width: 0;
-    height: 0;
-  }
 
   .slick-list {
     @include vars.breakpoint(medium) {
@@ -131,15 +104,10 @@
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
-    h3, p, .ys-btn {
+    h3, p {
       @include vars.breakpoint(medium) {
         position: relative;
       }
     }
-  }
-
-  .ys-btn {
-    font-family: vars.$font-bold-reg;
-    transform: skew(vars.$skew);
   }
 }

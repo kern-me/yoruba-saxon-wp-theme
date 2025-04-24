@@ -63,13 +63,9 @@ body.page-about {
   }
 
   .ys-section--about-intro {
-    padding-inline: 4vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    @include vars.breakpoint(medium) {
-      padding-inline: 4rem;
-    }
 
     p {
       text-align: center;
@@ -100,6 +96,9 @@ body.page-about {
   #projects {
     .grid {
       position: relative;
+      @include vars.breakpoint(medium) {
+        left: -3rem;
+      }
       a {
         &:before {
           content: '';
@@ -260,14 +259,6 @@ body.page-about {
       @include vars.breakpoint(medium) {
         order: 2;
         align-items: flex-start;
-      }
-    }
-    a.ys-btn {
-      transform: skew(vars.$skew);
-      margin: 0;
-      span {
-        font-family: vars.$font-bold-reg;
-        transform: skew(vars.$skew-base);
       }
     }
   }

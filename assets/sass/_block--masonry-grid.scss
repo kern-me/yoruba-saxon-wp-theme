@@ -8,9 +8,6 @@
     flex-wrap: wrap;
     grid-gap: $gap;
     max-width: 1500px;
-    @include vars.breakpoint(medium) {
-      padding-left: $gap;
-    }
     &--col {
       width: 100%;
       height: 20vh;
@@ -29,7 +26,7 @@
       @include vars.breakpoint(medium) {
         display: inline-block;
         transform: skew(vars.$skew);
-        width: 24rem;
+        width: 30%;
         height: 30rem;
       }
 
@@ -52,18 +49,6 @@
       @include vars.breakpoint(medium) {
         transform: skew(vars.$skew);
       }
-    }
-  }
-
-  .ys-btn {
-    position: relative;
-    transform: skew(vars.$skew);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    span {
-      transform: skew(vars.$skew-base);
-      font-family: vars.$font-bold-reg;
     }
   }
 }

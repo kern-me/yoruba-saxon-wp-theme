@@ -21,10 +21,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 0 4vw;
-    @include vars.breakpoint(medium) {
-      padding: 0 4rem;
-    }
     @include vars.breakpoint(medium){
       flex-direction: row;
       justify-content: end;

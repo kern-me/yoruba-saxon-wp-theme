@@ -7,7 +7,7 @@
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     @include vars.breakpoint(medium) {
-      row-gap: 14rem;
+      row-gap: 12rem;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
@@ -56,21 +56,6 @@
     }
   }
 
-  .ys-btn {
-    width: 80%;
-    margin: auto;
-    @include vars.breakpoint(medium) {
-      width: 100%;
-      margin: 0;
-    }
-    span {
-      font-family: vars.$font-bold-reg;
-      transform: skew(vars.$skew-base);
-    }
-  }
-
-
-
   img {
     position: relative;
     width: 100%;
@@ -95,13 +80,6 @@
   @include vars.breakpoint(medium) {
     padding: 0 1.5rem;
     width: 26.5rem;
-  }
-
-  .ys-btn {
-    max-width: 100%;
-    @include vars.breakpoint(small) {
-      max-width: 375px;
-    }
   }
 }
 

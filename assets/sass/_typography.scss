@@ -1,5 +1,9 @@
 @use 'vars';
 
+h1, .heading-xl {
+  font-family: vars.$font-thin-reg;
+}
+
 .u-heading-xlb {
   font-family: "din", sans-serif;
   text-transform: uppercase;

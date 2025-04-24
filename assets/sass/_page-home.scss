@@ -15,60 +15,57 @@ h1 {
 }
 
 .ys-section--intro {
-  .ys-skewed {
-    .inner {
-      padding: 0 4vw;
-      @include vars.breakpoint(medium){
-        padding: 0 0 0 14rem;
+  .inner {
+    @include vars.breakpoint(medium){
+      padding: 0 0 0 14rem;
+    }
+    &--lines {
+      &:before,
+      &:after {
+        content: '';
+        height: calc(100% + 16rem);
+        width: 100px;
+        position: absolute;
+        top: 0;
+        background: vars.$black;
+        display: none;
+        @include vars.breakpoint(medium){
+          display: block;
+        }
       }
-      &--lines {
-        &:before,
-        &:after {
-          content: '';
-          height: calc(100% + 16rem);
-          width: 100px;
-          position: absolute;
-          top: 0;
-          background: vars.$black;
-          display: none;
-          @include vars.breakpoint(medium){
-            display: block;
-          }
+      &:before {
+        @include vars.breakpoint(medium){
+          left: 2rem;
         }
-        &:before {
-          @include vars.breakpoint(medium){
-            left: 2rem;
-          }
-        }
-        &:after {
-          @include vars.breakpoint(medium){
-            right: -12rem;
-            height: calc(100% + 33rem);
-          }
+      }
+      &:after {
+        @include vars.breakpoint(medium){
+          right: -12rem;
+          height: calc(100% + 33rem);
         }
       }
     }
-    .ys-col {
-      &--last {
+  }
+  .ys-col {
+    &--last {
+      @include vars.breakpoint(medium){
+        position: relative;
+        overflow: hidden;
+      }
+      img {
+        transform: none;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top;
+        max-width: 100%;
         @include vars.breakpoint(medium){
-          position: relative;
-          overflow: hidden;
-        }
-        img {
-          transform: none;
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-          object-position: top;
-          max-width: 100%;
-          @include vars.breakpoint(medium){
-            max-width: none;
-            width: calc(100% + 175px);
-            position: absolute;
-            transform: skew(vars.$skew-base);
-            height: 100%;
-            left: -100px;
-          }
+          max-width: none;
+          width: calc(100% + 175px);
+          position: absolute;
+          transform: skew(vars.$skew-base);
+          height: 100%;
+          left: -100px;
         }
       }
     }
@@ -109,20 +106,6 @@ h1 {
       object-fit: cover;
       height: 100%;
       object-position: center;
-    }
-  }
-
-  .ys-btn {
-    transform: skew(-12deg);
-    position: relative;
-    align-self: center;
-    order: 2;
-
-    @include vars.breakpoint(medium){
-      left: 50%;
-      translate: -50%;
-      position: absolute;
-      bottom: 10rem;
     }
   }
 }
