@@ -1,15 +1,13 @@
 <?php
 get_header();
 include_once ('template-parts/ys-hero.php');
-
-$team_members = get_field('team_members');
-
-
 ?>
 
 <section class="ys-section team-container">
     <div class="inner block--two-col">
         <?php
+        $team_members = get_field('team_members');
+
         if (have_rows('team_members')):
             while ( have_rows('team_members')): the_row();
                 $team_member_name =     get_sub_field('team_member_name');
