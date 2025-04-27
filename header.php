@@ -16,11 +16,13 @@
 <body <?php body_class() ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-    <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'yoruba-saxon'); ?></a>
+    <a tabindex="0" class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'yoruba-saxon'); ?></a>
     <header>
         <nav class="menu--right" role="navigation">
             <div class="menu-toggle">
-                <input id="nav-btn" type="checkbox" />
+                <label for="nav-btn" class="sr-only">Primary Navigation</label>
+                <div id="active-menu-outline"></div>
+                <input id="nav-btn" tabindex="0" type="checkbox" />
                 <span></span>
                 <span></span>
                 <span></span>

@@ -39,6 +39,10 @@
     &:hover {
       background: white;
     }
+    &:focus {
+      outline: 2px solid vars.$black;
+      outline-offset: 8px;
+    }
   }
 
   &--white {
@@ -47,6 +51,10 @@
     transition: background 0.15s ease-in;
     &:hover {
       background: vars.$yellow;
+    }
+    &:focus {
+      outline: 2px solid vars.$black;
+      outline-offset: 8px;
     }
   }
 }

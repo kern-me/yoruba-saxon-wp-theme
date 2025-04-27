@@ -133,6 +133,9 @@
 
 .u-card-link {
   text-decoration: none;
+  &:focus {
+    outline: 2px solid vars.$black;
+  }
 
   &--light {
     * {
@@ -177,7 +180,6 @@
   text-decoration: none;
   white-space: nowrap;
   display: inline-block;
-
   h2, h3 {
     transition: color 0.15s ease-in;
     display: inline-block;
@@ -189,6 +191,11 @@
         color: vars.$yellow
       }
     }
+  }
+
+  &:focus {
+    outline: 2px solid vars.$black;
+    outline-offset: 8px;
   }
 }
 
