@@ -1,6 +1,10 @@
 @use 'vars';
 
 body.page-press {
+  .ys-section {
+    overflow: visible;
+  }
+
   .press-heading-content {
     display: flex;
     flex-direction: column;

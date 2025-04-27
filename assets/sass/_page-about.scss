@@ -7,6 +7,31 @@ body.page-about {
     color: white;
   }
 
+  a.ys-btn--yellow {
+    &:focus {
+      outline: 2px solid vars.$white;
+      outline-offset: 8px;
+    }
+  }
+
+  a.ys-btn--white {
+    &:focus {
+      outline: 2px solid vars.$yellow;
+      outline-offset: 8px;
+    }
+  }
+
+  a.partner {
+    &:focus {
+      outline: 2px solid vars.$white;
+      outline-offset: 8px;
+    }
+  }
+
+  .ys-section {
+    overflow: visible;
+  }
+
   .ys-hero {
     height: auto;
     align-items: center;
@@ -114,6 +139,9 @@ body.page-about {
           @include vars.breakpoint(medium) {
             opacity: 0;
           }
+        }
+        &:focus {
+          outline: 4px solid vars.$yellow;
         }
         &:hover {
           &:before {

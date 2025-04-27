@@ -10,7 +10,7 @@
                     $studio = get_field('studio', $pr_id);
                     $project_link = get_permalink($pr_id);
                     ?>
-                    <a href="<?php echo esc_url($project_link); ?>">
+                    <a title="Learn more about <?php echo $project_title ?>" href="<?php echo esc_url($project_link); ?>">
                         <div>
                             <p class="project-title"><?php echo $project_title ?></p>
                             <p class="project-studio"><?php echo $studio ?></p>

@@ -22,7 +22,7 @@
             <div class="menu-toggle">
                 <label for="nav-btn" class="sr-only">Primary Navigation</label>
                 <div id="active-menu-outline"></div>
-                <input id="nav-btn" tabindex="0" type="checkbox" />
+                <input aria-labelledby="nav-btn" title="Open Menu" id="nav-btn" tabindex="0" type="checkbox" />
                 <span></span>
                 <span></span>
                 <span></span>

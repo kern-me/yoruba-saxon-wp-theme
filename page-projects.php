@@ -1,5 +1,7 @@
 <?php
 get_header();
+echo '<main id="primary" class="site-main">';
+
 include_once ('template-parts/ys-hero.php');
 ?>
 <section class="ys-section ys-section--projects">
@@ -13,7 +15,7 @@ include_once ('template-parts/ys-hero.php');
                 $studio = get_field('studio', $project_card->ID);
                 $permalink =  get_permalink($project_card->ID);
                 ?>
-                <a href="<?php echo $permalink ?>" class="ys-project">
+                <a title="Learn more about <?php echo $title ?>" href="<?php echo $permalink ?>" class="ys-project">
                     <div class="ys-project-image-container">
                         <?php echo get_the_post_thumbnail($project_card->ID); ?>
                     </div>
@@ -28,4 +30,7 @@ include_once ('template-parts/ys-hero.php');
 </section>
 
 
-<?php get_footer(); ?>
+<?php
+echo '</main>';
+get_footer();
+?>

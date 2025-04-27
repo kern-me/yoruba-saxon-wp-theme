@@ -16,7 +16,7 @@ endif;
     <div class="meet-the-team--photo-grid_mobile">
         <a class="u-heading-link u-text-black" href="<?php echo site_url() ?>/projects"><h2 class="u-heading-lt u-skew-base--desktop">Our Team</h2></a>
         <img src="<?php echo esc_url($meet_the_team_image["url"]) ?>" alt="<?php echo $meet_the_team_image['alt'] ?>" />
-        <a class="ys-btn ys-btn--yellow u-margin-top--l" href="<?php echo esc_url( $link_url ) ?>" target="<?php echo esc_attr( $link_target ) ?>'"><span><?php echo esc_html( $link_title ) ?></span></a>
+        <a title="Learn more about the Yoruba Saxon team" class="ys-btn ys-btn--yellow u-margin-top--l" href="<?php echo esc_url( $link_url ) ?>" target="<?php echo esc_attr( $link_target ) ?>'"><span><?php echo esc_html( $link_title ) ?></span></a>
     </div>
 
     <div class="meet-the-team--photo-grid">

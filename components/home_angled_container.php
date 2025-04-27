@@ -46,7 +46,7 @@ $latest_work_heading = get_field('latest_work_heading');
                         $studio = get_field('studio', $project_card->ID);
                         $permalink =  get_permalink($project_card->ID);
                         ?>
-                        <a class="u-card-link u-card-link--light" href="<?php echo $permalink; ?>">
+                        <a title="Learn more about <?php echo $title ?>" class="u-card-link u-card-link--light" href="<?php echo $permalink; ?>">
                             <article class="ys-carousel-card">
                                 <div class="ys-carousel-card--image-container">
                                     <?php echo get_the_post_thumbnail($project_card->ID); ?>
