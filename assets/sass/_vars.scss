@@ -28,6 +28,8 @@ $pad-s: 1rem;
 
 $max-content-width: 1512px;
 
+$animation-delay: cubic-bezier(0.1, 0.6, 0.7, 1);
+
 @mixin breakpoint($point) {
   @if $point == small {
     @media (min-width: 430px) { @content; }
