@@ -1,49 +1,52 @@
 const nav_overlay = document.querySelector('.nav-overlay');
 const site_html = document.querySelector('html');
-const primary_menu = document.getElementById('nav-btn')
-const nav_links = document.querySelectorAll('.menu--right a')
-const active_menu_outline = document.getElementById('active-menu-outline')
+const hamburger_btn = document.getElementById('hamburger_btn')
+const main_menu = document.querySelector('.main-menu-navigation')
+const main_menu_links = document.querySelectorAll('.main-menu-navigation a')
 
-nav_links.forEach(elem => {
-    elem.setAttribute('tabindex', '-1');
+main_menu_links.forEach(elem => {
+    elem.setAttribute('tabindex', '-1')
 });
 
-document.addEventListener('click', (event) => {
-    if (!primary_menu.contains(event.target) && primary_menu.classList.contains('active')) {
-        nav_overlay.classList.remove('active');
-        primary_menu.click();
-        primary_menu.classList.remove('active');
-        site_html.classList.remove('active');
-    }
-});
-
-document.getElementById('nav-btn').onclick = function(){
-    if (this.classList.contains('active')){
-        this.classList.remove('active');
-        nav_overlay.classList.remove('active');
-        site_html.classList.remove('active');
-        nav_links.forEach(elem => {
-            elem.setAttribute('tabindex', '-1');
-        });
-    } else {
-        this.classList.add('active');
-        this.setAttribute('tabindex', '0');
-        nav_overlay.classList.add('active');
-        site_html.classList.add('active');
-        nav_links.forEach(elem => {
-            elem.setAttribute('tabindex', '0');
-        });
-        const activeMenu = document.querySelector('html.active .menu--right');
-        trapFocus(activeMenu);
-    }
+function inactive_states() {
+    nav_overlay.classList.remove('active')
+    main_menu.classList.remove('active')
+    main_menu.setAttribute('aria-expanded', 'false')
+    site_html.classList.remove('active')
+    main_menu_links.forEach(elem => {
+        elem.setAttribute('tabindex', '-1')
+    });
 }
 
-primary_menu.addEventListener('focus', function() {
-    active_menu_outline.classList.add('focused');
-})
-primary_menu.addEventListener('blur', function() {
-    active_menu_outline.classList.remove('focused');
-})
+function active_states() {
+    nav_overlay.classList.add('active')
+    main_menu.classList.add('active')
+    main_menu.setAttribute('aria-expanded', 'true')
+    site_html.classList.add('active')
+    main_menu_links.forEach(elem => {
+        elem.setAttribute('tabindex', '0')
+    });
+}
+
+document.addEventListener('click', (event) => {
+    if (!hamburger_btn.contains(event.target) && hamburger_btn.classList.contains('active')) {
+        hamburger_btn.classList.remove('active')
+        inactive_states()
+    }
+});
+
+hamburger_btn.onclick = function(){
+    if (this.classList.contains('active')){
+        this.classList.remove('active')
+        inactive_states()
+    } else {
+        this.classList.add('active')
+        this.setAttribute('tabindex', '0')
+        active_states()
+        const activeMenu = document.querySelector('html.active .site-header')
+        trapFocus(activeMenu)
+    }
+}
 
 // Focus Trap
 function trapFocus(element) {

@@ -17,24 +17,22 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
     <a tabindex="0" class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'yoruba-saxon'); ?></a>
-    <header>
-        <nav class="menu--right" role="navigation">
-            <div class="menu-toggle">
-                <label for="nav-btn" class="sr-only">Primary Navigation</label>
-                <div id="active-menu-outline"></div>
-                <input aria-labelledby="nav-btn" title="Open Menu" id="nav-btn" tabindex="0" type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul class="menu-item">
-                    <li><a href="<?php echo site_url() ?>">Home</a></li>
-                    <li><a href="<?php echo site_url() ?>/about">About</a></li>
-                    <li><a href="<?php echo site_url() ?>/projects">Projects</a></li>
-                    <li><a href="<?php echo site_url() ?>/team">Team</a></li>
-                    <li><a href="<?php echo site_url() ?>/press">Press</a></li>
-                </ul>
-            </div>
+    <header class="site-header">
+        <button class="hamburger" id="hamburger_btn" tabindex="0" aria-controls="main_menu_navigation" aria-label="Open Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="main_menu_navigation" class="main-menu-navigation" role="navigation" aria-label="Main Menu" aria-expanded="false">
+            <ul class="main-menu">
+                <li><a href="<?php echo site_url() ?>">Home</a></li>
+                <li><a href="<?php echo site_url() ?>/about">About</a></li>
+                <li><a href="<?php echo site_url() ?>/projects">Projects</a></li>
+                <li><a href="<?php echo site_url() ?>/team">Team</a></li>
+                <li><a href="<?php echo site_url() ?>/press">Press</a></li>
+            </ul>
         </nav>
-        <div class="nav-overlay"></div>
     </header>
+
+    <div class="nav-overlay"></div>
 
