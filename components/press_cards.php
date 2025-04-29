@@ -10,7 +10,7 @@
                     <p class="ys-carousel-card--date"><?php $post_date = get_the_date( 'F j, Y' ); echo $post_date; ?></p>
                     <div class="ys-carousel-card--description"><?php the_content() ?></div>
                 </div>
-                <a title="<?php echo get_the_content() ?>" href="<?php the_field('press_link') ?>" class="ys-btn ys-btn--yellow u-margin-top-2"><span>Read More</span></a>
+                <a href="<?php the_field('press_link') ?>" class="ys-btn ys-btn--yellow u-margin-top-2" title="Read More: <?php echo esc_attr(wp_strip_all_tags(get_the_content())); ?>"><span>Read More</span></a>
             </article>
         <?php endwhile; ?>
     </div>
