@@ -15,12 +15,9 @@
   right: 25px;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
-  outline: none;
-  border: none;
   z-index: 5;
   height: 50px;
   width: 50px;
-  cursor: pointer;
   &:focus {
     outline: 2px solid vars.$yellow;
   }
@@ -151,5 +148,22 @@ body {
     .nav-overlay {
       background-color: vars.$dark-gray
     }
+  }
+}
+
+.load-more-container {
+  text-align: center;
+  padding: 4rem 0 0;
+}
+
+.btn--load-more {
+  text-transform: uppercase;
+  border: 2px solid vars.$black;
+  padding: 0.5rem;
+  font-family: vars.$font-bold-reg;
+  transition: all 0.2s vars.$animation-delay;
+  &:hover {
+    color: white;
+    background-color: vars.$black;
   }
 }

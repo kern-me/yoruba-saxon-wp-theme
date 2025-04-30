@@ -247,3 +247,53 @@ function add_slug_body_class( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'add_slug_body_class' );
+
+function enqueue_press_scripts() {
+    if (is_page('press')) { // Adjust this condition based on your page
+        wp_enqueue_script('press-loadmore', get_template_directory_uri() . '/build/js/ys-press-load-more.min.js', array('jquery'), '1.0', true);
+        wp_localize_script('press-loadmore', 'ajax_object', array(
+            'ajax_url' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('load_more_press_nonce')
+        ));
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_press_scripts');
+
+function load_more_press() {
+    check_ajax_referer('load_more_press_nonce', 'nonce');
+
+    $page = $_POST['page'];
+    $args = array(
+        'post_type' => 'press',
+        'posts_per_page' => 6,
+        'paged' => $page
+    );
+
+    $query = new WP_Query($args);
+    ob_start();
+
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post();
+            ?>
+            <article class="ys-carousel-card">
+                <div>
+                    <div class="ys-carousel-card--image-container">
+                        <?php echo get_the_post_thumbnail(); ?>
+                    </div>
+                    <h3><?php the_field('publication'); ?></h3>
+                    <p class="ys-carousel-card--date"><?php echo get_the_date('F j, Y'); ?></p>
+                    <div class="ys-carousel-card--description"><?php the_content() ?></div>
+                </div>
+                <a href="<?php the_field('press_link') ?>" class="ys-btn ys-btn--yellow u-margin-top-2" title="Read More: <?php echo esc_attr(wp_strip_all_tags(get_the_content())); ?>"><span>Read More</span></a>
+            </article>
+        <?php
+        endwhile;
+    endif;
+
+    wp_reset_postdata();
+    $html = ob_get_clean();
+
+    wp_send_json_success(array('html' => $html));
+}
+add_action('wp_ajax_load_more_press', 'load_more_press');
+add_action('wp_ajax_nopriv_load_more_press', 'load_more_press');

@@ -11,7 +11,7 @@
   align-items: center;
   padding: 0 4vw;
   position: relative;
-  height: 15rem;
+  height: 20rem;
 
   @include vars.breakpoint(small) {
     height: 25rem;
