@@ -18,6 +18,9 @@
 <div id="page" class="site">
     <a tabindex="0" class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'yoruba-saxon'); ?></a>
     <header class="site-header">
+        <a href="<?php echo site_url() ?>" class="site-logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/build/images/ys-logo.svg" alt="Yoruba Saxon" />
+        </a>
         <button class="hamburger" id="hamburger_btn" tabindex="0" aria-controls="main_menu_navigation" aria-label="Open Menu">
             <span></span>
             <span></span>
@@ -33,6 +36,7 @@
             </ul>
         </nav>
     </header>
+
 
     <div class="nav-overlay"></div>
 

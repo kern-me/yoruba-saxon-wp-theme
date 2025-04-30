@@ -18,6 +18,7 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   position: relative;
+  transition: background 0.5s vars.$animation-btns;
 
   @media (min-width: 768px) {
     width: 65%;
@@ -35,7 +36,6 @@
 
   &--yellow {
     background: vars.$yellow;
-    transition: background 0.15s ease-in;
     &:hover {
       background: white;
     }
@@ -48,7 +48,6 @@
   &--white {
     background: vars.$white;
     color: vars.$black;
-    transition: background 0.15s ease-in;
     &:hover {
       background: vars.$yellow;
     }

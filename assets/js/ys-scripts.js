@@ -1,5 +1,5 @@
-const nav_overlay = document.querySelector('.nav-overlay');
-const site_html = document.querySelector('html');
+const nav_overlay = document.querySelector('.nav-overlay')
+const site_html = document.querySelector('html')
 const hamburger_btn = document.getElementById('hamburger_btn')
 const main_menu = document.querySelector('.main-menu-navigation')
 const main_menu_links = document.querySelectorAll('.main-menu-navigation a')
@@ -45,36 +45,37 @@ hamburger_btn.onclick = function(){
         active_states()
         const activeMenu = document.querySelector('html.active .site-header')
         trapFocus(activeMenu)
+        hamburger_btn.focus()
     }
 }
 
 // Focus Trap
 function trapFocus(element) {
-    const focusableElements = element.querySelectorAll('a[href], button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])');
-    const firstFocusableElement = focusableElements[0];
-    const lastFocusableElement = focusableElements[focusableElements.length - 1];
+    const focusableElements = element.querySelectorAll('a[href], button, input, textarea, select, details,[tabindex]:not([tabindex="-1"])')
+    const firstFocusableElement = focusableElements[0]
+    const lastFocusableElement = focusableElements[focusableElements.length - 1]
 
     element.addEventListener('keydown', function(e) {
-        const isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+        const isTabPressed = e.key === 'Tab' || e.keyCode === 9
 
         if (!isTabPressed) {
-            return;
+            return
         }
 
         if (e.shiftKey) {
             if (document.activeElement === firstFocusableElement) {
-                lastFocusableElement.focus();
-                e.preventDefault();
+                lastFocusableElement.focus()
+                e.preventDefault()
             }
         } else {
             if (document.activeElement === lastFocusableElement) {
-                firstFocusableElement.focus();
-                e.preventDefault();
+                firstFocusableElement.focus()
+                e.preventDefault()
             }
         }
     });
 
-    firstFocusableElement.focus();
+    firstFocusableElement.focus()
 }
 
 
@@ -98,8 +99,8 @@ if (document.querySelector('body.single-project')) {
 
     // Featured Video Play Button
     if (document.getElementById('featured_video')) {
-        const video = document.getElementById("featured_video");
-        const playButton = document.getElementById("featured_play_btn");
+        const video = document.getElementById("featured_video")
+        const playButton = document.getElementById("featured_play_btn")
 
         playButton.addEventListener("click", function() {
             playButton.classList.remove('initial')
@@ -117,12 +118,38 @@ if (document.querySelector('body.single-project')) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.site-header')
+    let scrollTimeout
+    const showDelay = 300
+
+    function hideHeader() {
+        header.classList.add('scrolling')
+    }
+
+    function showHeader() {
+        header.classList.remove('scrolling')
+    }
+
+    // Handle scroll events
+    window.addEventListener('scroll', function() {
+        // Hide header immediately when scrolling starts
+        hideHeader();
+
+        // Clear the existing timeout
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout)
+        }
+
+        // Set new timeout for scroll end detection with 1 second delay
+        scrollTimeout = setTimeout(function() {
+            showHeader()
+        }, showDelay)
+    });
+});
+
 const empty_paragraphs = document.querySelectorAll('p:empty')
 
 empty_paragraphs.forEach(elem => {
-    elem.remove();
+    elem.remove()
 });
-
-
-
-
