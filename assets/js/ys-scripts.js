@@ -43,7 +43,7 @@ hamburger_btn.onclick = function(){
         this.classList.add('active')
         this.setAttribute('tabindex', '0')
         active_states()
-        const activeMenu = document.querySelector('html.active .site-header')
+        const activeMenu = document.querySelector('.nav-container')
         trapFocus(activeMenu)
         hamburger_btn.focus()
     }
@@ -119,33 +119,74 @@ if (document.querySelector('body.single-project')) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('.site-header')
-    let scrollTimeout
-    const showDelay = 300
+    const header = document.querySelector('.site-header');
+    let lastScrollTop = 0;
+    let hideTimeout;
+    const hideDelay = 2000; // 2 seconds
 
     function hideHeader() {
-        header.classList.add('scrolling')
+        header.classList.add('hide');
+        header.classList.remove('active');
     }
 
     function showHeader() {
-        header.classList.remove('scrolling')
+        header.classList.remove('hide');
+        header.classList.add('active');
+
+        // Reset the hide timeout
+        if (hideTimeout) {
+            clearTimeout(hideTimeout);
+        }
+
+        hideTimeout = setTimeout(hideHeader, hideDelay);
     }
+
+    function scrollToTop(e) {
+        // Only proceed if header is visible
+        if (!header.classList.contains('active')) {
+            return;
+        }
+
+        // Prevent scrolling if clicking on interactive elements
+        if (e.target.closest('a')) {
+            return;
+        }
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Add click handler for scroll to top
+    header.addEventListener('click', scrollToTop);
 
     // Handle scroll events
     window.addEventListener('scroll', function() {
-        // Hide header immediately when scrolling starts
-        hideHeader();
+        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        // Clear the existing timeout
-        if (scrollTimeout) {
-            clearTimeout(scrollTimeout)
+        // Determine scroll direction and amount
+        const scrollDifference = currentScrollTop - lastScrollTop;
+
+        // Only react to significant scroll amounts
+        if (Math.abs(scrollDifference) < 10) {
+            return;
         }
 
-        // Set new timeout for scroll end detection with 1 second delay
-        scrollTimeout = setTimeout(function() {
-            showHeader()
-        }, showDelay)
+        // Scrolling down
+        if (scrollDifference > 0) {
+            hideHeader();
+        }
+        // Scrolling up
+        else {
+            showHeader();
+        }
+
+        lastScrollTop = currentScrollTop;
     });
+
+    // Initially hide the header
+    hideHeader();
 });
 
 const empty_paragraphs = document.querySelectorAll('p:empty')

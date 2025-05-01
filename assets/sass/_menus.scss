@@ -7,27 +7,27 @@
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
   transition: transform 0.3s vars.$animation-delay;
   background-color: vars.$black;
-  height: 6rem;
-  &.scrolling {
+  height: 5rem;
+  transform: translateY(-100%);
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+
+  &.hide {
     transform: translateY(-100%);
   }
-}
 
-.site-logo, .hamburger {
-  top: 50%;
-  translate: 0 -50%;
+  &.active {
+    transform: translateY(0);
+  }
+
 }
 
 .site-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   z-index: 5;
-  left: 25px;
-  @include vars.breakpoint(medium) {
-    left: 50px;
-  }
   &:focus {
     outline: 2px solid vars.$yellow;
     outline-offset: 8px;
@@ -43,26 +43,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
+  top: 25px;
   right: 25px;
   z-index: 5;
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
+  padding: 0;
   &:focus {
     outline: 2px solid vars.$yellow;
-  }
-  @include vars.breakpoint(medium) {
-    right: 50px;
+    outline-offset: 8px;
   }
   span {
     $animation: cubic-bezier(0.1, 0.6, 0.7, 1);
 
     position: relative;
     display: block;
-    width: 33px;
+    width: 100%;
     height: 2px;
     margin-bottom: 8px;
     background: white;
+    border: 1px solid black;
     border-radius: 3px;
     z-index: 1;
     opacity: 1;
