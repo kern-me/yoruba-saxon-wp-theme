@@ -122,23 +122,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.site-header');
     let lastScrollTop = 0;
     let hideTimeout;
+    let isHovering = false;
     const hideDelay = 2000; // 2 seconds
 
     function hideHeader() {
-        header.classList.add('hide');
-        header.classList.remove('active');
+        if (!isHovering) {
+            header.classList.add('hide');
+            header.classList.remove('active');
+        }
     }
 
     function showHeader() {
         header.classList.remove('hide');
         header.classList.add('active');
 
-        // Reset the hide timeout
-        if (hideTimeout) {
-            clearTimeout(hideTimeout);
-        }
+        // Reset the hide timeout only if not hovering
+        if (!isHovering) {
+            if (hideTimeout) {
+                clearTimeout(hideTimeout);
+            }
 
-        hideTimeout = setTimeout(hideHeader, hideDelay);
+            hideTimeout = setTimeout(hideHeader, hideDelay);
+        }
     }
 
     function scrollToTop(e) {
@@ -158,6 +163,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Add hover handlers
+    header.addEventListener('mouseenter', function() {
+        isHovering = true;
+        showHeader();
+        // Clear any existing hide timeout
+        if (hideTimeout) {
+            clearTimeout(hideTimeout);
+        }
+    });
+
+    header.addEventListener('mouseleave', function() {
+        isHovering = false;
+        // Start hide timeout when mouse leaves
+        if (hideTimeout) {
+            clearTimeout(hideTimeout);
+        }
+        hideTimeout = setTimeout(hideHeader, hideDelay);
+    });
+
     // Add click handler for scroll to top
     header.addEventListener('click', scrollToTop);
 
@@ -175,7 +199,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Scrolling down
         if (scrollDifference > 0) {
-            hideHeader();
+            if (!isHovering) {
+                hideHeader();
+            }
         }
         // Scrolling up
         else {
