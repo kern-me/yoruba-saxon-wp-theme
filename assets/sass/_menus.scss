@@ -4,7 +4,6 @@
   width: 100%;
   position: fixed;
   z-index: 5;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
   transition: transform 0.3s vars.$animation-delay;
   background-color: vars.$black;
   height: 5rem;
