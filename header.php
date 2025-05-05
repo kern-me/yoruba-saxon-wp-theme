@@ -24,7 +24,7 @@
     </header>
 
     <div class="nav-container">
-        <button class="hamburger" id="hamburger_btn" tabindex="0" aria-controls="main_menu_navigation" aria-label="Open Menu">
+        <button class="hamburger" id="hamburger_btn" aria-controls="main_menu_navigation" aria-label="Open Menu">
             <span></span>
             <span></span>
             <span></span>
@@ -41,4 +41,4 @@
     </div>
 
     <div class="nav-overlay"></div>
-
+    <main id="primary" class="site-main" role="main">

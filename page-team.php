@@ -1,6 +1,5 @@
 <?php
 get_header();
-echo '<main id="primary" class="site-main">';
 include_once ('template-parts/ys-hero.php');
 ?>
 
@@ -40,7 +39,4 @@ include_once ('template-parts/ys-hero.php');
 </section>
 
 
-<?php
-echo '</main>';
-get_footer();
-?>
+<?php get_footer(); ?>

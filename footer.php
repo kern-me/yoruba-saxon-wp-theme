@@ -1,8 +1,8 @@
 <?php
 
 ?>
-
-<footer id="colophon" class="site-footer">
+</main>
+<footer id="colophon" class="site-footer" role="contentinfo">
     <div class="ys-skewed">
         <div class="inner">
             <div class="site-footer--left-col">
