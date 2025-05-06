@@ -18,7 +18,7 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   position: relative;
-  transition: background 0.5s vars.$animation-btns;
+  transition: background 0.15s ease-in;
 
   @media (min-width: 768px) {
     width: 65%;

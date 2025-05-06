@@ -42,8 +42,7 @@
       color: vars.$yellow
     }
     &:focus {
-      outline: 2px solid vars.$yellow;
-      outline-offset: 8px;
+      color: vars.$yellow
     }
   }
 

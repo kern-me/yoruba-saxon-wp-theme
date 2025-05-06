@@ -26,6 +26,10 @@ strong {
   font-family: vars.$font-bold-reg;
 }
 
+:focus {
+  outline: none;
+}
+
 p:empty {
   display: none;
 }

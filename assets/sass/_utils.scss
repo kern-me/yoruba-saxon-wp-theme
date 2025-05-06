@@ -191,12 +191,14 @@
         color: vars.$yellow
       }
     }
+    &:focus {
+      h2 {
+        @include vars.focus-underline(vars.$black)
+      }
+    }
   }
 
-  &:focus {
-    outline: 2px solid vars.$black;
-    outline-offset: 8px;
-  }
+
 }
 
 .u-clamp5 {

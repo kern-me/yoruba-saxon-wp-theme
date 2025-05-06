@@ -31,6 +31,19 @@ $max-content-width: 1512px;
 $animation-delay: cubic-bezier(0.1, 0.6, 0.7, 1);
 $animation-btns: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
+@mixin focus-underline($line-color) {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.15rem;
+    width: 100%;
+    height: 2px;
+    background: $line-color;
+  }
+}
+
 @mixin breakpoint($point) {
   @if $point == small {
     @media (min-width: 430px) { @content; }
