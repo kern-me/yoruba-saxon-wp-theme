@@ -7,6 +7,10 @@ if ($media_selection === 'video') {
     echo 'ys-hero-video ys-hero-video-custom"';
 }
 
+if ($media_selection === 'youtube' || $media_selection === 'vimeo') {
+    echo 'ys-hero-video"';
+}
+
 if ($media_selection === 'youtube') {
     echo 'ys-hero-video"';
 }
@@ -63,13 +67,24 @@ if ($media_selection === 'image') {
         </div>';
     }
 
+    if ($media_selection === 'youtube' || $media_selection === 'vimeo') {
+        echo '<div class="iframe-overlay"></div>';
+    }
+
     if ($media_selection === 'youtube') {
         $youtubeID = get_field('youtubeID');
         $youtube_title = get_field('youtube_title');
         $youtube_start = get_field('youtube_start');
         echo
-            '<div class="iframe-overlay"></div>
-            <iframe aria-hidden="true" tabindex="-1" width="100%" height="" src="https://www.youtube.com/embed/' . $youtubeID . '?start='.$youtube_start.'&autoplay=1&mute=1&loop=1&playlist='. $youtubeID . '"  allow="autoplay" title="' . $youtube_title . '" frameborder="0" allowfullscreen></iframe>';
+            '<iframe aria-hidden="true" tabindex="-1" width="100%" height="" src="https://www.youtube.com/embed/' . $youtubeID . '?start='.$youtube_start.'&autoplay=1&mute=1&loop=1&playlist='. $youtubeID . '"  allow="autoplay" title="' . $youtube_title . '" frameborder="0" allowfullscreen></iframe>';
+    }
+
+    if ($media_selection === 'vimeo') {
+        $vimeoID = get_field('vimeoID');
+        $vimeo_title = get_field('vimeo_title');
+        $vimeo_start = get_field('vimeo_start');
+        echo
+            '<iframe aria-hidden="true" tabindex="-1" src="https://player.vimeo.com/video/' . $vimeoID . '?background=1' . '#t=' . $vimeo_start . '&autoplay=1&loop=1&badge=0&autopause=0&player_id=0&app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" title="' . $vimeo_title . '"></iframe><script src="https://player.vimeo.com/api/player.js"></script>';
     }
     ?>
 </section>

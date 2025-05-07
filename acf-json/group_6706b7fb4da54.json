@@ -19,12 +19,14 @@
             "choices": {
                 "video": "Custom Video",
                 "youtube": "YouTube Video",
+                "vimeo": "Vimeo Video",
                 "image": "Image"
             },
             "default_value": "Image",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
+            "allow_in_bindings": 1,
             "layout": "vertical",
             "save_other_choice": 0
         },
@@ -200,6 +202,93 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_681a1b5cf2954",
+            "label": "Vimeo ID",
+            "name": "vimeoID",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Copy the Vimeo video ID from the URL. \r\nExample: The Vimeo video ID of https:\/\/vimeo.com\/1055676964 is 1055676964",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_670429d06d502",
+                        "operator": "==",
+                        "value": "vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_681a1f35f2955",
+            "label": "Vimeo Title",
+            "name": "vimeo_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_670429d06d502",
+                        "operator": "==",
+                        "value": "vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_681a30a49d946",
+            "label": "Vimeo Start",
+            "name": "vimeo_start",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Use the following format: 1m2s",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_670429d06d502",
+                        "operator": "==",
+                        "value": "vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -234,5 +323,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744906607
+    "modified": 1746630929
 }
