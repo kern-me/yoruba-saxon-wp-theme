@@ -213,6 +213,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initially hide the header
     hideHeader();
+
+    const nav_links = document.querySelector('.nav-links');
+
+    if (nav_links) {
+        const nav_prev = nav_links.querySelector('.nav-previous');
+        const nav_next = nav_links.querySelector('.nav-next');
+
+        if (!nav_prev) {
+            nav_links.classList.add('nav-links--next-orphan');
+        }
+
+        if (!nav_next) {
+            nav_links.classList.add('nav-links--prev-orphan');
+        }
+    }
 });
 
 const empty_paragraphs = document.querySelectorAll('p:empty')
@@ -220,3 +235,4 @@ const empty_paragraphs = document.querySelectorAll('p:empty')
 empty_paragraphs.forEach(elem => {
     elem.remove()
 });
+

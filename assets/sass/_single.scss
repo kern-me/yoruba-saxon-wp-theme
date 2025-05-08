@@ -244,6 +244,14 @@ body.single-project {
   justify-content: space-between;
   flex-direction: row;
 
+  &.nav-links--prev-orphan {
+    justify-content: flex-start;
+  }
+
+  &.nav-links--next-orphan {
+    justify-content: flex-end;
+  }
+
   .nav-previous, .nav-next {
     @include flex;
     a {
