@@ -134,7 +134,7 @@ body {
   &.page-projects {
     .ys-hero {
       @include vars.breakpoint(medium) {
-        height: 60vh;
+        height: 36rem;
       }
     }
   }
