@@ -21,15 +21,6 @@ endif;
 
     <div class="meet-the-team--photo-grid">
         <a class="ys-btn ys-btn--white" href="<?php echo esc_url( $link_url ) ?>"><span><?php echo esc_html( $link_title ) ?></span></a>
-
         <img src="<?php echo esc_url($meet_the_team_image["url"]) ?>" alt="<?php echo $meet_the_team_image['alt'] ?>" />
-
-        <?php if( $meet_the_team_image_2): ?>
-            <img src="<?php echo esc_url($meet_the_team_image_2["url"]) ?>" alt="<?php echo $meet_the_team_image_2['alt'] ?>" />
-        <?php endif; ?>
-
-        <?php if( $meet_the_team_image_3): ?>
-            <img src="<?php echo esc_url($meet_the_team_image_3["url"]) ?>" alt="<?php echo $meet_the_team_image_3['alt'] ?>" />
-        <?php endif; ?>
     </div>
 </section>

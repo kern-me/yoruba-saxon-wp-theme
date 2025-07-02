@@ -97,9 +97,8 @@ h1 {
   .meet-the-team--photo-grid {
     display: none;
     @include vars.breakpoint(medium){
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-auto-rows: auto;
+      display: flex;
+      height: 43rem
     }
 
     img {
